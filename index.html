@@ -60,7 +60,17 @@
   @media(min-width:1024px){.pad{padding:8rem 0}}
 
   /* hero */
-  .hero{overflow:hidden}
+  .hero{overflow:hidden;position:relative}
+  .hero-inner{max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem 0}
+  .hero-media{margin-top:2.5rem}
+  .hero-media img{display:block;width:100%;height:44vh;min-height:280px;object-fit:cover;object-position:32% center}
+  @media(min-width:640px){.hero-inner{padding-left:2.5rem;padding-right:2.5rem}}
+  @media(min-width:1000px){
+    .hero{display:grid;grid-template-columns:1fr minmax(0,52%);align-items:stretch;min-height:86vh}
+    .hero-inner{align-self:center;max-width:48rem;margin:0;padding:3rem 2.5rem 3rem max(2.5rem,calc((100vw - 72rem)/2))}
+    .hero-media{margin-top:0;position:relative;overflow:hidden}
+    .hero-media img{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-position:30% center}
+  }
   .glow{position:absolute;inset:0;z-index:-1;pointer-events:none}
   .glow::before{content:"";position:absolute;left:50%;top:-18rem;width:52rem;height:36rem;
     transform:translateX(-50%);border-radius:999px;background:rgba(36,80,230,.06);filter:blur(80px)}
@@ -208,7 +218,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="glow"></div>
-      <div class="wrap pad">
+      <div class="hero-inner">
         <p class="pill reveal"><span class="dot"></span>New from Omnilex</p>
         <h1 class="reveal" style="margin-top:1.5rem">The best <span class="emph">legal counsel</span> you could have.</h1>
         <p class="lead reveal">Omnilex is your legal counsel, run by AI and supervised by expert lawyers — for top-tier legal work that is cost-efficient, fast, and adaptive to your needs.</p>
@@ -217,7 +227,9 @@
           <a href="#how-it-works" class="btn btn-ghost">See how it works →</a>
         </div>
       </div>
-      <div class="wrap"><div class="hr"></div></div>
+      <div class="hero-media reveal">
+        <img src="hero.jpg" alt="An executive in a dark suit standing in a marble boardroom at dusk, with a city skyline behind floor-to-ceiling glass" />
+      </div>
     </section>
 
     <!-- HOW IT WORKS -->
