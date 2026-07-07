@@ -172,6 +172,14 @@
   .supervise p{font-size:.9rem;line-height:1.6;color:rgba(255,255,255,.7)}
   .supervise strong{color:var(--paper);font-weight:600}
 
+  /* how-it-works: desktop diagram vs mobile cards */
+  .hiw-visual{display:none}
+  .hiw-visual svg{width:100%;height:auto;display:block}
+  @media(min-width:960px){
+    .hiw-visual{display:block;margin-top:3.5rem}
+    .hiw-stack{display:none}
+  }
+
   /* reveal */
   .reveal{opacity:0;transform:translateY(14px);
     transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
@@ -212,21 +220,6 @@
       <div class="wrap"><div class="hr"></div></div>
     </section>
 
-    <!-- OVERVIEW -->
-    <section id="overview">
-      <div class="wrap pad grid-split">
-        <div>
-          <p class="kicker">Overview</p>
-          <h2 class="reveal">Not another tool. The <span class="emph">work itself</span>, done.</h2>
-        </div>
-        <div class="prose">
-          <p class="reveal">The AI Native Legal End-to-End Service is a managed legal service. Rather than only equipping your team to work faster, Omnilex takes defined legal matters off your desk and returns finished, review-ready output.</p>
-          <p class="reveal">Every matter runs on the same AI-native engine your team already trusts for research — now applied across the full lifecycle of a matter, from first intake to delivered document, and supervised throughout by qualified Swiss lawyers.</p>
-          <p class="reveal">You keep oversight and final sign-off. We carry the load in between.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- HOW IT WORKS -->
     <section id="how-it-works" class="dark">
       <div class="wrap pad">
@@ -234,7 +227,50 @@
         <h2 class="reveal" style="max-width:40rem">One system for every legal issue your business faces.</h2>
         <p class="lead reveal" style="max-width:44rem;margin-top:1.25rem;color:rgba(255,255,255,.62)">Omnilex pairs an always-on AI legal mind with a team of expert lawyers who supervise it. Your legal work gets handled continuously — and always stands up to scrutiny.</p>
 
-        <div class="flow">
+        <div class="hiw-visual reveal" role="img" aria-label="Diagram: your legal issues flow into the always-on Omnilex Mind, which is supervised by expert lawyers, then delivered back to your business as resolved matters.">
+          <svg viewBox="0 0 1120 580" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <defs>
+              <marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(255,255,255,0.45)"/></marker>
+              <marker id="arwa" markerWidth="10" markerHeight="10" refX="6.5" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L6.5,3.2 L0,6.4 Z" fill="#9db8ff"/></marker>
+            </defs>
+            <path d="M959,374 C 959,545 520,560 172,448" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" marker-end="url(#arw)"/>
+            <text x="560" y="556" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="13" font-family="Inter, sans-serif">Delivered back to your business — continuously</text>
+            <path d="M300,300 C 400,300 440,320 528,320" stroke="rgba(255,255,255,0.2)" stroke-width="1.6"/>
+            <path d="M300,335 L528,320" stroke="rgba(255,255,255,0.28)" stroke-width="1.6" marker-end="url(#arw)"/>
+            <path d="M300,370 C 400,370 440,320 528,320" stroke="rgba(255,255,255,0.2)" stroke-width="1.6"/>
+            <text x="360" y="292" fill="rgba(255,255,255,0.42)" font-size="12" font-family="Inter, sans-serif">your issues, in</text>
+            <rect x="48" y="176" width="252" height="258" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
+            <text x="74" y="212" fill="#ffffff" font-size="16" font-weight="600" font-family="Inter, sans-serif">Your business</text>
+            <g font-family="Inter, sans-serif" font-size="13" fill="rgba(255,255,255,0.74)">
+              <circle cx="78" cy="243" r="3" fill="#6f8bd6"/><text x="92" y="247">Employment &amp; HR</text>
+              <circle cx="78" cy="270" r="3" fill="#6f8bd6"/><text x="92" y="274">Commercial &amp; MSAs</text>
+              <circle cx="78" cy="297" r="3" fill="#6f8bd6"/><text x="92" y="301">Procurement</text>
+              <circle cx="78" cy="324" r="3" fill="#6f8bd6"/><text x="92" y="328">Regulatory &amp; compliance</text>
+              <circle cx="78" cy="351" r="3" fill="#6f8bd6"/><text x="92" y="355">Internal policies</text>
+              <circle cx="78" cy="378" r="3" fill="#6f8bd6"/><text x="92" y="382">Cross-border research</text>
+              <circle cx="78" cy="405" r="3" fill="#6f8bd6"/><text x="92" y="409">Claims &amp; disputes</text>
+            </g>
+            <rect x="486" y="48" width="268" height="86" rx="14" fill="rgba(36,80,230,0.09)" stroke="rgba(77,121,255,0.5)"/>
+            <text x="620" y="86" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="600" font-family="Inter, sans-serif">Omnilex expert lawyers</text>
+            <text x="620" y="110" text-anchor="middle" fill="rgba(255,255,255,0.62)" font-size="12.5" font-family="Inter, sans-serif">supervise · approve · act</text>
+            <path d="M620,134 L620,216" stroke="#9db8ff" stroke-width="2" marker-end="url(#arwa)"/>
+            <text x="636" y="182" fill="#9db8ff" font-size="12" font-family="Inter, sans-serif">real-time supervision</text>
+            <circle cx="620" cy="320" r="96" stroke="#4d79ff" stroke-opacity="0.5"><animate attributeName="r" values="96;124" dur="2.8s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.5;0" dur="2.8s" repeatCount="indefinite"/></circle>
+            <circle cx="620" cy="320" r="96" stroke="#4d79ff" stroke-opacity="0.5"><animate attributeName="r" values="96;124" dur="2.8s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.5;0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/></circle>
+            <circle cx="620" cy="320" r="96" fill="rgba(36,80,230,0.16)" stroke="#4d79ff" stroke-width="2"/>
+            <circle cx="620" cy="320" r="70" fill="rgba(36,80,230,0.12)"/>
+            <text x="620" y="286" text-anchor="middle" fill="#9db8ff" font-size="11" letter-spacing="2" font-family="Inter, sans-serif">ALWAYS ON</text>
+            <text x="620" y="316" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="12.5" letter-spacing="1.5" font-family="Inter, sans-serif">THE OMNILEX</text>
+            <text x="620" y="352" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="600" font-family="Inter, sans-serif">Mind</text>
+            <path d="M716,320 L842,320" stroke="rgba(255,255,255,0.3)" stroke-width="2" marker-end="url(#arw)"/>
+            <rect x="846" y="266" width="226" height="108" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
+            <text x="959" y="312" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="600" font-family="Inter, sans-serif">Resolved &amp; delivered</text>
+            <text x="959" y="338" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="13" font-family="Inter, sans-serif">review-ready, on time</text>
+          </svg>
+        </div>
+
+        <div class="hiw-stack">
+          <div class="flow">
           <div class="flow-col reveal">
             <span class="flow-num">01</span>
             <h3>Your legal reality</h3>
@@ -271,6 +307,7 @@
           <span class="up" aria-hidden="true">↑</span>
           <p><strong>Expert lawyers supervise the Mind in real time</strong> — correcting, approving, and taking action on your matters when it counts. You get the speed of always-on AI with the accountability of a senior legal team.</p>
         </div>
+        </div><!-- /hiw-stack -->
       </div>
     </section>
 
