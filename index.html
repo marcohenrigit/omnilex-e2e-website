@@ -62,14 +62,28 @@
   /* hero */
   .hero{overflow:hidden;position:relative}
   .hero-inner{max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem 0}
-  .hero-media{margin-top:2.5rem}
-  .hero-media img{display:block;width:100%;height:44vh;min-height:280px;object-fit:cover;object-position:32% center}
+  .hero-media{margin-top:2.5rem;position:relative}
+  .hero-media img{display:block;width:100%;height:46vh;min-height:300px;object-fit:cover;object-position:center 20%}
   @media(min-width:640px){.hero-inner{padding-left:2.5rem;padding-right:2.5rem}}
   @media(min-width:1000px){
     .hero{display:grid;grid-template-columns:1fr minmax(0,52%);align-items:stretch;min-height:86vh}
     .hero-inner{align-self:center;max-width:48rem;margin:0;padding:3rem 2.5rem 3rem max(2.5rem,calc((100vw - 72rem)/2))}
-    .hero-media{margin-top:0;position:relative;overflow:hidden}
-    .hero-media img{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-position:30% center}
+    .hero-media{margin-top:0;overflow:hidden}
+    .hero-media img{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-position:center center}
+  }
+  /* hero glass card — ties the exec to the Omnilex service */
+  .hero-badge{display:none}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media(min-width:1000px){
+    .hero-badge{display:block;position:absolute;left:1.5rem;bottom:1.5rem;z-index:2;
+      background:rgba(14,14,11,0.52);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:.85rem 1.05rem;max-width:19.5rem;color:#fff;
+      box-shadow:0 8px 30px rgba(0,0,0,.35)}
+    .hb-head{display:flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;letter-spacing:.02em;margin-bottom:.55rem}
+    .hb-dot{width:.5rem;height:.5rem;border-radius:999px;background:#4d79ff;box-shadow:0 0 0 0 rgba(77,121,255,.6);animation:pulse 2s infinite}
+    .hb-row{display:flex;align-items:center;gap:.5rem;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.85);padding:.12rem 0}
+    .hb-ok{color:#69e0a0;font-size:.82rem;flex:none}
+    .hb-work{width:.6rem;height:.6rem;border-radius:999px;border:1.5px solid #9db8ff;border-top-color:transparent;animation:spin .9s linear infinite;flex:none}
   }
   .glow{position:absolute;inset:0;z-index:-1;pointer-events:none}
   .glow::before{content:"";position:absolute;left:50%;top:-18rem;width:52rem;height:36rem;
@@ -229,6 +243,12 @@
       </div>
       <div class="hero-media reveal">
         <img src="hero.jpg" alt="An executive in a dark suit standing in a marble boardroom at dusk, with a city skyline behind floor-to-ceiling glass" />
+        <div class="hero-badge" aria-label="Omnilex Mind handling active legal matters">
+          <div class="hb-head"><span class="hb-dot"></span>Omnilex Mind — always on</div>
+          <div class="hb-row"><span class="hb-ok">✓</span> Supplier MSA · drafted</div>
+          <div class="hb-row"><span class="hb-work"></span> Cross-border claim · researching</div>
+          <div class="hb-row"><span class="hb-ok">✓</span> Employment policy · reviewed</div>
+        </div>
       </div>
     </section>
 
