@@ -146,6 +146,32 @@
   .step{transition:background .2s}
   .step:hover{background:#1e1e16}
 
+  /* how-it-works flow */
+  .flow{margin-top:4rem;display:grid;gap:1rem;align-items:stretch}
+  @media(min-width:960px){.flow{grid-template-columns:1fr 2.2rem 1fr 2.2rem 1fr}}
+  .flow-col{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+    border-radius:1rem;padding:1.75rem;display:flex;flex-direction:column}
+  .flow-col.mind{border-color:rgba(77,121,255,.55);background:rgba(36,80,230,.09)}
+  .flow-num{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:rgba(255,255,255,.4);line-height:1}
+  .flow-col h3{margin-top:.9rem;font-size:1.1rem;font-weight:500;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+  .flow-col>p{margin-top:.65rem;font-size:.9rem;line-height:1.6;color:rgba(255,255,255,.6)}
+  .live{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;font-weight:500;
+    text-transform:uppercase;letter-spacing:.1em;color:#9db8ff}
+  .live .pulse{width:.45rem;height:.45rem;border-radius:999px;background:#4d79ff;animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(77,121,255,.6)}70%{box-shadow:0 0 0 7px rgba(77,121,255,0)}100%{box-shadow:0 0 0 0 rgba(77,121,255,0)}}
+  .chips{margin-top:1.1rem;display:flex;flex-wrap:wrap;gap:.45rem}
+  .chip{font-size:.72rem;padding:.32rem .62rem;border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;color:rgba(255,255,255,.78);white-space:nowrap}
+  .flow-arrow{display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.32);font-size:1.4rem}
+  @media(max-width:959px){.flow-arrow{transform:rotate(90deg);height:1.6rem}}
+  .supervise{margin-top:1rem;display:flex;gap:.8rem;align-items:flex-start;
+    border:1px dashed rgba(77,121,255,.4);border-radius:1rem;padding:1rem 1.25rem;
+    background:rgba(36,80,230,.05)}
+  @media(min-width:960px){.supervise{margin-left:calc(33.33% + .8rem)}}
+  .supervise .up{color:#9db8ff;font-size:1.1rem;line-height:1.4}
+  .supervise p{font-size:.9rem;line-height:1.6;color:rgba(255,255,255,.7)}
+  .supervise strong{color:var(--paper);font-weight:600}
+
   /* reveal */
   .reveal{opacity:0;transform:translateY(14px);
     transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
@@ -205,12 +231,45 @@
     <section id="how-it-works" class="dark">
       <div class="wrap pad">
         <p class="kicker">How it works</p>
-        <h2 class="reveal" style="max-width:34rem">From matter to finished output — in four steps.</h2>
-        <div class="steps">
-          <div class="step reveal"><span class="n">01</span><h3>Intake</h3><p>You hand over a matter in plain language. Structured intake captures the facts, scope, and constraints up front — without the usual back-and-forth.</p></div>
-          <div class="step reveal"><span class="n">02</span><h3>AI-native execution</h3><p>Research, analysis, and first-draft work are produced on the Omnilex engine — grounded in Swiss law, fully sourced, in hours rather than weeks.</p></div>
-          <div class="step reveal"><span class="n">03</span><h3>Lawyer review</h3><p>Qualified Swiss lawyers review, refine, and stand behind every output. Nothing leaves without human accountability.</p></div>
-          <div class="step reveal"><span class="n">04</span><h3>Delivery</h3><p>You receive finished, review-ready work in your format, with a clear audit trail from source to result.</p></div>
+        <h2 class="reveal" style="max-width:40rem">One system for every legal issue your business faces.</h2>
+        <p class="lead reveal" style="max-width:44rem;margin-top:1.25rem;color:rgba(255,255,255,.62)">Omnilex pairs an always-on AI legal mind with a team of expert lawyers who supervise it. Your legal work gets handled continuously — and always stands up to scrutiny.</p>
+
+        <div class="flow">
+          <div class="flow-col reveal">
+            <span class="flow-num">01</span>
+            <h3>Your legal reality</h3>
+            <p>Everything legal your business runs into, day to day.</p>
+            <div class="chips">
+              <span class="chip">Employment &amp; HR</span>
+              <span class="chip">Commercial &amp; MSAs</span>
+              <span class="chip">Procurement</span>
+              <span class="chip">Regulatory &amp; compliance</span>
+              <span class="chip">Internal policies</span>
+              <span class="chip">Cross-border research</span>
+              <span class="chip">Claims &amp; disputes</span>
+            </div>
+          </div>
+
+          <div class="flow-arrow reveal" aria-hidden="true">→</div>
+
+          <div class="flow-col mind reveal">
+            <span class="flow-num">02</span>
+            <h3>The Omnilex Mind <span class="live"><span class="pulse"></span>always on</span></h3>
+            <p>An AI legal mind works your matters non-stop — researching, drafting, and tracking every issue in parallel, around the clock.</p>
+          </div>
+
+          <div class="flow-arrow reveal" aria-hidden="true">→</div>
+
+          <div class="flow-col reveal">
+            <span class="flow-num">03</span>
+            <h3>Omnilex expert lawyers</h3>
+            <p>Qualified lawyers supervise the Mind, check its work, and step in to act whenever real human judgment is required.</p>
+          </div>
+        </div>
+
+        <div class="supervise reveal">
+          <span class="up" aria-hidden="true">↑</span>
+          <p><strong>Expert lawyers supervise the Mind in real time</strong> — correcting, approving, and taking action on your matters when it counts. You get the speed of always-on AI with the accountability of a senior legal team.</p>
         </div>
       </div>
     </section>
