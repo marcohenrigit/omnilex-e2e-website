@@ -186,7 +186,10 @@
   .supervise .up{color:rgba(1,1,1,.6);font-size:1.1rem;line-height:1.4}
   .supervise p{font-size:.9rem;line-height:1.6;color:var(--muted)}
   .supervise strong{color:var(--ink);font-weight:600}
-  .hiw-sub{margin-top:.85rem;max-width:44rem;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.35;color:var(--ink);font-weight:400;letter-spacing:-0.01em}
+  .hiw-sub{margin:.85rem auto 0;max-width:44rem;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.35;color:var(--ink);font-weight:400;letter-spacing:-0.01em}
+  .hiw-head{max-width:48rem;margin:0 auto;text-align:center}
+  .hiw-head .kicker{margin-bottom:.85rem}
+  .hiw-caption{max-width:44rem;margin:2.25rem auto 0;text-align:center;font-size:.98rem;line-height:1.65;color:var(--muted)}
 
   /* how-it-works: desktop diagram vs mobile cards */
   .hiw-visual{display:none}
@@ -198,7 +201,8 @@
   @media(min-width:1000px){
     #how-it-works{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
     #how-it-works .pad{padding-top:3rem;padding-bottom:3rem}
-    #how-it-works .hiw-visual{margin-top:2.5rem}
+    #how-it-works .wrap{max-width:80rem}
+    #how-it-works .hiw-visual{margin-top:2rem}
   }
 
   /* reveal */
@@ -246,10 +250,11 @@
     <!-- HOW IT WORKS -->
     <section id="how-it-works" class="surface">
       <div class="wrap pad">
-        <p class="kicker">How it works</p>
-        <h2 class="reveal" style="max-width:46rem">Omnilex handles your cases like an <span class="emph">outsourced legal team</span>.</h2>
-        <p class="hiw-sub reveal">But it's delivering <span class="emph">faster</span> and costs a <span class="emph">fraction</span> of it.</p>
-        <p class="lead reveal" style="max-width:47rem;margin-top:1.1rem;color:var(--muted)">The Omnilex Mind is a legal super-agent that handles legal matters end-to-end, from intake to delivering the finished work product. The Omnilex Mind is supervised by expert lawyers, making sure everything is in your best interest. And you? You can focus on the business again.</p>
+        <div class="hiw-head reveal">
+          <p class="kicker">How it works</p>
+          <h2>Omnilex handles your cases like an <span class="emph">outsourced legal team</span>.</h2>
+          <p class="hiw-sub">But it's delivering <span class="emph">faster</span> and costs a <span class="emph">fraction</span> of it.</p>
+        </div>
 
         <div class="hiw-visual reveal" role="img" aria-label="Diagram: your legal issues flow into the always-on Omnilex Mind, which is supervised by expert lawyers, then delivered back to your business as resolved matters.">
           <svg viewBox="0 0 1120 580" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -341,6 +346,7 @@
           <p><strong>Expert lawyers supervise the Mind in real time</strong> — correcting, approving, and taking action on your matters when it counts. You get the speed of always-on AI with the accountability of a senior legal team.</p>
         </div>
         </div><!-- /hiw-stack -->
+        <p class="hiw-caption reveal">The Omnilex Mind is a legal super-agent that handles legal matters end-to-end, from intake to delivering the finished work product. The Omnilex Mind is supervised by expert lawyers, making sure everything is in your best interest. And you? You can focus on the business again.</p>
       </div>
     </section>
 
