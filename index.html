@@ -60,25 +60,26 @@
   @media(min-width:1024px){.pad{padding:8rem 0}}
 
   /* hero */
-  .hero{overflow:hidden;position:relative}
+  .hero{overflow:hidden;position:relative;background:var(--paper)}
   .hero-logo{position:absolute;top:1.6rem;left:1.5rem;z-index:5}
   .hero-logo img{height:23px;width:auto;display:block}
   @media(min-width:640px){.hero-logo{left:2.5rem}}
   @media(min-width:1000px){.hero-logo{top:2.25rem;left:max(2.5rem,calc((100vw - 84rem)/2))}}
   .foot-logo{height:22px;width:auto;display:block}
-  .hero-inner{max-width:72rem;margin:0 auto;padding:4.5rem 1.5rem 0}
-  .hero-media{margin-top:2.5rem;position:relative}
-  .hero-media img{display:block;width:100%;height:46vh;min-height:300px;object-fit:cover;object-position:center 20%}
+  .hero-inner{max-width:72rem;margin:0 auto;padding:7rem 1.5rem 0;position:relative;z-index:2}
   @media(min-width:640px){.hero-inner{padding-left:2.5rem;padding-right:2.5rem}}
+  .hero-skyline{position:absolute;left:0;right:0;bottom:0;width:100%;z-index:1;pointer-events:none}
+  .hero-skyline svg{width:100%;height:auto;display:block}
+  .hero-light{fill:#F5A623;cursor:pointer;pointer-events:auto;transform-box:fill-box;transform-origin:center;animation:heroLight 3.6s ease-in-out infinite}
+  @keyframes heroLight{0%,100%{opacity:.92;transform:translateY(0)}50%{opacity:.5;transform:translateY(-2.5px)}}
+  #hero-tip{opacity:0;pointer-events:none;transition:opacity .35s ease}
+  #hero-tip.show{opacity:1}
   @media(min-width:1000px){
-    .hero{display:grid;grid-template-columns:1fr minmax(0,52%);align-items:stretch;min-height:100vh;min-height:100svh}
-    .hero-inner{align-self:center;max-width:48rem;margin:0;padding:3rem 2.5rem 3rem max(2.5rem,calc((100vw - 84rem)/2))}
-    .hero-media{margin-top:0;overflow:hidden}
-    .hero-media img{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-position:center center}
+    .hero{min-height:100vh;min-height:100svh}
+    .hero-inner{padding:0 2.5rem 0 max(2.5rem,calc((100vw - 84rem)/2));max-width:none;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;pointer-events:none}
+    .hero-inner .btn{pointer-events:auto}
+    .hero-inner>*{max-width:44rem}
   }
-  .glow{position:absolute;inset:0;z-index:-1;pointer-events:none}
-  .glow::before{content:"";position:absolute;left:50%;top:-18rem;width:52rem;height:36rem;
-    transform:translateX(-50%);border-radius:999px;background:rgba(1,1,1,.045);filter:blur(80px)}
   .pill{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--line);
     background:var(--surface);border-radius:999px;padding:.4rem .9rem;font-size:.75rem;
     font-weight:500;color:var(--muted)}
@@ -233,7 +234,6 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <div class="glow"></div>
       <a class="hero-logo" href="#top" aria-label="Omnilex home"><img src="omnilex-logo.png" alt="Omnilex" /></a>
       <div class="hero-inner">
         <h1 class="reveal">The best <span class="emph">legal counsel</span> you could have.</h1>
@@ -243,8 +243,16 @@
           <a href="#how-it-works" class="btn btn-ghost">See how it works →</a>
         </div>
       </div>
-      <div class="hero-media reveal">
-        <img src="hero.jpg" alt="An executive in a dark suit standing in a marble boardroom at dusk, with a city skyline behind floor-to-ceiling glass" />
+      <div class="hero-skyline">
+        <svg viewBox="0 0 1680 780" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path d="M0,700 C200,676 340,714 480,704 C620,695 730,724 812,712 L852,712 L852,614 L890,614 L890,588 L928,588 L928,712 L966,712 L966,300 L1032,300 L1032,346 L1088,346 L1088,712 L1152,712 L1152,150 L1236,86 L1320,150 L1320,712 L1362,712 L1362,470 L1402,470 L1402,432 L1472,432 L1472,712 L1560,712 C1610,712 1650,700 1680,700" stroke="#161616" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+          <g id="hero-tip">
+            <path d="M1190,166 C1168,150 1160,148 1140,148" stroke="#010101" stroke-width="1.4" fill="none"/>
+            <rect x="740" y="122" width="400" height="52" rx="12" fill="#010101"/>
+            <text x="940" y="154" text-anchor="middle" fill="#FBFBF9" font-size="21" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">Omnilex is working on your case</text>
+          </g>
+          <rect id="hero-light" class="hero-light" x="1188" y="158" width="24" height="24" rx="2" role="button" tabindex="0" aria-label="Omnilex is working on your case"/>
+        </svg>
       </div>
     </section>
 
@@ -433,6 +441,15 @@
         entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);} });
       },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
       els.forEach(function(e){io.observe(e)});
+    })();
+    (function(){
+      var light=document.getElementById('hero-light');
+      var tip=document.getElementById('hero-tip');
+      if(!light||!tip)return;
+      var toggle=function(e){e.stopPropagation();tip.classList.toggle('show');};
+      light.addEventListener('click',toggle);
+      light.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle(e);}});
+      document.addEventListener('click',function(){tip.classList.remove('show');});
     })();
   </script>
 </body>
