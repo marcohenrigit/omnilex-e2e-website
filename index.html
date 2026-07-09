@@ -24,7 +24,7 @@
   a{color:inherit;text-decoration:none}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
   @media(min-width:1024px){.wrap{padding:0 2.5rem}}
-  .emph{font-family:var(--serif);font-style:italic;font-weight:700;letter-spacing:0}
+  .emph{font-weight:700}
   .kicker{font-size:.75rem;font-weight:500;text-transform:uppercase;
     letter-spacing:.18em;color:var(--muted);margin-bottom:1rem}
 
@@ -106,7 +106,7 @@
   @media(min-width:640px){.steps{grid-template-columns:1fr 1fr}}
   @media(min-width:1024px){.steps{grid-template-columns:repeat(4,1fr)}}
   .step{background:var(--ink);padding:2rem}
-  .step .n{font-family:var(--serif);font-style:italic;font-size:1.9rem;color:rgba(255,255,255,.4)}
+  .step .n{font-size:1.9rem;color:rgba(255,255,255,.4)}
   .step h3{margin-top:1.4rem;font-size:1.05rem;font-weight:500}
   .step p{margin-top:.75rem;font-size:.875rem;line-height:1.6;color:rgba(255,255,255,.6)}
 
@@ -168,7 +168,7 @@
   .flow-col{position:relative;background:#F3F2EF;border:1px solid var(--line);
     border-radius:1rem;padding:1.75rem;display:flex;flex-direction:column}
   .flow-col.mind{border-color:rgba(1,1,1,.25);background:#F3F2EF}
-  .flow-num{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:rgba(1,1,1,.35);line-height:1}
+  .flow-num{font-size:1.5rem;color:rgba(1,1,1,.35);line-height:1}
   .flow-col h3{margin-top:.9rem;font-size:1.1rem;font-weight:500;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
   .flow-col>p{margin-top:.65rem;font-size:.9rem;line-height:1.6;color:var(--muted)}
   .live{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;font-weight:500;
@@ -219,6 +219,16 @@
   .team-spec{margin-top:.7rem;font-size:.875rem;line-height:1.55;color:var(--muted)}
   .team-all{display:inline-flex;align-items:center;gap:.4rem;margin-top:2.75rem;font-size:.95rem;font-weight:500;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;transition:opacity .2s}
   .team-all:hover{opacity:.65}
+  .team-row{margin-top:2.75rem}
+  .team-rowlabel{font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:1.25rem}
+
+  /* technology pillars */
+  .pillars{margin-top:3rem;display:grid;gap:2.5rem;grid-template-columns:1fr}
+  @media(min-width:760px){.pillars{grid-template-columns:repeat(3,1fr)}}
+  .pillar{border-top:1px solid var(--ink);padding-top:1.25rem}
+  .pillar-num{font-size:.85rem;font-weight:500;color:var(--muted);letter-spacing:.05em}
+  .pillar h3{margin-top:.7rem;font-size:1.15rem;font-weight:500}
+  .pillar p{margin-top:.6rem;font-size:.95rem;line-height:1.6;color:var(--muted)}
 
   /* reveal */
   .reveal{opacity:0;transform:translateY(14px);
@@ -281,47 +291,46 @@
         <div class="hiw-visual reveal" role="img" aria-label="Diagram: your legal issues flow into the always-on Omnilex Mind, which is supervised by expert lawyers, then delivered back to your business as resolved matters.">
           <svg viewBox="0 0 1120 580" xmlns="http://www.w3.org/2000/svg" fill="none">
             <defs>
-              <marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(1,1,1,0.45)"/></marker>
-              <marker id="arwa" markerWidth="10" markerHeight="10" refX="6.5" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L6.5,3.2 L0,6.4 Z" fill="rgba(1,1,1,.72)"/></marker>
+              <marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L6,3 L0,6 Z" fill="#161616"/></marker>
+              <marker id="arwa" markerWidth="10" markerHeight="10" refX="6.5" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L6.5,3.2 L0,6.4 Z" fill="#161616"/></marker>
             </defs>
-            <path d="M959,374 C 959,545 520,560 172,448" stroke="rgba(1,1,1,0.18)" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" marker-end="url(#arw)"/>
+            <path d="M959,374 C 959,545 520,560 172,448" stroke="#161616" stroke-width="1.4" stroke-dasharray="2 7" stroke-linecap="round" marker-end="url(#arw)"/>
             <text x="560" y="556" text-anchor="middle" fill="rgba(1,1,1,0.5)" font-size="13" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">continuous delivery</text>
-            <path d="M300,300 C 400,300 440,320 528,320" stroke="rgba(1,1,1,0.2)" stroke-width="1.6"/>
-            <path d="M300,335 L528,320" stroke="rgba(1,1,1,0.28)" stroke-width="1.6" marker-end="url(#arw)"/>
-            <path d="M300,370 C 400,370 440,320 528,320" stroke="rgba(1,1,1,0.2)" stroke-width="1.6"/>
+            <path d="M300,300 C 400,300 440,320 528,320" stroke="#161616" stroke-width="1.4"/>
+            <path d="M300,335 L528,320" stroke="#161616" stroke-width="1.4" marker-end="url(#arw)"/>
+            <path d="M300,370 C 400,370 440,320 528,320" stroke="#161616" stroke-width="1.4"/>
             <text x="360" y="292" fill="rgba(1,1,1,0.42)" font-size="12" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">legal matters</text>
-            <rect x="48" y="176" width="252" height="258" rx="16" fill="#F3F2EF" stroke="rgba(1,1,1,0.14)"/>
+            <rect x="48" y="176" width="252" height="258" rx="16" fill="none" stroke="#161616" stroke-width="1.8"/>
             <text x="74" y="212" fill="#010101" font-size="16" font-weight="600" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">Your business</text>
             <g font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" fill="rgba(1,1,1,0.74)">
-              <circle cx="78" cy="243" r="3" fill="rgba(1,1,1,.5)"/><text x="92" y="247">Employment &amp; HR</text>
-              <circle cx="78" cy="270" r="3" fill="rgba(1,1,1,.5)"/><text x="92" y="274">Commercial &amp; MSAs</text>
-              <circle cx="78" cy="297" r="3" fill="rgba(1,1,1,.5)"/><text x="92" y="301">Procurement</text>
-              <circle cx="78" cy="324" r="3" fill="rgba(1,1,1,.5)"/><text x="92" y="328">Regulatory &amp; compliance</text>
-              <circle cx="78" cy="351" r="3" fill="rgba(1,1,1,.5)"/><text x="92" y="355">Internal policies</text>
-              <circle cx="78" cy="378" r="3" fill="rgba(1,1,1,.5)"/><text x="92" y="382">Cross-border research</text>
-              <circle cx="78" cy="405" r="3" fill="rgba(1,1,1,.5)"/><text x="92" y="409">Claims &amp; disputes</text>
+              <circle cx="78" cy="243" r="2.6" fill="#161616"/><text x="92" y="247">Employment &amp; HR</text>
+              <circle cx="78" cy="270" r="2.6" fill="#161616"/><text x="92" y="274">Commercial &amp; MSAs</text>
+              <circle cx="78" cy="297" r="2.6" fill="#161616"/><text x="92" y="301">Procurement</text>
+              <circle cx="78" cy="324" r="2.6" fill="#161616"/><text x="92" y="328">Regulatory &amp; compliance</text>
+              <circle cx="78" cy="351" r="2.6" fill="#161616"/><text x="92" y="355">Internal policies</text>
+              <circle cx="78" cy="378" r="2.6" fill="#161616"/><text x="92" y="382">Cross-border research</text>
+              <circle cx="78" cy="405" r="2.6" fill="#161616"/><text x="92" y="409">Claims &amp; disputes</text>
             </g>
-            <rect x="486" y="48" width="268" height="86" rx="14" fill="#F3F2EF" stroke="rgba(1,1,1,0.35)"/>
+            <rect x="486" y="48" width="268" height="86" rx="14" fill="none" stroke="#161616" stroke-width="1.8"/>
             <text x="620" y="86" text-anchor="middle" fill="#010101" font-size="16" font-weight="600" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">Omnilex expert lawyers</text>
             <text x="620" y="110" text-anchor="middle" fill="rgba(1,1,1,0.62)" font-size="12.5" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">supervise · approve · act</text>
-            <path d="M620,134 L620,216" stroke="rgba(1,1,1,.72)" stroke-width="2" marker-end="url(#arwa)"/>
-            <text x="636" y="182" fill="rgba(1,1,1,.72)" font-size="12" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">real-time supervision</text>
-            <circle cx="620" cy="320" r="96" stroke="#010101" stroke-opacity="0.5"><animate attributeName="r" values="96;124" dur="2.8s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.5;0" dur="2.8s" repeatCount="indefinite"/></circle>
-            <circle cx="620" cy="320" r="96" stroke="#010101" stroke-opacity="0.5"><animate attributeName="r" values="96;124" dur="2.8s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.5;0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/></circle>
-            <circle cx="620" cy="320" r="96" fill="#F3F2EF" stroke="#010101" stroke-width="2"/>
-            <circle cx="620" cy="320" r="70" fill="rgba(1,1,1,0.04)"/>
+            <path d="M620,134 L620,216" stroke="#161616" stroke-width="1.6" marker-end="url(#arwa)"/>
+            <text x="636" y="182" fill="rgba(1,1,1,0.6)" font-size="12" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">real-time supervision</text>
+            <circle cx="620" cy="320" r="96" stroke="#F5A623" stroke-width="1.6" stroke-opacity="0.75"><animate attributeName="r" values="96;126" dur="2.8s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.75;0" dur="2.8s" repeatCount="indefinite"/></circle>
+            <circle cx="620" cy="320" r="96" stroke="#F5A623" stroke-width="1.6" stroke-opacity="0.75"><animate attributeName="r" values="96;126" dur="2.8s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.75;0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/></circle>
+            <circle cx="620" cy="320" r="96" fill="none" stroke="#161616" stroke-width="1.8"/>
             <text x="620" y="308" text-anchor="middle" fill="rgba(1,1,1,0.7)" font-size="12.5" letter-spacing="1.5" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">OMNILEX</text>
-            <text x="620" y="350" text-anchor="middle" fill="#010101" font-size="36" font-family="'Signifier','Instrument Serif',Georgia,serif" font-style="italic">Mind</text>
-            <path d="M716,320 L842,320" stroke="rgba(1,1,1,0.3)" stroke-width="2" marker-end="url(#arw)"/>
-            <rect x="846" y="266" width="226" height="108" rx="14" fill="#F3F2EF" stroke="rgba(1,1,1,0.14)"/>
+            <text x="620" y="350" text-anchor="middle" fill="#010101" font-size="34" font-family="'Signifier','Instrument Serif',Georgia,serif">Mind</text>
+            <path d="M716,320 L842,320" stroke="#161616" stroke-width="1.4" marker-end="url(#arw)"/>
+            <rect x="846" y="266" width="226" height="108" rx="14" fill="none" stroke="#161616" stroke-width="1.8"/>
             <text x="959" y="312" text-anchor="middle" fill="#010101" font-size="16" font-weight="600" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">Resolved matters</text>
             <text x="959" y="338" text-anchor="middle" fill="rgba(1,1,1,0.6)" font-size="12" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">ready for the business to implement</text>
-            <g fill="#010101" opacity="0.16">
+            <g fill="#F5A623" opacity="0.3">
               <circle r="10"><animateMotion dur="6.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.20;0.46;1" keyPoints="0;0.14;0.27;1" keySplines="0.2 0.7 0.4 1;0.4 0 0.6 1;0.3 0 0.6 1" path="M300,300 C400,300 440,320 528,320 L620,320 L955,320 L955,374 C955,545 520,560 172,448"/></circle>
               <circle r="10"><animateMotion dur="7.6s" begin="-2.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.18;0.44;1" keyPoints="0;0.14;0.27;1" keySplines="0.2 0.7 0.4 1;0.4 0 0.6 1;0.3 0 0.6 1" path="M300,335 L528,320 L620,320 L955,320 L955,374 C955,545 520,560 172,448"/></circle>
               <circle r="10"><animateMotion dur="6.8s" begin="-4.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.22;0.52;1" keyPoints="0;0.14;0.27;1" keySplines="0.2 0.7 0.4 1;0.4 0 0.6 1;0.3 0 0.6 1" path="M300,370 C400,370 440,320 528,320 L620,320 L955,320 L955,374 C955,545 520,560 172,448"/></circle>
             </g>
-            <g fill="#010101">
+            <g fill="#F5A623">
               <circle r="4.5"><animateMotion dur="6.2s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.20;0.46;1" keyPoints="0;0.14;0.27;1" keySplines="0.2 0.7 0.4 1;0.4 0 0.6 1;0.3 0 0.6 1" path="M300,300 C400,300 440,320 528,320 L620,320 L955,320 L955,374 C955,545 520,560 172,448"/></circle>
               <circle r="4.5"><animateMotion dur="7.6s" begin="-2.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.18;0.44;1" keyPoints="0;0.14;0.27;1" keySplines="0.2 0.7 0.4 1;0.4 0 0.6 1;0.3 0 0.6 1" path="M300,335 L528,320 L620,320 L955,320 L955,374 C955,545 520,560 172,448"/></circle>
               <circle r="4.5"><animateMotion dur="6.8s" begin="-4.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.22;0.52;1" keyPoints="0;0.14;0.27;1" keySplines="0.2 0.7 0.4 1;0.4 0 0.6 1;0.3 0 0.6 1" path="M300,370 C400,370 440,320 528,320 L620,320 L955,320 L955,374 C955,545 520,560 172,448"/></circle>
@@ -372,40 +381,102 @@
       </div>
     </section>
 
-    <!-- LEGAL TEAM -->
-    <section id="team">
+    <!-- TECHNOLOGY -->
+    <section id="technology">
       <div class="wrap pad">
         <div style="max-width:44rem">
-          <p class="kicker">The legal team</p>
-          <h2 class="reveal">Real lawyers behind <span class="emph">every result</span>.</h2>
-          <p class="lead reveal" style="margin-top:1.25rem;color:var(--muted)">The Omnilex Mind is supervised by a team of qualified Swiss lawyers. Every output is checked, refined, and signed off by senior counsel — so you get AI speed with the accountability of an established firm.</p>
+          <p class="kicker">The technology behind it</p>
+          <h2 class="reveal">[ Section title — to be added ]</h2>
+          <p class="lead reveal" style="margin-top:1.25rem;color:var(--muted)">[ Short explanation of the technology — to be added. ]</p>
         </div>
-        <div class="team-grid">
-          <div class="team-card reveal">
-            <div class="team-avatar" aria-hidden="true">EV</div>
-            <p class="team-name">Dr. iur. Elena Vogt</p>
-            <p class="team-role">Managing Partner</p>
-            <p class="team-spec">Commercial contracts, M&amp;A and corporate governance.</p>
+        <div class="pillars">
+          <div class="pillar reveal">
+            <span class="pillar-num">01</span>
+            <h3>[ Pillar one — title ]</h3>
+            <p>[ Pillar one explanation — placeholder text you'll provide. ]</p>
           </div>
-          <div class="team-card reveal">
-            <div class="team-avatar" aria-hidden="true">JF</div>
-            <p class="team-name">Julien Favre, LL.M.</p>
-            <p class="team-role">Partner</p>
-            <p class="team-spec">Litigation, disputes and claims management.</p>
+          <div class="pillar reveal">
+            <span class="pillar-num">02</span>
+            <h3>[ Pillar two — title ]</h3>
+            <p>[ Pillar two explanation — placeholder text you'll provide. ]</p>
           </div>
-          <div class="team-card reveal">
-            <div class="team-avatar" aria-hidden="true">SM</div>
-            <p class="team-name">Dr. iur. Sophie Meier</p>
-            <p class="team-role">Senior Counsel</p>
-            <p class="team-spec">Employment law, data protection and compliance.</p>
-          </div>
-          <div class="team-card reveal">
-            <div class="team-avatar" aria-hidden="true">AR</div>
-            <p class="team-name">Andreas Rüegg</p>
-            <p class="team-role">Counsel</p>
-            <p class="team-spec">Regulatory, procurement and cross-border matters.</p>
+          <div class="pillar reveal">
+            <span class="pillar-num">03</span>
+            <h3>[ Pillar three — title ]</h3>
+            <p>[ Pillar three explanation — placeholder text you'll provide. ]</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- RUN BY INDUSTRY LEADERS -->
+    <section id="team">
+      <div class="wrap pad">
+        <div style="max-width:46rem">
+          <p class="kicker">The people</p>
+          <h2 class="reveal">Run by <span class="emph">industry leaders</span>.</h2>
+        </div>
+
+        <div class="team-row reveal">
+          <p class="team-rowlabel">Expert lawyers supervising the Omnilex Mind</p>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">EV</div>
+              <p class="team-name">Dr. iur. Elena Vogt</p>
+              <p class="team-role">Managing Partner</p>
+              <p class="team-spec">Commercial contracts, M&amp;A and corporate governance.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">JF</div>
+              <p class="team-name">Julien Favre, LL.M.</p>
+              <p class="team-role">Partner</p>
+              <p class="team-spec">Litigation, disputes and claims management.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">SM</div>
+              <p class="team-name">Dr. iur. Sophie Meier</p>
+              <p class="team-role">Senior Counsel</p>
+              <p class="team-spec">Employment law, data protection and compliance.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">AR</div>
+              <p class="team-name">Andreas Rüegg</p>
+              <p class="team-role">Counsel</p>
+              <p class="team-spec">Regulatory, procurement and cross-border matters.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-row reveal" style="margin-top:3rem">
+          <p class="team-rowlabel">We made LegalTech popular in Central Europe</p>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">LB</div>
+              <p class="team-name">Lukas Brunner</p>
+              <p class="team-role">Co-founder &amp; CEO</p>
+              <p class="team-spec">Scaled legal AI across the DACH region.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">NK</div>
+              <p class="team-name">Nina Keller</p>
+              <p class="team-role">Co-founder &amp; CTO</p>
+              <p class="team-spec">Built the Omnilex Mind and its legal engine.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">DR</div>
+              <p class="team-name">David Roth</p>
+              <p class="team-role">Head of Product</p>
+              <p class="team-spec">Turns complex legal workflows into simple products.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">CW</div>
+              <p class="team-name">Clara Weber</p>
+              <p class="team-role">Head of Growth</p>
+              <p class="team-spec">Brought LegalTech to firms across Central Europe.</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Placeholder: link to the full team page/section -->
         <a href="#" class="team-all reveal">See the full team →</a>
       </div>
@@ -498,10 +569,10 @@
       var light=document.getElementById('hero-light');
       var tip=document.getElementById('hero-tip');
       if(!light||!tip)return;
+      setTimeout(function(){tip.classList.add('show');},3000);
       var toggle=function(e){e.stopPropagation();tip.classList.toggle('show');};
       light.addEventListener('click',toggle);
       light.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle(e);}});
-      document.addEventListener('click',function(){tip.classList.remove('show');});
     })();
   </script>
 </body>
