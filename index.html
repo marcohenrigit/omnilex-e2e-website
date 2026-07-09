@@ -207,6 +207,19 @@
     #how-it-works .hiw-visual{margin-top:2rem;max-width:1500px;margin-left:auto;margin-right:auto}
   }
 
+  /* legal team */
+  .team-grid{margin-top:3rem;display:grid;gap:1.25rem;grid-template-columns:1fr}
+  @media(min-width:600px){.team-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){.team-grid{grid-template-columns:repeat(4,1fr)}}
+  .team-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem;display:flex;flex-direction:column;align-items:flex-start;transition:border-color .2s}
+  .team-card:hover{border-color:rgba(1,1,1,.28)}
+  .team-avatar{width:72px;height:72px;border-radius:50%;background:#EFEEEA;color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:500;letter-spacing:.03em}
+  .team-name{margin-top:1.1rem;font-size:1.02rem;font-weight:500;line-height:1.25}
+  .team-role{margin-top:.3rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+  .team-spec{margin-top:.7rem;font-size:.875rem;line-height:1.55;color:var(--muted)}
+  .team-all{display:inline-flex;align-items:center;gap:.4rem;margin-top:2.75rem;font-size:.95rem;font-weight:500;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;transition:opacity .2s}
+  .team-all:hover{opacity:.65}
+
   /* reveal */
   .reveal{opacity:0;transform:translateY(14px);
     transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
@@ -356,6 +369,45 @@
         </div>
         </div><!-- /hiw-stack -->
         <p class="hiw-caption reveal">The Omnilex Mind is a legal super-agent that handles legal matters end-to-end, from intake to delivering the finished work product. The Omnilex Mind is supervised by expert lawyers, making sure everything is in your best interest. And you? You can focus on the business again.</p>
+      </div>
+    </section>
+
+    <!-- LEGAL TEAM -->
+    <section id="team">
+      <div class="wrap pad">
+        <div style="max-width:44rem">
+          <p class="kicker">The legal team</p>
+          <h2 class="reveal">Real lawyers behind <span class="emph">every result</span>.</h2>
+          <p class="lead reveal" style="margin-top:1.25rem;color:var(--muted)">The Omnilex Mind is supervised by a team of qualified Swiss lawyers. Every output is checked, refined, and signed off by senior counsel — so you get AI speed with the accountability of an established firm.</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <div class="team-avatar" aria-hidden="true">EV</div>
+            <p class="team-name">Dr. iur. Elena Vogt</p>
+            <p class="team-role">Managing Partner</p>
+            <p class="team-spec">Commercial contracts, M&amp;A and corporate governance.</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar" aria-hidden="true">JF</div>
+            <p class="team-name">Julien Favre, LL.M.</p>
+            <p class="team-role">Partner</p>
+            <p class="team-spec">Litigation, disputes and claims management.</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar" aria-hidden="true">SM</div>
+            <p class="team-name">Dr. iur. Sophie Meier</p>
+            <p class="team-role">Senior Counsel</p>
+            <p class="team-spec">Employment law, data protection and compliance.</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar" aria-hidden="true">AR</div>
+            <p class="team-name">Andreas Rüegg</p>
+            <p class="team-role">Counsel</p>
+            <p class="team-spec">Regulatory, procurement and cross-border matters.</p>
+          </div>
+        </div>
+        <!-- Placeholder: link to the full team page/section -->
+        <a href="#" class="team-all reveal">See the full team →</a>
       </div>
     </section>
 
