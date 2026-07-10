@@ -80,8 +80,8 @@
   .narrator{margin-top:1.9rem;max-width:58rem;border:1px solid rgba(1,1,1,.14);border-radius:16px;padding:1.5rem 1.75rem 1.9rem;background:#fff}
   .ntrack{position:relative;display:flex;justify-content:space-between;align-items:center;max-width:30rem;margin:.25rem auto 1.6rem}
   .ntrack-line{position:absolute;left:13px;right:13px;top:50%;height:2px;background:rgba(1,1,1,.12);transform:translateY(-50%)}
-  .ntrack-fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold);transition:width .5s ease}
-  .ncase{position:absolute;top:-17px;left:0;width:14px;height:17px;border-radius:3px;background:var(--gold);transform:translateX(-50%);box-shadow:0 0 0 4px rgba(245,166,35,.16);transition:left .6s cubic-bezier(.5,0,.2,1);z-index:3}
+  .ntrack-fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold)}
+  .ncase{position:absolute;top:-17px;left:0;width:14px;height:17px;border-radius:3px;background:var(--gold);transform:translateX(-50%);box-shadow:0 0 0 4px rgba(245,166,35,.16);transition:opacity .3s ease;z-index:3}
   .ncase::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid var(--gold)}
   .nnode{position:relative;z-index:1;width:26px;height:26px;border-radius:50%;border:1.5px solid rgba(1,1,1,.25);background:#fff;color:var(--muted);font-size:.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;font-family:inherit;transition:.3s}
   .nnode.done{border-color:var(--gold);color:var(--ink)}
@@ -319,28 +319,39 @@
       window.addEventListener('resize',onScroll);
       update();
     })();
-    // step-by-step narrator
+    // step-by-step narrator with a continuously moving case marker
     (function(){
       var n=document.querySelector('.narrator'); if(!n)return;
       var steps=[].slice.call(n.querySelectorAll('.nstep'));
       var nodes=[].slice.call(n.querySelectorAll('.nnode'));
       var fill=n.querySelector('.ntrack-fill');
       var casem=n.querySelector('.ncase');
-      var i=0,timer=null,DUR=4200;
-      function show(k){
-        i=(k+steps.length)%steps.length;
-        steps.forEach(function(s,x){s.classList.toggle('active',x===i);});
-        nodes.forEach(function(nd,x){nd.classList.toggle('active',x===i);nd.classList.toggle('done',x<i);});
-        var pct=(steps.length>1?(i/(steps.length-1))*100:0);
-        if(fill)fill.style.width=pct+'%';
-        if(casem)casem.style.left=pct+'%';
+      var N=steps.length; if(!N)return;
+      var SEG=4200, TOTAL=N*SEG, TRAVEL=(N-1)*SEG||1;
+      var origin=performance.now(), raf=null, cur=-1, pausedEl=null;
+      function render(el){
+        var pos=Math.min(1, el/TRAVEL)*100;
+        if(fill)fill.style.width=pos+'%';
+        if(casem){
+          casem.style.left=pos+'%';
+          var f=1;
+          if(el>TOTAL-450)f=(TOTAL-el)/450; else if(el<350)f=el/350;
+          casem.style.opacity=Math.max(0,Math.min(1,f));
+        }
+        var idx=Math.min(N-1, Math.floor(el/SEG));
+        if(idx!==cur){
+          cur=idx;
+          steps.forEach(function(s,x){s.classList.toggle('active',x===idx);});
+          nodes.forEach(function(nd,x){nd.classList.toggle('active',x===idx);nd.classList.toggle('done',x<idx);});
+        }
       }
-      function next(){show(i+1);}
-      function play(){stop();timer=setInterval(next,DUR);}
-      function stop(){if(timer){clearInterval(timer);timer=null;}}
-      nodes.forEach(function(nd,x){nd.addEventListener('click',function(){show(x);play();});});
-      n.addEventListener('mouseenter',stop); n.addEventListener('mouseleave',play);
-      show(0); play();
+      function loop(now){ render((now-origin)%TOTAL); raf=requestAnimationFrame(loop); }
+      function play(){ if(!raf)raf=requestAnimationFrame(loop); }
+      function pause(){ if(raf){cancelAnimationFrame(raf);raf=null;} }
+      n.addEventListener('mouseenter',function(){ pausedEl=(performance.now()-origin)%TOTAL; pause(); });
+      n.addEventListener('mouseleave',function(){ if(pausedEl!=null){origin=performance.now()-pausedEl;pausedEl=null;} play(); });
+      nodes.forEach(function(nd,x){ nd.addEventListener('click',function(){ origin=performance.now()-x*SEG; cur=-1; render(x*SEG); play(); }); });
+      play();
     })();
   </script>
 </body>
