@@ -49,8 +49,9 @@
   .logos{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:3rem 0 5rem}
   @media(min-width:640px){.logos{grid-template-columns:repeat(3,1fr)}}
   @media(min-width:1000px){.logos{grid-template-columns:repeat(5,1fr)}}
-  .logo-tile{border:1px solid rgba(1,1,1,.13);border-radius:12px;aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.28);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;transition:border-color .2s,color .2s}
+  .logo-tile{background:#fff;border:1px solid rgba(1,1,1,.13);border-radius:12px;aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.28);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;transition:border-color .2s,color .2s}
   .logo-tile:hover{border-color:rgba(1,1,1,.34);color:var(--muted)}
+  .logo-tile img{max-width:72%;max-height:56%;width:auto;height:auto;object-fit:contain;display:block}
 
   /* section 2 — customer story path */
   .story{padding:4rem 0 7rem;border-top:1px solid var(--line)}
@@ -109,16 +110,11 @@
         <h1 class="reveal">Companies that <span class="emph">work with us</span>.</h1>
         <p class="lead reveal">From in-house teams to law firms, organisations across Central Europe rely on Omnilex to take high-stakes legal work off their desk — and get it back finished, review-ready, and supervised by expert lawyers.</p>
         <div class="logos">
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
-          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal"><img src="logo-deloitte.png" alt="Deloitte" loading="lazy" /></div>
+          <div class="logo-tile reveal"><img src="logo-bayer.png" alt="Bayer" loading="lazy" /></div>
+          <div class="logo-tile reveal"><img src="logo-swatch.png" alt="Swatch Group" loading="lazy" /></div>
+          <div class="logo-tile reveal"><img src="logo-bystronic.png" alt="Bystronic" loading="lazy" /></div>
+          <div class="logo-tile reveal"><img src="logo-asga.png" alt="ASGA Pensionskasse" loading="lazy" /></div>
         </div>
       </div>
     </section>
