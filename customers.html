@@ -73,7 +73,8 @@
   .stage-kicker::before{content:"";width:7px;height:7px;border-radius:1px;background:var(--gold)}
   .stage h3{margin-top:.85rem;font-size:clamp(1.4rem,2.6vw,2rem);font-weight:600;line-height:1.15;letter-spacing:-0.02em}
   .stage p{margin-top:1rem;max-width:44rem;color:var(--muted);font-size:1.04rem;line-height:1.7}
-  .portrait{margin-top:1.75rem;max-width:44rem;border:1px solid rgba(1,1,1,.13);border-radius:14px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.3);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(180deg,#fff,#f4f3ef)}
+  .portrait{margin-top:1.75rem;max-width:44rem;border:1px solid rgba(1,1,1,.13);border-radius:14px;aspect-ratio:16/9;overflow:hidden;display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.3);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(180deg,#fff,#f4f3ef)}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block}
   .stats{display:flex;flex-wrap:wrap;gap:2.75rem;margin-top:2rem}
   .stat-num{display:block;font-size:2.1rem;font-weight:600;letter-spacing:-0.02em}
   .stat-num::before{content:"";display:inline-block;width:8px;height:8px;border-radius:1px;background:var(--gold);margin-right:.55rem;vertical-align:middle}
@@ -137,7 +138,7 @@
             <p class="stage-kicker">01 — The company</p>
             <h3>ASGA Pension Fund</h3>
             <p>ASGA is an established multi-employer pension fund that provides occupational pension solutions primarily to small and medium-sized businesses across a broad range of industries in Switzerland.</p>
-            <div class="portrait">[ Company portrait ]</div>
+            <div class="portrait"><img src="asga-building.jpg" alt="ASGA Pensionskasse headquarters" loading="lazy" /></div>
           </div>
 
           <div class="stage">
