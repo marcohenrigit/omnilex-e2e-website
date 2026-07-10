@@ -253,7 +253,9 @@
 
   /* top nav */
   .topbar{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.85);backdrop-filter:saturate(1.1) blur(8px);-webkit-backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid rgba(1,1,1,.07)}
-  .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:62px;max-width:none;margin:0;padding:0 1.5rem}
+  @media(min-width:640px){.topbar-inner{padding-left:2.5rem;padding-right:2.5rem}}
+  @media(min-width:1000px){.topbar-inner{padding-left:max(2.5rem,calc((100vw - 84rem)/2));padding-right:2.5rem}}
   .topbar-brand img{height:24px;width:auto;display:block}
   .topbar-nav{display:flex;gap:2.2rem}
   .topbar-nav a{font-size:.95rem;color:var(--muted);position:relative;padding:.25rem 0;transition:color .2s}
@@ -264,7 +266,7 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="wrap topbar-inner">
+    <div class="topbar-inner">
       <a href="index.html" class="topbar-brand" aria-label="Omnilex home"><img src="omnilex-logo.png" alt="Omnilex" /></a>
       <nav class="topbar-nav">
         <a href="index.html" class="active">Home</a>
@@ -289,21 +291,25 @@
           <path d="M0,700 C200,676 340,714 480,704 C620,695 730,724 812,712 L852,712 L852,614 L890,614 L890,588 L928,588 L928,712 L966,712 L966,300 L1032,300 L1032,346 L1088,346 L1088,712 L1152,712 L1152,150 L1236,86 L1320,150 L1320,712 L1362,712 L1362,470 L1402,470 L1402,432 L1472,432 L1472,712 L1560,712 C1610,712 1650,700 1680,700" stroke="#161616" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
           <!-- unlit windows (dark) — only the golden one is working -->
           <g fill="#232320">
-            <rect x="1240" y="158" width="24" height="24" rx="2"/>
-            <rect x="1292" y="158" width="24" height="24" rx="2"/>
-            <rect x="1188" y="214" width="24" height="24" rx="2"/>
-            <rect x="1240" y="214" width="24" height="24" rx="2"/>
-            <rect x="1292" y="214" width="24" height="24" rx="2"/>
-            <rect x="992" y="372" width="24" height="24" rx="2"/>
-            <rect x="1034" y="372" width="24" height="24" rx="2"/>
-            <rect x="992" y="430" width="24" height="24" rx="2"/>
+            <rect x="1170" y="176" width="24" height="24" rx="2"/>
+            <rect x="1278" y="176" width="24" height="24" rx="2"/>
+            <rect x="1170" y="236" width="24" height="24" rx="2"/>
+            <rect x="1224" y="236" width="24" height="24" rx="2"/>
+            <rect x="1278" y="236" width="24" height="24" rx="2"/>
+            <rect x="1170" y="296" width="24" height="24" rx="2"/>
+            <rect x="1224" y="296" width="24" height="24" rx="2"/>
+            <rect x="1278" y="296" width="24" height="24" rx="2"/>
+            <rect x="990" y="420" width="24" height="24" rx="2"/>
+            <rect x="1044" y="420" width="24" height="24" rx="2"/>
+            <rect x="990" y="490" width="24" height="24" rx="2"/>
+            <rect x="1044" y="490" width="24" height="24" rx="2"/>
           </g>
           <g id="hero-tip">
-            <path d="M1190,166 C1168,150 1160,148 1140,148" stroke="#010101" stroke-width="1.4" fill="none"/>
+            <path d="M1224,186 C1198,178 1168,162 1142,154" stroke="#010101" stroke-width="1.4" fill="none"/>
             <rect x="740" y="122" width="400" height="52" rx="12" fill="#010101"/>
             <text x="940" y="154" text-anchor="middle" fill="#FBFBF9" font-size="21" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">Omnilex is working on your case</text>
           </g>
-          <rect id="hero-light" class="hero-light" x="1188" y="158" width="24" height="24" rx="2" role="button" tabindex="0" aria-label="Omnilex is working on your case"/>
+          <rect id="hero-light" class="hero-light" x="1224" y="176" width="24" height="24" rx="2" role="button" tabindex="0" aria-label="Omnilex is working on your case"/>
         </svg>
       </div>
     </section>
