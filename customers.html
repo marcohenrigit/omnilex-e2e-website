@@ -25,6 +25,9 @@
   @media(min-width:1024px){.wrap{padding:0 2.5rem}}
   .emph{font-weight:700}
   .kicker{font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin-bottom:1rem}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
   /* top nav */
   .topbar{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.85);backdrop-filter:saturate(1.1) blur(8px);-webkit-backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid rgba(1,1,1,.07)}
@@ -37,23 +40,43 @@
   .topbar-nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1.5px;background:var(--ink)}
 
   main{flex:1 0 auto}
-  .head{padding:6rem 0 3rem}
-  @media(min-width:1024px){.head{padding:8rem 0 4rem}}
+
+  /* section 1 — companies / logos */
+  .head{padding:6rem 0 2rem}
+  @media(min-width:1024px){.head{padding:8rem 0 3rem}}
   h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;font-weight:400;letter-spacing:-0.03em}
   .lead{margin-top:1.5rem;max-width:42rem;font-size:1.05rem;color:var(--muted);line-height:1.65}
+  .logos{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:3rem 0 5rem}
+  @media(min-width:640px){.logos{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:1000px){.logos{grid-template-columns:repeat(5,1fr)}}
+  .logo-tile{border:1px solid rgba(1,1,1,.13);border-radius:12px;aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.28);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;transition:border-color .2s,color .2s}
+  .logo-tile:hover{border-color:rgba(1,1,1,.34);color:var(--muted)}
 
-  .cases{padding:1rem 0 6rem;display:grid;gap:1.25rem;grid-template-columns:1fr}
-  @media(min-width:720px){.cases{grid-template-columns:1fr 1fr}}
-  @media(min-width:1000px){.cases{grid-template-columns:repeat(3,1fr)}}
-  .case{border:1px solid rgba(1,1,1,.15);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;min-height:15rem;transition:border-color .25s}
-  .case:hover{border-color:rgba(1,1,1,.42)}
-  .case .tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
-  .case .tag::before{content:"";width:7px;height:7px;border-radius:1px;background:var(--gold)}
-  .case h3{margin-top:1rem;font-size:1.3rem;font-weight:600;line-height:1.2}
-  .case p{margin-top:.7rem;font-size:.92rem;color:var(--muted);line-height:1.6}
-  .case .go{margin-top:auto;padding-top:1.25rem;font-size:.9rem;font-weight:500;color:var(--ink)}
-  .case.soon{border-style:dashed;color:var(--muted)}
-  .case.soon h3{color:var(--muted)}
+  /* section 2 — customer story path */
+  .story{padding:4rem 0 7rem;border-top:1px solid var(--line)}
+  .story-head h2{font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.08;font-weight:400;letter-spacing:-0.03em}
+  .story-head .lead{margin-top:1.25rem}
+  .path{position:relative;margin-top:4rem;padding-left:3rem}
+  @media(min-width:640px){.path{padding-left:3.5rem}}
+  .path-line{position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:rgba(1,1,1,.12);border-radius:2px;overflow:hidden}
+  .path-fill{position:absolute;left:0;top:0;width:100%;height:0;background:var(--gold);border-radius:2px}
+  .stage{position:relative;padding-bottom:5rem;opacity:.4;transition:opacity .5s ease}
+  .stage:last-child{padding-bottom:0}
+  .stage.active{opacity:1}
+  .node{position:absolute;top:4px;width:16px;height:16px;border-radius:3px;background:var(--paper);border:2px solid rgba(1,1,1,.28);transition:background .35s,border-color .35s,box-shadow .35s}
+  .path{--nodeleft:-3rem}
+  @media(min-width:640px){.path{--nodeleft:-3.5rem}}
+  .node{left:calc(var(--nodeleft) + 0px)}
+  .stage.active .node{border-color:var(--gold);background:var(--gold);box-shadow:0 0 0 5px rgba(245,166,35,.15)}
+  .stage-kicker{display:flex;align-items:center;gap:.55rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+  .stage-kicker::before{content:"";width:7px;height:7px;border-radius:1px;background:var(--gold)}
+  .stage h3{margin-top:.85rem;font-size:clamp(1.4rem,2.6vw,2rem);font-weight:600;line-height:1.15;letter-spacing:-0.02em}
+  .stage p{margin-top:1rem;max-width:44rem;color:var(--muted);font-size:1.04rem;line-height:1.7}
+  .portrait{margin-top:1.75rem;max-width:44rem;border:1px solid rgba(1,1,1,.13);border-radius:14px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.3);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(180deg,#fff,#f4f3ef)}
+  .stats{display:flex;flex-wrap:wrap;gap:2.75rem;margin-top:2rem}
+  .stat-num{display:block;font-size:2.1rem;font-weight:600;letter-spacing:-0.02em}
+  .stat-num::before{content:"";display:inline-block;width:8px;height:8px;border-radius:1px;background:var(--gold);margin-right:.55rem;vertical-align:middle}
+  .stat-lbl{font-size:.85rem;color:var(--muted)}
 
   footer{border-top:1px solid var(--line);padding:3rem 0;flex-shrink:0}
   .foot{display:flex;flex-direction:column;gap:1.5rem;justify-content:space-between}
@@ -79,31 +102,79 @@
   </header>
 
   <main>
+    <!-- SECTION 1: companies that work with us -->
     <section class="head">
       <div class="wrap">
-        <p class="kicker">Customers</p>
-        <h1>Trusted by legal teams across <span class="emph">Central Europe</span>.</h1>
-        <p class="lead">From in-house teams to law firms, organisations rely on Omnilex to take high-stakes legal work off their desk and return finished, review-ready output — supervised by expert lawyers throughout.</p>
+        <p class="kicker reveal">Customers</p>
+        <h1 class="reveal">Companies that <span class="emph">work with us</span>.</h1>
+        <p class="lead reveal">From in-house teams to law firms, organisations across Central Europe rely on Omnilex to take high-stakes legal work off their desk — and get it back finished, review-ready, and supervised by expert lawyers.</p>
+        <div class="logos">
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+          <div class="logo-tile reveal">Logo</div>
+        </div>
       </div>
     </section>
 
-    <section class="wrap">
-      <div class="cases">
-        <a class="case" href="https://omnilex.ai/dextra-case" target="_blank" rel="noopener noreferrer">
-          <span class="tag">Case study</span>
-          <h3>Dextra</h3>
-          <p>How Dextra put recurring legal work on the Omnilex engine and freed its team for higher-value matters.</p>
-          <span class="go">Read the case →</span>
-        </a>
-        <div class="case soon">
-          <span class="tag">Case study</span>
-          <h3>[ Coming soon ]</h3>
-          <p>Another customer story is on its way. Add the details and I'll drop it in.</p>
+    <!-- SECTION 2: customer story (scroll path) -->
+    <section class="story">
+      <div class="wrap">
+        <div class="story-head">
+          <p class="kicker reveal">Customer story</p>
+          <h2 class="reveal"><span class="emph">[ Customer ]</span> — from overflow to output.</h2>
+          <p class="lead reveal">Follow one matter through the way it used to work, and the way it works now.</p>
         </div>
-        <div class="case soon">
-          <span class="tag">Case study</span>
-          <h3>[ Coming soon ]</h3>
-          <p>Another customer story is on its way. Add the details and I'll drop it in.</p>
+
+        <div class="path">
+          <div class="path-line"><span class="path-fill"></span></div>
+
+          <div class="stage">
+            <span class="node" aria-hidden="true"></span>
+            <p class="stage-kicker">01 — The company</p>
+            <h3>[ Customer name ]</h3>
+            <p>[ Customer ] is a [ industry ] company headquartered in [ city ], serving [ markets / customers ]. Behind the scenes, a lean in-house legal team of [ N ] keeps the business moving — from commercial contracts to regulatory compliance.</p>
+            <div class="portrait">[ Company portrait ]</div>
+          </div>
+
+          <div class="stage">
+            <span class="node" aria-hidden="true"></span>
+            <p class="stage-kicker">02 — The problem</p>
+            <h3>Too much recurring work, too little time.</h3>
+            <p>As the business grew, the legal team was buried in high-volume, repetitive matters — NDAs, vendor agreements, data-processing addenda, and routine regulatory checks. Essential work, but low-leverage, and it crowded out the strategic matters only they could handle.</p>
+          </div>
+
+          <div class="stage">
+            <span class="node" aria-hidden="true"></span>
+            <p class="stage-kicker">03 — How it was solved before</p>
+            <h3>External firms — expensive and slow.</h3>
+            <p>Overflow went to outside law firms, billed by the hour. Turnaround stretched to [ days ], costs were hard to forecast, and every engagement meant re-explaining the business from scratch. Institutional knowledge left the building with each invoice.</p>
+          </div>
+
+          <div class="stage">
+            <span class="node" aria-hidden="true"></span>
+            <p class="stage-kicker">04 — How we handle it</p>
+            <h3>The work itself, delivered end-to-end.</h3>
+            <p>Now the same matters run on Omnilex's AI-native engine and come back finished and review-ready — supervised by expert lawyers at every step. Intake to work product in [ hours ], with a full audit trail from source to result. The in-house team keeps oversight and final sign-off; Omnilex carries the load in between.</p>
+          </div>
+
+          <div class="stage">
+            <span class="node" aria-hidden="true"></span>
+            <p class="stage-kicker">05 — The business case</p>
+            <h3>Faster, cheaper, and off the team's plate.</h3>
+            <p>The same work, delivered for a fraction of the cost and a fraction of the time — without adding headcount, and without giving up control.</p>
+            <div class="stats">
+              <div class="stat"><span class="stat-num">[ X ]%</span><span class="stat-lbl">lower cost per matter</span></div>
+              <div class="stat"><span class="stat-num">[ Y ]×</span><span class="stat-lbl">faster turnaround</span></div>
+              <div class="stat"><span class="stat-num">[ Z ] h</span><span class="stat-lbl">in-house time freed / month</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -124,5 +195,40 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // reveal on scroll
+    (function(){
+      var els=[].slice.call(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+      var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});},{threshold:0.14,rootMargin:'0px 0px -8% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+    // visual path: fill spine + activate stages on scroll
+    (function(){
+      var path=document.querySelector('.path');
+      var fill=document.querySelector('.path-fill');
+      var stages=[].slice.call(document.querySelectorAll('.stage'));
+      if(!path||!fill)return;
+      var ticking=false;
+      function update(){
+        ticking=false;
+        var rect=path.getBoundingClientRect();
+        var line=Math.max(1,rect.height);
+        var marker=window.innerHeight*0.52;
+        var pct=Math.max(0,Math.min(1,(marker-rect.top)/line));
+        fill.style.height=(pct*100)+'%';
+        stages.forEach(function(s){
+          var n=s.querySelector('.node');
+          var nr=n.getBoundingClientRect();
+          s.classList.toggle('active', nr.top<=marker);
+        });
+      }
+      function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(update);}}
+      window.addEventListener('scroll',onScroll,{passive:true});
+      window.addEventListener('resize',onScroll);
+      update();
+    })();
+  </script>
 </body>
 </html>
