@@ -38,6 +38,8 @@
   .topbar-nav a:hover{color:var(--ink)}
   .topbar-nav a.active{color:var(--ink)}
   .topbar-nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1.5px;background:var(--ink)}
+  .cityline{width:100%;line-height:0;margin-top:2rem}
+  .cityline img{width:100%;height:auto;display:block}
 
   main{flex:1 0 auto}
 
@@ -75,8 +77,23 @@
   .stage p{margin-top:1rem;max-width:44rem;color:var(--muted);font-size:1.04rem;line-height:1.7}
   .portrait{margin-top:1.75rem;max-width:44rem;border:1px solid rgba(1,1,1,.13);border-radius:14px;aspect-ratio:16/9;overflow:hidden;display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.3);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(180deg,#fff,#f4f3ef)}
   .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block}
-  .claim-visual{margin-top:1.9rem;max-width:100%}
-  .claim-visual svg{width:100%;height:auto;display:block}
+  .narrator{margin-top:1.9rem;max-width:58rem;border:1px solid rgba(1,1,1,.14);border-radius:16px;padding:1.5rem 1.75rem 1.9rem;background:#fff}
+  .ntrack{position:relative;display:flex;justify-content:space-between;align-items:center;max-width:30rem;margin:.25rem auto 1.6rem}
+  .ntrack-line{position:absolute;left:13px;right:13px;top:50%;height:2px;background:rgba(1,1,1,.12);transform:translateY(-50%)}
+  .ntrack-fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold);transition:width .5s ease}
+  .nnode{position:relative;z-index:1;width:26px;height:26px;border-radius:50%;border:1.5px solid rgba(1,1,1,.25);background:#fff;color:var(--muted);font-size:.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;font-family:inherit;transition:.3s}
+  .nnode.done{border-color:var(--gold);color:var(--ink)}
+  .nnode.active{border-color:var(--gold);background:var(--gold);color:#fff;box-shadow:0 0 0 5px rgba(245,166,35,.15)}
+  .nstage{position:relative;min-height:14rem}
+  .nstep{position:absolute;inset:0;display:flex;gap:2rem;align-items:center;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s;pointer-events:none}
+  .nstep.active{opacity:1;transform:none;pointer-events:auto}
+  .nstep-vis{flex:0 0 auto;width:248px}
+  .nstep-vis svg{width:100%;height:auto;display:block}
+  .nstep-txt{flex:1 1 auto}
+  .nstep-num{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .nstep-txt h4{margin-top:.5rem;font-size:1.35rem;font-weight:600;letter-spacing:-0.02em;line-height:1.15}
+  .nstep-txt p{margin-top:.6rem;color:var(--muted);font-size:1rem;line-height:1.6}
+  @media(max-width:680px){.nstage{min-height:23rem}.nstep{flex-direction:column;gap:1.1rem;align-items:flex-start}.nstep-vis{width:100%;max-width:240px}}
   .stats{display:flex;flex-wrap:wrap;gap:2.75rem;margin-top:2rem}
   .stat-num{display:block;font-size:2.1rem;font-weight:600;letter-spacing:-0.02em}
   .stat-num::before{content:"";display:inline-block;width:8px;height:8px;border-radius:1px;background:var(--gold);margin-right:.55rem;vertical-align:middle}
@@ -162,132 +179,94 @@
             <span class="node" aria-hidden="true"></span>
             <p class="stage-kicker">04 — How we handle it</p>
             <h3>Handling claims AI-native and end-to-end</h3>
-            <div class="claim-visual reveal" role="img" aria-label="Animated diagram: an ASGA invalidity claim and its 1,000+ pages of documents enter the Omnilex Mind, which splits and categorises them, analyses many in parallel against the law and ASGA policies, builds a timeline of events and flags contradictions, escalates to Omnilex lawyers when needed, then produces a claim report that is signed off and delivered back to ASGA via the portal.">
-              <svg viewBox="0 0 1160 560" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
-                <defs>
-                  <marker id="cvar" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L6,3 L0,6 Z" fill="#161616"/></marker>
-                </defs>
+            <div class="narrator reveal" role="group" aria-label="Step-by-step: how the Omnilex Mind handles an ASGA claim, from intake through analysis and structured findings to a signed-off recommendation delivered back to ASGA.">
+              <div class="ntrack">
+                <div class="ntrack-line"><span class="ntrack-fill"></span></div>
+                <button type="button" class="nnode active">1</button>
+                <button type="button" class="nnode">2</button>
+                <button type="button" class="nnode">3</button>
+                <button type="button" class="nnode">4</button>
+                <button type="button" class="nnode">5</button>
+                <button type="button" class="nnode">6</button>
+              </div>
+              <div class="nstage">
 
-                <!-- connectors -->
-                <path d="M162,250 L196,250" stroke="#161616" stroke-width="1.4" marker-end="url(#cvar)"/>
-                <path d="M340,250 L388,250" stroke="#161616" stroke-width="1.4" marker-end="url(#cvar)"/>
-                <path d="M566,250 L620,250" stroke="#161616" stroke-width="1.4" marker-end="url(#cvar)"/>
-                <path d="M772,250 L812,250" stroke="#161616" stroke-width="1.4" marker-end="url(#cvar)"/>
-                <path d="M956,250 L998,250" stroke="#161616" stroke-width="1.4" marker-end="url(#cvar)"/>
-                <path d="M672,206 L672,132" stroke="#161616" stroke-width="1.3" stroke-dasharray="3 5" marker-end="url(#cvar)"/>
-                <path d="M694,132 L694,206" stroke="#161616" stroke-width="1.3" stroke-dasharray="3 5" marker-end="url(#cvar)"/>
+                <div class="nstep active">
+                  <div class="nstep-vis"><svg viewBox="0 0 240 180" fill="none" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+                    <g stroke="#161616" stroke-width="1.8"><path d="M78,38 h50 l20,20 v82 h-70 z"/><path d="M128,38 v20 h20"/></g>
+                    <g stroke="#161616" stroke-width="1.5"><line x1="90" y1="82" x2="138" y2="82"/><line x1="90" y1="100" x2="138" y2="100"/><line x1="90" y1="118" x2="122" y2="118"/></g>
+                    <circle cx="150" cy="126" r="16" fill="#F5A623"/><text x="150" y="133" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">!</text>
+                  </svg></div>
+                  <div class="nstep-txt"><span class="nstep-num">Step 1 / 6</span><h4>An invalidity claim arrives</h4><p>An ASGA insuree files an invalidity claim, and it lands with the fund's team to investigate.</p></div>
+                </div>
 
-                <!-- 1 CLAIM -->
-                <rect x="26" y="206" width="136" height="88" rx="12" stroke="#161616" stroke-width="1.7"/>
-                <path d="M78,228 h30 l10,10 v30 h-40 z" stroke="#161616" stroke-width="1.4"/>
-                <path d="M108,228 v10 h10" stroke="#161616" stroke-width="1.4"/>
-                <text x="94" y="256" text-anchor="middle" fill="#F5A623" font-size="16" font-weight="700">!</text>
-                <text x="94" y="316" text-anchor="middle" fill="#010101" font-size="13.5" font-weight="600">Invalidity claim</text>
-                <text x="94" y="334" text-anchor="middle" fill="rgba(1,1,1,.55)" font-size="11.5">insuree → ASGA</text>
+                <div class="nstep">
+                  <div class="nstep-vis"><svg viewBox="0 0 240 180" fill="none" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+                    <g stroke="#161616" stroke-width="1.8" fill="#fff"><rect x="66" y="60" width="58" height="76" rx="4"/><rect x="80" y="46" width="58" height="76" rx="4"/><rect x="94" y="32" width="58" height="76" rx="4"/></g>
+                    <g stroke="#161616" stroke-width="1.4"><line x1="104" y1="50" x2="142" y2="50"/><line x1="104" y1="64" x2="142" y2="64"/><line x1="104" y1="78" x2="132" y2="78"/></g>
+                    <text x="116" y="164" text-anchor="middle" fill="#F5A623" font-size="17" font-weight="700">1,000+ pages</text>
+                  </svg></div>
+                  <div class="nstep-txt"><span class="nstep-num">Step 2 / 6</span><h4>Thousands of pages</h4><p>Each claim arrives with more than 1,000 pages of medical records, correspondence and documentation.</p></div>
+                </div>
 
-                <!-- 2 DOCUMENTS -->
-                <rect x="196" y="234" width="34" height="44" rx="3" stroke="#161616" stroke-width="1.4"/>
-                <rect x="206" y="226" width="34" height="44" rx="3" stroke="#161616" stroke-width="1.4"/>
-                <rect x="216" y="218" width="34" height="44" rx="3" stroke="#161616" stroke-width="1.4" fill="#FBFBF9"/>
-                <line x1="223" y1="230" x2="243" y2="230" stroke="#161616" stroke-width="1.2"/>
-                <line x1="223" y1="238" x2="243" y2="238" stroke="#161616" stroke-width="1.2"/>
-                <line x1="223" y1="246" x2="238" y2="246" stroke="#161616" stroke-width="1.2"/>
-                <text x="266" y="316" text-anchor="middle" fill="#010101" font-size="13.5" font-weight="600">1,000+ pages</text>
-                <text x="266" y="334" text-anchor="middle" fill="rgba(1,1,1,.55)" font-size="11.5">case documents</text>
+                <div class="nstep">
+                  <div class="nstep-vis"><svg viewBox="0 0 240 180" fill="none" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+                    <circle cx="72" cy="90" r="40" stroke="#F5A623" stroke-width="1.6"><animate attributeName="r" values="40;54" dur="2.6s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.7;0" dur="2.6s" repeatCount="indefinite"/></circle>
+                    <circle cx="72" cy="90" r="40" stroke="#161616" stroke-width="1.8"/>
+                    <text x="72" y="85" text-anchor="middle" font-size="8.5" letter-spacing="1.2" fill="rgba(1,1,1,.6)">OMNILEX</text>
+                    <text x="72" y="104" text-anchor="middle" font-size="17" font-family="'Signifier','Instrument Serif',Georgia,serif">Mind</text>
+                    <g stroke="#161616" stroke-width="1.5"><path d="M114,74 L150,56"/><path d="M114,90 L150,90"/><path d="M114,106 L150,124"/></g>
+                    <g stroke="#161616" stroke-width="1.6" fill="#fff"><rect x="152" y="46" width="54" height="22" rx="4"/><rect x="152" y="79" width="54" height="22" rx="4"/><rect x="152" y="112" width="54" height="22" rx="4"/></g>
+                  </svg></div>
+                  <div class="nstep-txt"><span class="nstep-num">Step 3 / 6</span><h4>Into the Omnilex Mind</h4><p>The Mind splits the file back into its original documents and categorises every one of them.</p></div>
+                </div>
 
-                <!-- 3 OMNILEX MIND -->
-                <circle cx="476" cy="250" r="86" stroke="#F5A623" stroke-width="1.5" stroke-opacity="0.7"><animate attributeName="r" values="86;110" dur="2.8s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.7;0" dur="2.8s" repeatCount="indefinite"/></circle>
-                <circle cx="476" cy="250" r="86" stroke="#F5A623" stroke-width="1.5" stroke-opacity="0.7"><animate attributeName="r" values="86;110" dur="2.8s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="0.7;0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/></circle>
-                <circle cx="476" cy="250" r="86" stroke="#161616" stroke-width="1.8"/>
-                <text x="476" y="240" text-anchor="middle" fill="rgba(1,1,1,.7)" font-size="11" letter-spacing="1.4">OMNILEX</text>
-                <text x="476" y="272" text-anchor="middle" fill="#010101" font-size="30" font-family="'Signifier','Instrument Serif',Georgia,serif">Mind</text>
-                <text x="476" y="150" text-anchor="middle" fill="rgba(1,1,1,.5)" font-size="11.5">splits &amp; categorises documents</text>
-                <g stroke="#161616" stroke-width="1.3">
-                  <rect x="404" y="372" width="30" height="38" rx="3"/>
-                  <rect x="444" y="372" width="30" height="38" rx="3"/>
-                  <rect x="484" y="372" width="30" height="38" rx="3"/>
-                  <rect x="524" y="372" width="30" height="38" rx="3"/>
-                </g>
-                <g fill="#F5A623">
-                  <rect x="404" y="372" width="30" height="38" rx="3" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="2s" begin="0s" repeatCount="indefinite"/></rect>
-                  <rect x="444" y="372" width="30" height="38" rx="3" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="2s" begin="0.5s" repeatCount="indefinite"/></rect>
-                  <rect x="484" y="372" width="30" height="38" rx="3" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="2s" begin="1s" repeatCount="indefinite"/></rect>
-                  <rect x="524" y="372" width="30" height="38" rx="3" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="2s" begin="1.5s" repeatCount="indefinite"/></rect>
-                </g>
-                <line x1="476" y1="336" x2="476" y2="366" stroke="#161616" stroke-width="1.3"/>
-                <text x="476" y="430" text-anchor="middle" fill="rgba(1,1,1,.6)" font-size="11.5">analyses in parallel</text>
-                <text x="476" y="447" text-anchor="middle" fill="rgba(1,1,1,.5)" font-size="11">vs. law &amp; ASGA policies</text>
+                <div class="nstep">
+                  <div class="nstep-vis"><svg viewBox="0 0 240 180" fill="none" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+                    <g stroke="#161616" stroke-width="1.6" fill="#fff"><rect x="36" y="46" width="30" height="44" rx="3"/><rect x="76" y="46" width="30" height="44" rx="3"/><rect x="116" y="46" width="30" height="44" rx="3"/><rect x="156" y="46" width="30" height="44" rx="3"/></g>
+                    <g fill="#F5A623"><rect x="36" y="46" width="30" height="44" rx="3" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="1.8s" begin="0s" repeatCount="indefinite"/></rect><rect x="76" y="46" width="30" height="44" rx="3" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="1.8s" begin=".45s" repeatCount="indefinite"/></rect><rect x="116" y="46" width="30" height="44" rx="3" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="1.8s" begin=".9s" repeatCount="indefinite"/></rect><rect x="156" y="46" width="30" height="44" rx="3" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="1.8s" begin="1.35s" repeatCount="indefinite"/></rect></g>
+                    <g stroke="#161616" stroke-width="1.3" fill="none"><rect x="44" y="112" width="60" height="26" rx="13"/><rect x="118" y="112" width="78" height="26" rx="13"/></g>
+                    <text x="74" y="129" text-anchor="middle" font-size="12" fill="rgba(1,1,1,.62)">the law</text>
+                    <text x="157" y="129" text-anchor="middle" font-size="12" fill="rgba(1,1,1,.62)">ASGA policies</text>
+                  </svg></div>
+                  <div class="nstep-txt"><span class="nstep-num">Step 4 / 6</span><h4>Analysed in parallel</h4><p>Many documents are analysed at once and checked against the law and ASGA's policies.</p></div>
+                </div>
 
-                <!-- 4 TIMELINE + FLAGS -->
-                <rect x="620" y="206" width="152" height="88" rx="12" stroke="#161616" stroke-width="1.7"/>
-                <line x1="636" y1="262" x2="756" y2="262" stroke="#161616" stroke-width="1.3"/>
-                <circle cx="650" cy="262" r="3.2" fill="#161616"/>
-                <circle cx="682" cy="262" r="3.2" fill="#161616"/>
-                <circle cx="714" cy="262" r="3.2" fill="#161616"/>
-                <circle cx="746" cy="262" r="3.2" fill="#161616"/>
-                <path d="M714,262 v-20 h14 l-4,5 4,5 h-14" fill="#F5A623" stroke="#F5A623" stroke-width="1"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.6s" repeatCount="indefinite"/></path>
-                <text x="696" y="314" text-anchor="middle" fill="#010101" font-size="13.5" font-weight="600">Timeline of events</text>
-                <text x="696" y="332" text-anchor="middle" fill="rgba(1,1,1,.55)" font-size="11.5">flags contradictions</text>
+                <div class="nstep">
+                  <div class="nstep-vis"><svg viewBox="0 0 240 180" fill="none" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+                    <g font-size="13.5" fill="#010101"><rect x="24" y="34" width="10" height="10" rx="2" fill="#F5A623"/><text x="44" y="44">Timeline of events</text><rect x="24" y="66" width="10" height="10" rx="2" fill="#F5A623"/><text x="44" y="76">Causality of invalidity</text><rect x="24" y="98" width="10" height="10" rx="2" fill="#F5A623"/><text x="44" y="108">Coverage of insurance</text><text x="44" y="140" fill="rgba(1,1,1,.5)" font-size="16">...</text></g>
+                  </svg></div>
+                  <div class="nstep-txt"><span class="nstep-num">Step 5 / 6</span><h4>Structured findings</h4><p>The Mind builds a structured picture &mdash; timeline of events, causality of invalidity, coverage of insurance and more &mdash; flags contradictions, and escalates to Omnilex lawyers when needed.</p></div>
+                </div>
 
-                <!-- LAWYERS (escalation) -->
-                <rect x="596" y="70" width="176" height="62" rx="12" stroke="#161616" stroke-width="1.7"/>
-                <text x="684" y="100" text-anchor="middle" fill="#010101" font-size="13.5" font-weight="600">Omnilex lawyers</text>
-                <text x="684" y="118" text-anchor="middle" fill="rgba(1,1,1,.55)" font-size="11.5">review &amp; sign-off</text>
-                <circle r="3.6" fill="#F5A623"><animateMotion dur="2.6s" repeatCount="indefinite" path="M672,206 L672,132"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="2.6s" repeatCount="indefinite"/></circle>
-                <circle r="3.6" fill="#F5A623"><animateMotion dur="2.6s" begin="-1.3s" repeatCount="indefinite" path="M694,132 L694,206"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="2.6s" begin="-1.3s" repeatCount="indefinite"/></circle>
+                <div class="nstep">
+                  <div class="nstep-vis"><svg viewBox="0 0 240 180" fill="none" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+                    <g stroke="#161616" stroke-width="1.7"><path d="M26,54 h34 l10,10 v52 h-44 z"/><line x1="34" y1="74" x2="62" y2="74"/><line x1="34" y1="86" x2="62" y2="86"/><line x1="34" y1="98" x2="54" y2="98"/><path d="M78,90 L96,90"/><circle cx="120" cy="90" r="20"/><path d="M138,90 L156,90"/><rect x="166" y="66" width="48" height="34" rx="4"/><line x1="190" y1="100" x2="190" y2="110"/><line x1="176" y1="110" x2="204" y2="110"/></g>
+                    <path d="M111,90 l6,7 12,-15" stroke="#F5A623" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <text x="120" y="150" text-anchor="middle" font-size="11" fill="rgba(1,1,1,.55)">report &#8594; sign-off &#8594; ASGA</text>
+                  </svg></div>
+                  <div class="nstep-txt"><span class="nstep-num">Step 6 / 6</span><h4>Signed off &amp; delivered</h4><p>A recommendation on how to proceed is written, signed off by an Omnilex expert lawyer, and returned to ASGA through the portal.</p></div>
+                </div>
 
-                <!-- 5 REPORT -->
-                <rect x="812" y="206" width="144" height="88" rx="12" stroke="#161616" stroke-width="1.7"/>
-                <path d="M866,224 h34 l8,8 v40 h-42 z" stroke="#161616" stroke-width="1.4"/>
-                <line x1="872" y1="242" x2="902" y2="242" stroke="#161616" stroke-width="1.2"/>
-                <line x1="872" y1="252" x2="902" y2="252" stroke="#161616" stroke-width="1.2"/>
-                <line x1="872" y1="262" x2="894" y2="262" stroke="#161616" stroke-width="1.2"/>
-                <text x="884" y="314" text-anchor="middle" fill="#010101" font-size="13.5" font-weight="600">Claim report</text>
-                <text x="884" y="332" text-anchor="middle" fill="rgba(1,1,1,.55)" font-size="11.5">recommended handling</text>
-
-                <!-- 6 ASGA PORTAL -->
-                <rect x="998" y="206" width="140" height="88" rx="12" stroke="#161616" stroke-width="1.7"/>
-                <rect x="1044" y="226" width="48" height="34" rx="3" stroke="#161616" stroke-width="1.4"/>
-                <line x1="1068" y1="260" x2="1068" y2="270" stroke="#161616" stroke-width="1.4"/>
-                <line x1="1056" y1="270" x2="1080" y2="270" stroke="#161616" stroke-width="1.4"/>
-                <circle cx="1058" cy="243" r="3" fill="#F5A623"/>
-                <text x="1068" y="314" text-anchor="middle" fill="#010101" font-size="13.5" font-weight="600">Back to ASGA</text>
-                <text x="1068" y="332" text-anchor="middle" fill="rgba(1,1,1,.55)" font-size="11.5">via portal</text>
-
-                <!-- flowing document tokens along the pipeline -->
-                <g fill="#F5A623" opacity="0.26">
-                  <circle r="9"><animateMotion dur="9s" repeatCount="indefinite" path="M172,250 L1066,250"/></circle>
-                  <circle r="9"><animateMotion dur="9s" begin="-1.8s" repeatCount="indefinite" path="M172,250 L1066,250"/></circle>
-                  <circle r="9"><animateMotion dur="9s" begin="-3.6s" repeatCount="indefinite" path="M172,250 L1066,250"/></circle>
-                  <circle r="9"><animateMotion dur="9s" begin="-5.4s" repeatCount="indefinite" path="M172,250 L1066,250"/></circle>
-                  <circle r="9"><animateMotion dur="9s" begin="-7.2s" repeatCount="indefinite" path="M172,250 L1066,250"/></circle>
-                </g>
-                <g fill="#F5A623">
-                  <rect x="-5.5" y="-6.5" width="11" height="13" rx="2"><animateMotion dur="9s" repeatCount="indefinite" path="M172,250 L1066,250"/></rect>
-                  <rect x="-5.5" y="-6.5" width="11" height="13" rx="2"><animateMotion dur="9s" begin="-1.8s" repeatCount="indefinite" path="M172,250 L1066,250"/></rect>
-                  <rect x="-5.5" y="-6.5" width="11" height="13" rx="2"><animateMotion dur="9s" begin="-3.6s" repeatCount="indefinite" path="M172,250 L1066,250"/></rect>
-                  <rect x="-5.5" y="-6.5" width="11" height="13" rx="2"><animateMotion dur="9s" begin="-5.4s" repeatCount="indefinite" path="M172,250 L1066,250"/></rect>
-                  <rect x="-5.5" y="-6.5" width="11" height="13" rx="2"><animateMotion dur="9s" begin="-7.2s" repeatCount="indefinite" path="M172,250 L1066,250"/></rect>
-                </g>
-              </svg>
+              </div>
             </div>
           </div>
 
           <div class="stage">
             <span class="node" aria-hidden="true"></span>
-            <p class="stage-kicker">05 — The business case</p>
-            <h3>Faster, cheaper, and off the team's plate.</h3>
-            <p>The same work, delivered for a fraction of the cost and a fraction of the time — without adding headcount, and without giving up control.</p>
+            <p class="stage-kicker">05 — The impact</p>
+            <h3>Saving millions each year</h3>
+            <p>The Omnilex Mind investigates each of the claims immediately and works out a recommendation on how to proceed that is first signed off by the Omnilex expert lawyer and then gets back to ASGA. Already today, 2% of the claims that got paid out before are rightfully rejected, resulting in USD 11.24M of saved costs each year.</p>
             <div class="stats">
-              <div class="stat"><span class="stat-num">[ X ]%</span><span class="stat-lbl">lower cost per matter</span></div>
-              <div class="stat"><span class="stat-num">[ Y ]×</span><span class="stat-lbl">faster turnaround</span></div>
-              <div class="stat"><span class="stat-num">[ Z ] h</span><span class="stat-lbl">in-house time freed / month</span></div>
+              <div class="stat"><span class="stat-num">USD 11.24M</span><span class="stat-lbl">saved claims payouts per year</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <div class="cityline" aria-hidden="true"><img src="sf-skyline.svg" alt="" /></div>
 
   <footer>
     <div class="wrap foot">
@@ -337,6 +316,26 @@
       window.addEventListener('scroll',onScroll,{passive:true});
       window.addEventListener('resize',onScroll);
       update();
+    })();
+    // step-by-step narrator
+    (function(){
+      var n=document.querySelector('.narrator'); if(!n)return;
+      var steps=[].slice.call(n.querySelectorAll('.nstep'));
+      var nodes=[].slice.call(n.querySelectorAll('.nnode'));
+      var fill=n.querySelector('.ntrack-fill');
+      var i=0,timer=null,DUR=4200;
+      function show(k){
+        i=(k+steps.length)%steps.length;
+        steps.forEach(function(s,x){s.classList.toggle('active',x===i);});
+        nodes.forEach(function(nd,x){nd.classList.toggle('active',x===i);nd.classList.toggle('done',x<i);});
+        if(fill)fill.style.width=(steps.length>1?(i/(steps.length-1))*100:0)+'%';
+      }
+      function next(){show(i+1);}
+      function play(){stop();timer=setInterval(next,DUR);}
+      function stop(){if(timer){clearInterval(timer);timer=null;}}
+      nodes.forEach(function(nd,x){nd.addEventListener('click',function(){show(x);play();});});
+      n.addEventListener('mouseenter',stop); n.addEventListener('mouseleave',play);
+      show(0); play();
     })();
   </script>
 </body>
