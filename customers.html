@@ -81,11 +81,13 @@
   .ntrack{position:relative;display:flex;justify-content:space-between;align-items:center;max-width:30rem;margin:.25rem auto 1.6rem}
   .ntrack-line{position:absolute;left:13px;right:13px;top:50%;height:2px;background:rgba(1,1,1,.12);transform:translateY(-50%)}
   .ntrack-fill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--gold);transition:width .5s ease}
+  .ncase{position:absolute;top:-17px;left:0;width:14px;height:17px;border-radius:3px;background:var(--gold);transform:translateX(-50%);box-shadow:0 0 0 4px rgba(245,166,35,.16);transition:left .6s cubic-bezier(.5,0,.2,1);z-index:3}
+  .ncase::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid var(--gold)}
   .nnode{position:relative;z-index:1;width:26px;height:26px;border-radius:50%;border:1.5px solid rgba(1,1,1,.25);background:#fff;color:var(--muted);font-size:.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;font-family:inherit;transition:.3s}
   .nnode.done{border-color:var(--gold);color:var(--ink)}
   .nnode.active{border-color:var(--gold);background:var(--gold);color:#fff;box-shadow:0 0 0 5px rgba(245,166,35,.15)}
   .nstage{position:relative;min-height:14rem}
-  .nstep{position:absolute;inset:0;display:flex;gap:2rem;align-items:center;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s;pointer-events:none}
+  .nstep{position:absolute;inset:0;display:flex;gap:2rem;align-items:center;opacity:0;transform:translateX(30px);transition:opacity .5s,transform .5s;pointer-events:none}
   .nstep.active{opacity:1;transform:none;pointer-events:auto}
   .nstep-vis{flex:0 0 auto;width:248px}
   .nstep-vis svg{width:100%;height:auto;display:block}
@@ -181,7 +183,7 @@
             <h3>Handling claims AI-native and end-to-end</h3>
             <div class="narrator reveal" role="group" aria-label="Step-by-step: how the Omnilex Mind handles an ASGA claim, from intake through analysis and structured findings to a signed-off recommendation delivered back to ASGA.">
               <div class="ntrack">
-                <div class="ntrack-line"><span class="ntrack-fill"></span></div>
+                <div class="ntrack-line"><span class="ntrack-fill"></span><span class="ncase" aria-hidden="true"></span></div>
                 <button type="button" class="nnode active">1</button>
                 <button type="button" class="nnode">2</button>
                 <button type="button" class="nnode">3</button>
@@ -323,12 +325,15 @@
       var steps=[].slice.call(n.querySelectorAll('.nstep'));
       var nodes=[].slice.call(n.querySelectorAll('.nnode'));
       var fill=n.querySelector('.ntrack-fill');
+      var casem=n.querySelector('.ncase');
       var i=0,timer=null,DUR=4200;
       function show(k){
         i=(k+steps.length)%steps.length;
         steps.forEach(function(s,x){s.classList.toggle('active',x===i);});
         nodes.forEach(function(nd,x){nd.classList.toggle('active',x===i);nd.classList.toggle('done',x<i);});
-        if(fill)fill.style.width=(steps.length>1?(i/(steps.length-1))*100:0)+'%';
+        var pct=(steps.length>1?(i/(steps.length-1))*100:0);
+        if(fill)fill.style.width=pct+'%';
+        if(casem)casem.style.left=pct+'%';
       }
       function next(){show(i+1);}
       function play(){stop();timer=setInterval(next,DUR);}
