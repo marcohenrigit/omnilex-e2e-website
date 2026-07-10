@@ -222,12 +222,20 @@
   .team-all:hover{opacity:.65}
   .team-row{margin-top:2.75rem}
   .team-rowlabel{font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:1.25rem}
-  .team-card.photo{background:transparent;border:none;padding:0;align-items:stretch}
-  .team-card.photo:hover{border-color:transparent}
-  .team-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:14px;background:#EFEEEA;display:block}
-  .team-card.photo .team-name{margin-top:.85rem;padding-left:.15rem}
-  .team-card.photo .team-role{padding-left:.15rem}
-  .team-card.photo .team-spec{padding-left:.15rem;margin-top:.5rem}
+  .team-card.photo{background:transparent;border:1px solid rgba(1,1,1,.15);border-radius:14px;padding:.7rem;align-items:stretch;transition:border-color .25s}
+  .team-card.photo:hover{border-color:rgba(1,1,1,.4)}
+  .team-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:8px;background:#EFEEEA;display:block}
+  .team-card.photo .team-name{display:flex;align-items:center;gap:.45rem;margin-top:.75rem;padding-left:.1rem;font-weight:600}
+  .team-card.photo .team-name::before{content:"";flex:0 0 auto;width:7px;height:7px;border-radius:1px;background:#F5A623}
+  .team-card.photo .team-role{padding-left:calc(.1rem + 12px)}
+  .team-card.photo .team-spec{padding-left:calc(.1rem + 12px);margin-top:.5rem}
+  /* team carousel (single auto-scrolling line) */
+  .team-carousel{margin-top:3rem;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+  .team-track{display:flex;width:max-content;animation:teamscroll 95s linear infinite}
+  .team-carousel:hover .team-track{animation-play-state:paused}
+  .team-track .team-card.photo{flex:0 0 208px;width:208px;margin-right:1.25rem}
+  @keyframes teamscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.team-track{animation:none}}
 
   /* technology pillars */
   .pillars{margin-top:3rem;display:grid;gap:2.5rem;grid-template-columns:1fr}
@@ -242,29 +250,32 @@
     transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
   .reveal.vis{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* top nav */
+  .topbar{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.85);backdrop-filter:saturate(1.1) blur(8px);-webkit-backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid rgba(1,1,1,.07)}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .topbar-brand img{height:24px;width:auto;display:block}
+  .topbar-nav{display:flex;gap:2.2rem}
+  .topbar-nav a{font-size:.95rem;color:var(--muted);position:relative;padding:.25rem 0;transition:color .2s}
+  .topbar-nav a:hover{color:var(--ink)}
+  .topbar-nav a.active{color:var(--ink)}
+  .topbar-nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1.5px;background:var(--ink)}
 </style>
 </head>
 <body>
-  <!-- Top bar temporarily removed — restore this block to bring it back.
-  <header>
-    <div class="wrap navbar">
-      <a href="#top" class="brand"><span class="mark">O</span>Omnilex</a>
-      <nav class="navlinks">
-        <a href="#overview">Overview</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#scope">Scope</a>
-        <a href="#why-omnilex">Why Omnilex</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="index.html" class="topbar-brand" aria-label="Omnilex home"><img src="omnilex-logo.png" alt="Omnilex" /></a>
+      <nav class="topbar-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="customers.html">Customers</a>
       </nav>
-      <a href="https://omnilex.ai/demo-call" class="btn btn-dark btn-sm">Talk to us</a>
     </div>
   </header>
-  -->
-
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <a class="hero-logo" href="#top" aria-label="Omnilex home"><img src="omnilex-logo.png" alt="Omnilex" /></a>
       <div class="hero-inner">
         <h1 class="reveal">The best <span class="emph">legal counsel</span> you could have.</h1>
         <p class="lead reveal">Omnilex is your legal counsel, run by AI and supervised by expert lawyers. Top-tier legal work that is cost-efficient, fast, and adaptive to your needs.</p>
@@ -276,6 +287,17 @@
       <div class="hero-skyline">
         <svg viewBox="0 0 1680 780" xmlns="http://www.w3.org/2000/svg" fill="none">
           <path d="M0,700 C200,676 340,714 480,704 C620,695 730,724 812,712 L852,712 L852,614 L890,614 L890,588 L928,588 L928,712 L966,712 L966,300 L1032,300 L1032,346 L1088,346 L1088,712 L1152,712 L1152,150 L1236,86 L1320,150 L1320,712 L1362,712 L1362,470 L1402,470 L1402,432 L1472,432 L1472,712 L1560,712 C1610,712 1650,700 1680,700" stroke="#161616" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+          <!-- unlit windows (dark) — only the golden one is working -->
+          <g fill="#232320">
+            <rect x="1240" y="158" width="24" height="24" rx="2"/>
+            <rect x="1292" y="158" width="24" height="24" rx="2"/>
+            <rect x="1188" y="214" width="24" height="24" rx="2"/>
+            <rect x="1240" y="214" width="24" height="24" rx="2"/>
+            <rect x="1292" y="214" width="24" height="24" rx="2"/>
+            <rect x="992" y="372" width="24" height="24" rx="2"/>
+            <rect x="1034" y="372" width="24" height="24" rx="2"/>
+            <rect x="992" y="430" width="24" height="24" rx="2"/>
+          </g>
           <g id="hero-tip">
             <path d="M1190,166 C1168,150 1160,148 1140,148" stroke="#010101" stroke-width="1.4" fill="none"/>
             <rect x="740" y="122" width="400" height="52" rx="12" fill="#010101"/>
@@ -355,30 +377,30 @@
             <text x="951" y="312" text-anchor="middle" fill="#010101" font-size="16" font-weight="600" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">Resolved matters</text>
             <text x="951" y="338" text-anchor="middle" fill="rgba(1,1,1,0.6)" font-size="12" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">ready for the business to implement</text>
 
-            <!-- SHUTTLE DOTS: many, looping business <-> workspace and back -->
+            <!-- SHUTTLE DOTS: business <-> workspace; fade out inside business, reappear on leaving -->
             <g fill="#F5A623" opacity="0.28">
-              <circle r="8"><animateMotion dur="4.8s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
-              <circle r="8"><animateMotion dur="4.8s" begin="-0.96s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
-              <circle r="8"><animateMotion dur="4.8s" begin="-1.92s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
-              <circle r="8"><animateMotion dur="4.8s" begin="-2.88s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
-              <circle r="8"><animateMotion dur="4.8s" begin="-3.84s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
+              <circle r="8"><animateMotion dur="4.8s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/><animate attributeName="opacity" dur="4.8s" repeatCount="indefinite" keyTimes="0;0.1;0.82;0.95;1" values="0;1;1;0;0"/></circle>
+              <circle r="8"><animateMotion dur="4.8s" begin="-1.2s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/><animate attributeName="opacity" dur="4.8s" begin="-1.2s" repeatCount="indefinite" keyTimes="0;0.1;0.82;0.95;1" values="0;1;1;0;0"/></circle>
+              <circle r="8"><animateMotion dur="4.8s" begin="-2.4s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/><animate attributeName="opacity" dur="4.8s" begin="-2.4s" repeatCount="indefinite" keyTimes="0;0.1;0.82;0.95;1" values="0;1;1;0;0"/></circle>
+              <circle r="8"><animateMotion dur="4.8s" begin="-3.6s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/><animate attributeName="opacity" dur="4.8s" begin="-3.6s" repeatCount="indefinite" keyTimes="0;0.1;0.82;0.95;1" values="0;1;1;0;0"/></circle>
             </g>
             <g fill="#F5A623">
-              <circle r="3.6"><animateMotion dur="4.8s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
-              <circle r="3.6"><animateMotion dur="4.8s" begin="-0.96s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
-              <circle r="3.6"><animateMotion dur="4.8s" begin="-1.92s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
-              <circle r="3.6"><animateMotion dur="4.8s" begin="-2.88s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
-              <circle r="3.6"><animateMotion dur="4.8s" begin="-3.84s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/></circle>
+              <circle r="3.6"><animateMotion dur="4.8s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/><animate attributeName="opacity" dur="4.8s" repeatCount="indefinite" keyTimes="0;0.1;0.82;0.95;1" values="0;1;1;0;0"/></circle>
+              <circle r="3.6"><animateMotion dur="4.8s" begin="-1.2s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/><animate attributeName="opacity" dur="4.8s" begin="-1.2s" repeatCount="indefinite" keyTimes="0;0.1;0.82;0.95;1" values="0;1;1;0;0"/></circle>
+              <circle r="3.6"><animateMotion dur="4.8s" begin="-2.4s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/><animate attributeName="opacity" dur="4.8s" begin="-2.4s" repeatCount="indefinite" keyTimes="0;0.1;0.82;0.95;1" values="0;1;1;0;0"/></circle>
+              <circle r="3.6"><animateMotion dur="4.8s" begin="-3.6s" repeatCount="indefinite" path="M264,308 L440,308 L440,342 L264,342 L264,308"/><animate attributeName="opacity" dur="4.8s" begin="-3.6s" repeatCount="indefinite" keyTimes="0;0.1;0.82;0.95;1" values="0;1;1;0;0"/></circle>
             </g>
 
-            <!-- ESCALATION DOTS: fewer, full loop business -> workspace -> Mind -> resolved -> back -->
+            <!-- ESCALATION DOTS: full loop; steady on the resolved->business return, fade out inside business -->
             <g fill="#F5A623" opacity="0.3">
-              <circle r="10"><animateMotion dur="9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.6;1" keyPoints="0;0.42;0.55;1" keySplines="0.3 0 0.5 1;0.5 0 0.5 1;0.3 0 0.6 1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/></circle>
-              <circle r="10"><animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.6;1" keyPoints="0;0.42;0.55;1" keySplines="0.3 0 0.5 1;0.5 0 0.5 1;0.3 0 0.6 1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/></circle>
+              <circle r="10"><animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="10"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" begin="-3s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="10"><animateMotion dur="9s" begin="-6s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" begin="-6s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
             </g>
             <g fill="#F5A623">
-              <circle r="4.5"><animateMotion dur="9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.6;1" keyPoints="0;0.42;0.55;1" keySplines="0.3 0 0.5 1;0.5 0 0.5 1;0.3 0 0.6 1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/></circle>
-              <circle r="4.5"><animateMotion dur="9s" begin="-4.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.34;0.6;1" keyPoints="0;0.42;0.55;1" keySplines="0.3 0 0.5 1;0.5 0 0.5 1;0.3 0 0.6 1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/></circle>
+              <circle r="4.5"><animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="4.5"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" begin="-3s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="4.5"><animateMotion dur="9s" begin="-6s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" begin="-6s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
             </g>
           </svg>
         </div>
@@ -424,7 +446,7 @@
         </div><!-- /hiw-stack -->
         <p class="hiw-caption reveal">The Omnilex Mind is a legal super-agent that handles legal matters end-to-end, from intake to delivering the finished work product. The Omnilex Mind is supervised by expert lawyers, making sure everything is in your best interest. And you? You can focus on the business again.</p>
         <!-- Case study button — replace href with the real case-study URL -->
-        <div class="hiw-cta reveal"><a href="https://omnilex.ai/dextra-case" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">See a case study →</a></div>
+        <div class="hiw-cta reveal"><a href="customers.html" class="btn btn-ghost">See a case study →</a></div>
       </div>
     </section>
 
@@ -495,62 +517,32 @@
         </div>
 
         <div class="team-row reveal" style="margin-top:3rem">
-          <p class="team-rowlabel">We made LegalTech popular in Central Europe</p>
-          <div class="team-grid">
-            <div class="team-card photo">
-              <img class="team-photo" src="team-1.jpg" alt="Marc Rudisuhli" loading="lazy" />
-              <p class="team-name">Marc Rudisuhli</p>
-              <p class="team-role">Business Development</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-2.jpg" alt="Jérémie Amstutz" loading="lazy" />
-              <p class="team-name">Jérémie Amstutz</p>
-              <p class="team-role">AI Engineer</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-4.jpg" alt="Luis Bueno" loading="lazy" />
-              <p class="team-name">Luis Bueno</p>
-              <p class="team-role">User Experience</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-5.jpg" alt="Yana Maeva" loading="lazy" />
-              <p class="team-name">Yana Maeva</p>
-              <p class="team-role">Operations</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-6.jpg" alt="Tomas Valdivieso" loading="lazy" />
-              <p class="team-name">Tomas Valdivieso</p>
-              <p class="team-role">AI Engineer</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-7.jpg" alt="Simon Schütz" loading="lazy" />
-              <p class="team-name">Simon Schütz</p>
-              <p class="team-role">Business Development</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-8.jpg" alt="Etienne Salimbeni" loading="lazy" />
-              <p class="team-name">Etienne Salimbeni</p>
-              <p class="team-role">Chief Technology Officer</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-9.jpg" alt="Marco Henri" loading="lazy" />
-              <p class="team-name">Marco Henri</p>
-              <p class="team-role">Chief Executive Officer</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-11.jpg" alt="Mohammad M. Hejazi" loading="lazy" />
-              <p class="team-name">Mohammad M. Hejazi</p>
-              <p class="team-role">Fullstack Software Engineer</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-12.jpg" alt="Ismael Seck" loading="lazy" />
-              <p class="team-name">Ismael Seck</p>
-              <p class="team-role">Chief Commercial Officer</p>
-            </div>
-            <div class="team-card photo">
-              <img class="team-photo" src="team-13.jpg" alt="Kevin Erhart" loading="lazy" />
-              <p class="team-name">Kevin Erhart</p>
-              <p class="team-role">[ Role ]</p>
+          <p class="team-rowlabel">You can rely on us</p>
+          <div class="team-carousel">
+            <div class="team-track">
+              <div class="team-card photo"><img class="team-photo" src="team-1.jpg" alt="Marc Rudisuhli" loading="lazy" /><p class="team-name">Marc Rudisuhli</p><p class="team-role">Business Development</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-2.jpg" alt="Jérémie Amstutz" loading="lazy" /><p class="team-name">Jérémie Amstutz</p><p class="team-role">AI Engineer</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-4.jpg" alt="Luis Bueno" loading="lazy" /><p class="team-name">Luis Bueno</p><p class="team-role">User Experience</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-5.jpg" alt="Yana Maeva" loading="lazy" /><p class="team-name">Yana Maeva</p><p class="team-role">Operations</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-6.jpg" alt="Tomas Valdivieso" loading="lazy" /><p class="team-name">Tomas Valdivieso</p><p class="team-role">AI Engineer</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-7.jpg" alt="Simon Schütz" loading="lazy" /><p class="team-name">Simon Schütz</p><p class="team-role">Business Development</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-8.jpg" alt="Etienne Salimbeni" loading="lazy" /><p class="team-name">Etienne Salimbeni</p><p class="team-role">Chief Technology Officer</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-9.jpg" alt="Marco Henri" loading="lazy" /><p class="team-name">Marco Henri</p><p class="team-role">Chief Executive Officer</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-11.jpg" alt="Mohammad M. Hejazi" loading="lazy" /><p class="team-name">Mohammad M. Hejazi</p><p class="team-role">Fullstack Software Engineer</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-12.jpg" alt="Ismael Seck" loading="lazy" /><p class="team-name">Ismael Seck</p><p class="team-role">Chief Commercial Officer</p></div>
+              <div class="team-card photo"><img class="team-photo" src="team-13.jpg" alt="Kevin Erhart" loading="lazy" /><p class="team-name">Kevin Erhart</p><p class="team-role">Revenue Operations</p></div>
+              <!-- duplicate set for seamless loop -->
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-1.jpg" alt="" loading="lazy" /><p class="team-name">Marc Rudisuhli</p><p class="team-role">Business Development</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-2.jpg" alt="" loading="lazy" /><p class="team-name">Jérémie Amstutz</p><p class="team-role">AI Engineer</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-4.jpg" alt="" loading="lazy" /><p class="team-name">Luis Bueno</p><p class="team-role">User Experience</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-5.jpg" alt="" loading="lazy" /><p class="team-name">Yana Maeva</p><p class="team-role">Operations</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-6.jpg" alt="" loading="lazy" /><p class="team-name">Tomas Valdivieso</p><p class="team-role">AI Engineer</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-7.jpg" alt="" loading="lazy" /><p class="team-name">Simon Schütz</p><p class="team-role">Business Development</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-8.jpg" alt="" loading="lazy" /><p class="team-name">Etienne Salimbeni</p><p class="team-role">Chief Technology Officer</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-9.jpg" alt="" loading="lazy" /><p class="team-name">Marco Henri</p><p class="team-role">Chief Executive Officer</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-11.jpg" alt="" loading="lazy" /><p class="team-name">Mohammad M. Hejazi</p><p class="team-role">Fullstack Software Engineer</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-12.jpg" alt="" loading="lazy" /><p class="team-name">Ismael Seck</p><p class="team-role">Chief Commercial Officer</p></div>
+              <div class="team-card photo" aria-hidden="true"><img class="team-photo" src="team-13.jpg" alt="" loading="lazy" /><p class="team-name">Kevin Erhart</p><p class="team-role">Revenue Operations</p></div>
             </div>
           </div>
         </div>
@@ -565,13 +557,12 @@
     <div class="wrap foot">
       <div>
         <img class="foot-logo" src="omnilex-logo.png" alt="Omnilex AG" />
-        <div class="addr">Hohlstrasse 186<br/>8004 Zürich<br/><span style="display:inline-block;margin-top:.25rem">UID: CHE-264.938.111</span></div>
       </div>
       <div class="foot-links">
         <nav>
-          <a href="https://omnilex.ai/privacy-policy">Datenschutz</a>
-          <a href="https://omnilex.ai/terms-and-conditions">AGB / T&amp;C</a>
-          <a href="https://omnilex.ai/kontakt">Kontakt</a>
+          <a href="https://omnilex.ai/privacy-policy">Privacy Policy</a>
+          <a href="https://omnilex.ai/terms-and-conditions">Terms &amp; Conditions</a>
+          <a href="https://omnilex.ai/kontakt">Contact</a>
         </nav>
         <p class="cr">Copyright © 2026 Omnilex AG. All rights reserved.</p>
       </div>
