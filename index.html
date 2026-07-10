@@ -331,8 +331,8 @@
             </defs>
 
             <!-- continuous delivery: resolved matters back to the business -->
-            <path d="M951,374 C 951,545 520,560 160,432" stroke="#161616" stroke-width="1.4" stroke-dasharray="2 7" stroke-linecap="round" marker-end="url(#arw)"/>
-            <text x="555" y="556" text-anchor="middle" fill="rgba(1,1,1,0.5)" font-size="13" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">continuous delivery</text>
+            <path d="M951,374 L951,508 L152,508 L152,430" stroke="#161616" stroke-width="1.4" stroke-dasharray="2 7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arw)"/>
+            <text x="551" y="532" text-anchor="middle" fill="rgba(1,1,1,0.5)" font-size="13" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">continuous delivery</text>
 
             <!-- business <-> AI workspace (day-to-day, both directions) -->
             <path d="M264,308 L332,308" stroke="#161616" stroke-width="1.4" marker-end="url(#arw)"/>
@@ -340,11 +340,11 @@
             <text x="298" y="300" text-anchor="middle" fill="rgba(1,1,1,0.42)" font-size="11.5" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">day-to-day</text>
 
             <!-- AI workspace -> Mind (high-stakes matters escalate) -->
-            <path d="M508,325 L566,323" stroke="#161616" stroke-width="1.4" marker-end="url(#arw)"/>
+            <path d="M508,320 L566,320" stroke="#161616" stroke-width="1.4" marker-end="url(#arw)"/>
             <text x="537" y="310" text-anchor="middle" fill="rgba(1,1,1,0.42)" font-size="11" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">high-stakes</text>
 
             <!-- Mind -> resolved matters -->
-            <path d="M750,323 L824,321" stroke="#161616" stroke-width="1.4" marker-end="url(#arw)"/>
+            <path d="M750,320 L824,320" stroke="#161616" stroke-width="1.4" marker-end="url(#arw)"/>
 
             <!-- YOUR BUSINESS -->
             <rect x="40" y="180" width="224" height="250" rx="16" fill="none" stroke="#161616" stroke-width="1.8"/>
@@ -399,14 +399,14 @@
 
             <!-- ESCALATION DOTS: full loop; steady on the resolved->business return, fade out inside business -->
             <g fill="#F5A623" opacity="0.3">
-              <circle r="10"><animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
-              <circle r="10"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" begin="-3s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
-              <circle r="10"><animateMotion dur="9s" begin="-6s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" begin="-6s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="10"><animateMotion dur="9s" repeatCount="indefinite" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,508 L152,508 L152,430"/><animate attributeName="opacity" dur="9s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="10"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,508 L152,508 L152,430"/><animate attributeName="opacity" dur="9s" begin="-3s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="10"><animateMotion dur="9s" begin="-6s" repeatCount="indefinite" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,508 L152,508 L152,430"/><animate attributeName="opacity" dur="9s" begin="-6s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
             </g>
             <g fill="#F5A623">
-              <circle r="4.5"><animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
-              <circle r="4.5"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" begin="-3s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
-              <circle r="4.5"><animateMotion dur="9s" begin="-6s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.30;0.50;1" keyPoints="0;0.234;0.438;1" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,374 C951,545 520,560 160,432"/><animate attributeName="opacity" dur="9s" begin="-6s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="4.5"><animateMotion dur="9s" repeatCount="indefinite" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,508 L152,508 L152,430"/><animate attributeName="opacity" dur="9s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="4.5"><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,508 L152,508 L152,430"/><animate attributeName="opacity" dur="9s" begin="-3s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
+              <circle r="4.5"><animateMotion dur="9s" begin="-6s" repeatCount="indefinite" path="M264,320 L508,320 L570,320 L660,320 L750,320 L828,320 L951,320 L951,508 L152,508 L152,430"/><animate attributeName="opacity" dur="9s" begin="-6s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"/></circle>
             </g>
           </svg>
         </div>
