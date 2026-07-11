@@ -45,15 +45,23 @@
   h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;font-weight:400;letter-spacing:-0.03em}
   .lead{margin-top:1.5rem;max-width:44rem;font-size:1.05rem;color:var(--muted);line-height:1.65}
 
-  .verticals{display:grid;gap:1.25rem;grid-template-columns:1fr;margin:3rem 0 4rem}
-  @media(min-width:680px){.verticals{grid-template-columns:1fr 1fr}}
-  @media(min-width:1040px){.verticals{grid-template-columns:1fr 1fr 1fr}}
-  .vcard{border:1px solid rgba(1,1,1,.14);border-radius:16px;padding:1.75rem;display:flex;flex-direction:column;transition:border-color .25s}
-  .vcard:hover{border-color:rgba(1,1,1,.42)}
-  .vcard h3{display:flex;align-items:flex-start;gap:.55rem;font-size:1.28rem;font-weight:600;line-height:1.2;letter-spacing:-0.02em}
-  .vcard h3::before{content:"";flex:0 0 auto;width:9px;height:9px;border-radius:2px;background:var(--gold);margin-top:.45rem}
-  .vcard .vlabel{margin-top:1.15rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:600}
-  .vcard p{margin-top:.4rem;font-size:.92rem;line-height:1.6;color:var(--muted)}
+  .vgroups{margin:3rem 0 4rem}
+  .verticals{display:grid;gap:1.25rem;grid-template-columns:1fr}
+  .verticals+.vsep{margin:2.25rem 0}
+  .vsep{border:0;border-top:1px solid var(--line)}
+  @media(min-width:640px){.verticals{grid-template-columns:1fr 1fr}}
+  .vcard{position:relative;overflow:hidden;min-height:13rem;border:1px solid rgba(1,1,1,.14);border-radius:18px;background:var(--surface);transition:border-color .25s,box-shadow .3s}
+  .vcard:hover{border-color:rgba(1,1,1,.5);box-shadow:0 16px 44px rgba(0,0,0,.07)}
+  .vcard-title{position:absolute;inset:0;display:flex;align-items:center;padding:2.25rem;transition:opacity .3s ease}
+  .vcard-title h3{display:flex;align-items:center;gap:.7rem;font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:600;line-height:1.08;letter-spacing:-0.025em}
+  .vcard-title h3::before{content:"";flex:0 0 auto;width:12px;height:12px;border-radius:3px;background:var(--gold)}
+  .vcard-desc{padding:2.25rem;opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease}
+  .vcard:hover .vcard-title{opacity:0}
+  .vcard:hover .vcard-desc{opacity:1;transform:none}
+  .vcard-desc .vlabel{margin-top:1.1rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:600}
+  .vcard-desc .vlabel:first-child{margin-top:0}
+  .vcard-desc p{margin-top:.4rem;font-size:.92rem;line-height:1.6;color:var(--muted)}
+  @media(hover:none){.vcard-title{position:static;padding-bottom:0}.vcard-desc{opacity:1;transform:none;padding-top:1.1rem}}
 
   .vcta{border-top:1px solid var(--line);padding:3rem 0 5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.25rem}
   .vcta h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:400;letter-spacing:-0.02em}
@@ -119,54 +127,72 @@
     </section>
 
     <section class="wrap">
+      <div class="vgroups">
       <div class="verticals">
         <div class="vcard reveal">
-          <h3>Banking</h3>
+          <div class="vcard-title"><h3>Banking &amp; Finance</h3></div>
+          <div class="vcard-desc">
           <p class="vlabel">Who</p>
           <p>Banks, asset managers and fintechs operating under dense, fast-moving regulation.</p>
           <p class="vlabel">How we help</p>
           <p>Regulatory research and monitoring, contract review against your playbook, and cross-border compliance assessments — fully sourced and citation-ready.</p>
+          </div>
         </div>
 
         <div class="vcard reveal">
-          <h3>Insurance and Pension</h3>
+          <div class="vcard-title"><h3>Insurance &amp; Pension</h3></div>
+          <div class="vcard-desc">
           <p class="vlabel">Who</p>
           <p>Insurers and occupational pension funds processing high volumes of claims and member cases.</p>
           <p class="vlabel">How we help</p>
           <p>Investigate invalidity and benefit claims end-to-end — split thousands of pages, build a timeline of events, flag contradictions, and recommend how to proceed, signed off by expert lawyers.</p>
+          </div>
         </div>
 
         <div class="vcard reveal">
-          <h3>Frontier-AI</h3>
-          <p class="vlabel">Who</p>
-          <p>AI research labs and companies that work on the future of AI.</p>
-          <p class="vlabel">How we help</p>
-          <p>Commercial contracting, product reviews, privacy, regulatory implementation, training-data/IP work and compute procurement.</p>
-        </div>
-
-        <div class="vcard reveal">
-          <h3>DeepTech</h3>
-          <p class="vlabel">Who</p>
-          <p>Deep-tech teams scaling hardware and AI faster than their legal capacity.</p>
-          <p class="vlabel">How we help</p>
-          <p>NDAs, IP and licensing agreements, R&amp;D and integration contracts, government and SBIR-style awards, and data-processing terms handled end-to-end — freeing your team to protect the technology and close the deals that only they can.</p>
-        </div>
-
-        <div class="vcard reveal">
-          <h3>Public Sector</h3>
-          <p class="vlabel">Who</p>
-          <p>Government bodies and public institutions with strict accountability and confidentiality requirements.</p>
-          <p class="vlabel">How we help</p>
-          <p>Legal research, drafting and analysis on certified, DSG-compliant infrastructure — with a complete audit trail from source to result.</p>
-        </div>
-
-        <div class="vcard reveal">
-          <h3>Real Estate &amp; Construction</h3>
+          <div class="vcard-title"><h3>Venture Capital</h3></div>
+          <div class="vcard-desc">
           <p class="vlabel">Who</p>
           <p>Developers, funds and firms managing contract-heavy transactions at scale.</p>
           <p class="vlabel">How we help</p>
           <p>Draft and review leases, development and construction agreements, and run document-heavy due diligence — faster and at a fraction of the cost.</p>
+          </div>
         </div>
+      </div>
+
+      <div class="vsep" aria-hidden="true"></div>
+
+      <div class="verticals">
+        <div class="vcard reveal">
+          <div class="vcard-title"><h3>Big Tech</h3></div>
+          <div class="vcard-desc">
+          <p class="vlabel">Who</p>
+          <p>Government bodies and public institutions with strict accountability and confidentiality requirements.</p>
+          <p class="vlabel">How we help</p>
+          <p>Legal research, drafting and analysis on certified, DSG-compliant infrastructure — with a complete audit trail from source to result.</p>
+          </div>
+        </div>
+
+        <div class="vcard reveal">
+          <div class="vcard-title"><h3>Deep Tech</h3></div>
+          <div class="vcard-desc">
+          <p class="vlabel">Who</p>
+          <p>Deep-tech teams scaling hardware and AI faster than their legal capacity.</p>
+          <p class="vlabel">How we help</p>
+          <p>NDAs, IP and licensing agreements, R&amp;D and integration contracts, government and SBIR-style awards, and data-processing terms handled end-to-end — freeing your team to protect the technology and close the deals that only they can.</p>
+          </div>
+        </div>
+
+        <div class="vcard reveal">
+          <div class="vcard-title"><h3>Frontier AI</h3></div>
+          <div class="vcard-desc">
+          <p class="vlabel">Who</p>
+          <p>AI research labs and companies that work on the future of AI.</p>
+          <p class="vlabel">How we help</p>
+          <p>Commercial contracting, product reviews, privacy, regulatory implementation, training-data/IP work and compute procurement.</p>
+          </div>
+        </div>
+      </div>
       </div>
 
       <div class="vcta reveal">
