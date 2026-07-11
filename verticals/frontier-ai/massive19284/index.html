@@ -4,8 +4,8 @@
 <meta name="robots" content="noindex,nofollow" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Omnilex × Massive — Pilot Proposal</title>
-<meta name="description" content="A 30-day fixed-scope legal pilot for Massive: SDK consent, partner DPAs, customer AUP and vetting, scraping risk — handled end-to-end by Omnilex." />
+<title>Omnilex × Massive: Legal built for real-time web access</title>
+<meta name="description" content="A focused legal pilot for Massive: SDK consent, partner and enterprise DPAs, customer AUP and vetting, and scraping liability, handled end-to-end by Omnilex, AI-native and lawyer-supervised." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23010101'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Georgia'%20font-size='18'%20fill='%23FBFBF9'%20text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +14,7 @@
   :root{
     --paper:#FBFBF9; --surface:#FFFFFF; --ink:#010101; --coal:#212121; --muted:#6E6E6E;
     --line:#E7E5DF; --gold:#F5A623;
+    --m1:#FF9964; --m2:#FF6E63; --mnavy:#1B222D;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
     --serif:"Signifier","Instrument Serif",Georgia,serif;
     --max:64rem;
@@ -26,7 +27,7 @@
   @media(min-width:1024px){.wrap{padding:0 2rem}}
   .emph{font-weight:700}
   .kicker{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:1rem}
-  .kicker .dotmark{color:var(--gold)}
+  .kicker .dotmark{color:var(--m2)}
   section{position:relative}
   .sec{padding:4.5rem 0}
   @media(min-width:1024px){.sec{padding:6rem 0}}
@@ -64,7 +65,7 @@
   .hero-terms b{color:var(--ink);font-weight:600}
   .hairline-gold{width:52px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:1.8rem}
 
-  /* legal surface — the star */
+  /* legal surface, the star */
   .surface-sec{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .surface-head{max-width:48rem}
   .surface-head .lead{margin-top:1.1rem}
@@ -155,6 +156,12 @@
   .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
   .foot img{height:22px;width:auto;display:block}
   .foot .cr{font-size:.84rem;color:var(--muted)}
+  .hero{overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 100% -8%, rgba(255,110,99,.14), rgba(255,153,100,.06) 45%, transparent 72%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-massive{height:44px;width:auto;display:block;margin-bottom:1.9rem}
+  @media(max-width:760px){.hero-massive{height:34px;margin-bottom:1.5rem}}
+  .mgrad{background:linear-gradient(90deg,var(--m1),var(--m2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:600}
 </style>
 </head>
 <body>
@@ -171,46 +178,46 @@
     <!-- 1 · HERO -->
     <section class="hero">
       <div class="wrap">
-        <div class="hairline-gold reveal"></div>
+        <img class="hero-massive reveal" src="/massive-logo.svg" alt="Massive" />
         <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; Providing world class legal to Massive</p>
-        <h1 class="reveal">Header Hero</h1>
-        <p class="lead reveal">Description Hero</p>
+        <h1 class="reveal">Real-time web access deserves <span class="mgrad">real-time legal</span>.</h1>
+        <p class="lead reveal">Massive is the ethical foundation for how AI reaches the live web: real-time access through millions of consented devices in 195+ countries. That model runs on consent, partner contracts, and multi-jurisdiction compliance at a scale that buries most legal teams. Omnilex is built to move at your speed: AI-native, supervised by expert lawyers, and handling the recurring legal load end-to-end so it never gates your roadmap.</p>
       </div>
     </section>
 
-    <!-- 2 · LEGAL SURFACE — THE STAR -->
+    <!-- 2 · LEGAL SURFACE, THE STAR -->
     <section class="surface-sec">
       <div class="wrap sec">
         <div class="surface-head">
           <p class="kicker reveal">We know your business</p>
-          <h2 class="reveal">Header Business</h2>
-          <p class="lead reveal">Description Business</p>
+          <h2 class="reveal">You built the ethical foundation for web data. This is the legal load underneath it.</h2>
+          <p class="lead reveal">A consented-bandwidth network selling real-time web access to AI teams, from Snowflake to Tavily and on the back of a Point72-led seed and a SOC 2 Type 1 posture, carries a very specific legal footprint. From your public model and your own SDK privacy policy, here is where we would start.</p>
         </div>
 
         <div class="surf-list reveal">
           <div class="surf">
-            <div class="surf-t"><span class="num">01</span><h3>Topic 1</h3></div>
-          <p>Description 1</p>
+            <div class="surf-t"><span class="num">01</span><h3>The SDK consent flow</h3></div>
+          <p>Your entire &ldquo;ethically sourced&rdquo; promise lives on the opt-in a user sees inside a partner app. Your SDK policy commits to 100% opt-in, revocable consent, IP used only for routing, and nothing sold. That has to be specific, informed and provable across GDPR, CCPA, LGPD and India&rsquo;s ITA-2000, and survive AppEsteem and antivirus-whitelisting review. If it is thin at the partner layer, the exposure lands on Massive.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">02</span><h3>Topic 2</h3></div>
-          <p>Description 2</p>
+            <div class="surf-t"><span class="num">02</span><h3>Partner agreements &amp; the consent chain</h3></div>
+          <p>Every publisher embedding the Massive SDK is a link in your consent chain. Those contracts need consent warranties, disclosure duties, reward terms, opt-out and uninstall handling, and indemnities that push risk back to the partner who onboarded the user, not to Massive.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">03</span><h3>Topic 3</h3></div>
-          <p>Description 3</p>
+            <div class="surf-t"><span class="num">03</span><h3>Customer AUP &amp; vetting</h3></div>
+          <p>You sell real-time access to any site on the internet. An enforceable acceptable-use policy plus real customer vetting (KYC) is what keeps &ldquo;infrastructure provider&rdquo; from becoming &ldquo;party to the misuse&rdquo;. It is the single highest-leverage document you can tighten.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">04</span><h3>Topic 4</h3></div>
-          <p>Description 4</p>
+            <div class="surf-t"><span class="num">04</span><h3>Scraping liability, shifted correctly</h3></div>
+          <p>Customers aim your network, and the antibot-bypassing Web Render API, at targets with their own terms of service. Your contracts should place lawful-use responsibility on the customer and hold a clean posture on target-ToS, CFAA-style and database-rights questions, without over-promising what you can police.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">05</span><h3>Topic 5</h3></div>
-          <p>Description 5</p>
+            <div class="surf-t"><span class="num">05</span><h3>DPAs across partners &amp; enterprise</h3></div>
+          <p>You sit between consumer devices and enterprise buyers like Snowflake running security reviews. That means DPAs, sub-processor terms and SCCs on both sides, kept consistent with your SOC 2 Type 1 and privacy posture so procurement never stalls a deal.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">06</span><h3>Topic 6</h3></div>
-          <p>Description 6</p>
+            <div class="surf-t"><span class="num">06</span><h3>&ldquo;Your data stays yours&rdquo;, in writing</h3></div>
+          <p>You promise customers their targets, volumes and strategy stay private, and users that nothing is tracked or sold. Those promises are only as strong as the confidentiality and data-handling clauses behind them. We make the contracts say exactly what your marketing and SDK policy already claim.</p>
           </div>
         </div>
       </div>
@@ -220,30 +227,30 @@
     <section class="sline">
       <div class="wrap sec">
         <p class="kicker reveal">Never worry about legal again</p>
-        <h2 class="reveal" style="max-width:32ch">Header Value Proposition</h2>
+        <h2 class="reveal" style="max-width:34ch">You provide browser rendering with zero infrastructure. We provide you legal without the infrastructure.</h2>
         <div class="flow reveal">
           <div class="fstep">
-            <span class="ft">Step 1</span>
-            <span class="fd">Description 1</span>
-            <span class="fh">CTA 1</span>
+            <span class="ft">Forward it</span>
+            <span class="fd">Drop us any matter you have on our platform, Email, Slack or where it is most convenient.</span>
+            <span class="fh">Always-on</span>
           </div>
           <div class="farrow" aria-hidden="true">→</div>
           <div class="fstep">
-            <span class="ft">Step 2</span>
-            <span class="fd">Description 2</span>
-            <span class="fh">CTA 2</span>
+            <span class="ft">Let the mind work</span>
+            <span class="fd">The Omnilex Mind gets to work. Legal Research. Benchmarking with internal best practices. Redlining. Drafting the deliverable. Back-checking with initial findings. Preparing for review by the expert lawyer.</span>
+            <span class="fh">Immediate effort</span>
           </div>
           <div class="farrow" aria-hidden="true">→</div>
           <div class="fstep">
-            <span class="ft">Step 3</span>
-            <span class="fd">Description 3</span>
-            <span class="fh">CTA 3</span>
+            <span class="ft">Lawyer signs off</span>
+            <span class="fd">An Omnilex expert lawyer supervises, corrects and approves. The work is signed off only once it reaches world-class legal quality.</span>
+            <span class="fh">Zero Effort</span>
           </div>
           <div class="farrow" aria-hidden="true">→</div>
           <div class="fstep">
-            <span class="ft">Step 4</span>
-            <span class="fd">Description 4</span>
-            <span class="fh">CTA 4</span>
+            <span class="ft">That&rsquo;s it. Done</span>
+            <span class="fd">You get the finished, reviewed document, analysis, legal advice, heads-up. Not a feedback. Not an instruction what to do. It&rsquo;s done. End-to-end.</span>
+            <span class="fh">Results only</span>
           </div>
         </div>
       </div>
@@ -253,75 +260,27 @@
     <section class="sline">
       <div class="wrap sec">
         <p class="kicker reveal">Done with the old times</p>
-        <h2 class="reveal" style="max-width:30ch">Recurring contract work is exactly what firms overcharge for.</h2>
+        <h2 class="reveal" style="max-width:32ch">Your Cooley lawyer should be saving the company, not reviewing partner terms.</h2>
+        <p class="lead reveal" style="margin-top:1.1rem;max-width:44rem">Right now a single lawyer, with Cooley on the meter behind them, carries your whole legal load. He is your safe haven if the company is about to die, not a contract engine. Every partner agreement, DPA, AUP redline etc. that lands on his desk is expensive time spent on work that should never have reached him.</p>
         <div class="cmp">
           <div class="cmp-col reveal">
-            <h3>Traditional legal teams</h3>
+            <h3>Massive today</h3>
             <ul>
-              <li>Rely on outside counsel billing hourly</li>
-              <li>Drown in high-volume matters daily</li>
-              <li>Have long turnaround and stacked to-dos for weeks</li>
-              <li>Should be able to focus on high-stakes, critical matters</li>
+              <li>One in-house lawyer stretched across the whole company</li>
+              <li>Billed by the hour through Cooley</li>
+              <li>Legal matters piled up or not handled at all</li>
+              <li>Your lawyer costs spent on redlines, not real risk</li>
             </ul>
           </div>
           <div class="cmp-col us reveal">
-            <h3>Omnilex</h3>
+            <h3>With Omnilex</h3>
             <ul>
-              <li>Built for high-volume matter throughput</li>
-              <li>Works around the clock and brings turnaround down to hours</li>
-              <li>Handles your matters at a fraction of common costs</li>
-              <li>Is operated by world-class lawyers</li>
+              <li>Absorbs your recurring, high-volume contract work end-to-end</li>
+              <li>Turnaround in hours, around the clock, at a fraction of Cooley rates</li>
+              <li>Frees your lawyer and Cooley for crises and bet-the-company calls</li>
+              <li>Operated by world-class lawyers, supervising every document</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3 · THE PILOT -->
-    <section id="pilot">
-      <div class="wrap sec">
-        <p class="kicker reveal">Get started</p>
-        <h2 class="reveal" style="max-width:34ch">Small scope. Low risk.</h2>
-        <div class="offer reveal" style="margin-top:2.4rem">
-          <div class="offer-top">
-            <h3>X days to convince yourself</h3>
-            <div class="offer-badges">
-              <span class="badge">Fixed scope</span>
-              <span class="badge">Fixed fee</span>
-              <span class="badge">No lock-in</span>
-            </div>
-          </div>
-
-          <div class="offer-grid">
-            <div>
-              <p class="deliv-label">Two deliverables you'll actually hold</p>
-              <div class="deliv">
-                <h4>1 · SDK consent + partner terms, redrafted</h4>
-                <p>The exact opt-in language users see, plus the partner-app agreement behind it — rebuilt so consent is provable and risk flows to the right party.</p>
-              </div>
-              <div class="deliv">
-                <h4>2 · Customer AUP + vetting policy, built</h4>
-                <p>An enforceable acceptable-use policy and a practical customer-vetting workflow you can run from day one — the layer that keeps misuse off your books.</p>
-              </div>
-            </div>
-
-            <div class="offer-meta">
-              <div class="meta-row">
-                <p class="mk">What it costs</p>
-                <p class="mv"><span class="fee"><span class="ph">CHF [fixed fee]</span></span> &nbsp;— one price for the 30 days. No hourly billing, no surprise invoices.</p>
-              </div>
-              <div class="meta-row">
-                <p class="mk">What success looks like</p>
-                <p class="mv">Two documents in force, a written read of your remaining exposure, and a clear yes/no on whether we run your recurring legal volume next.</p>
-              </div>
-              <div class="meta-row">
-                <p class="mk">What we'll actually touch</p>
-                <p class="mv">Your SDK consent screen, one partner template, and your customer-facing AUP — nothing that blocks the business while we work.</p>
-              </div>
-            </div>
-          </div>
-
-          <p class="escalate"><b>The honest escalation path.</b> Recurring, high-volume contract work — partner onboarding, customer DPAs, AUP enforcement — is exactly what we take end-to-end after the pilot. The bet-the-company calls — a novel regulatory challenge, live litigation, a regulator at the door — we flag clearly and route to senior human counsel. We don't pretend AI replaces that judgment; we make sure it's rarely what you're paying for.</p>
         </div>
       </div>
     </section>
