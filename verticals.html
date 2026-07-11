@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Verticals — Omnilex</title>
+<meta name="description" content="Who Omnilex serves and how — from insurers and pension funds to law firms, in-house teams, and the public sector." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23010101'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Georgia'%20font-size='18'%20fill='%23FBFBF9'%20text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#FBFBF9; --surface:#FFFFFF; --ink:#010101; --coal:#212121; --muted:#6E6E6E;
+    --line:#E7E5DF; --gold:#F5A623;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --serif:"Signifier","Instrument Serif",Georgia,serif;
+    --max:72rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-0.01em;display:flex;flex-direction:column;min-height:100vh}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem;width:100%}
+  @media(min-width:1024px){.wrap{padding:0 2.5rem}}
+  .emph{font-weight:700}
+  .kicker{font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin-bottom:1rem}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  /* top nav */
+  .topbar{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.85);backdrop-filter:saturate(1.1) blur(8px);-webkit-backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid rgba(1,1,1,.07)}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .topbar-brand img{height:24px;width:auto;display:block}
+  .topbar-nav{display:flex;gap:2rem}
+  .topbar-nav a{font-size:.95rem;color:var(--muted);position:relative;padding:.25rem 0;transition:color .2s}
+  .topbar-nav a:hover{color:var(--ink)}
+  .topbar-nav a.active{color:var(--ink)}
+  .topbar-nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1.5px;background:var(--ink)}
+
+  main{flex:1 0 auto}
+  .head{padding:6rem 0 1rem}
+  @media(min-width:1024px){.head{padding:8rem 0 2rem}}
+  h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;font-weight:400;letter-spacing:-0.03em}
+  .lead{margin-top:1.5rem;max-width:44rem;font-size:1.05rem;color:var(--muted);line-height:1.65}
+
+  .verticals{display:grid;gap:1.25rem;grid-template-columns:1fr;margin:3rem 0 4rem}
+  @media(min-width:680px){.verticals{grid-template-columns:1fr 1fr}}
+  @media(min-width:1040px){.verticals{grid-template-columns:1fr 1fr 1fr}}
+  .vcard{border:1px solid rgba(1,1,1,.14);border-radius:16px;padding:1.75rem;display:flex;flex-direction:column;transition:border-color .25s}
+  .vcard:hover{border-color:rgba(1,1,1,.42)}
+  .vcard h3{display:flex;align-items:flex-start;gap:.55rem;font-size:1.28rem;font-weight:600;line-height:1.2;letter-spacing:-0.02em}
+  .vcard h3::before{content:"";flex:0 0 auto;width:9px;height:9px;border-radius:2px;background:var(--gold);margin-top:.45rem}
+  .vcard .vlabel{margin-top:1.15rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:600}
+  .vcard p{margin-top:.4rem;font-size:.92rem;line-height:1.6;color:var(--muted)}
+
+  .vcta{border-top:1px solid var(--line);padding:3rem 0 5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.25rem}
+  .vcta h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:400;letter-spacing:-0.02em}
+  .vcta .emph{font-weight:700}
+  .btn{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;font-size:.9rem;font-weight:500;padding:.8rem 1.5rem;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-dark:hover{opacity:.85}
+
+  .cityline{width:100%;line-height:0}
+  .cityline img{width:100%;height:auto;display:block}
+
+  footer{border-top:1px solid var(--line);padding:3rem 0;flex-shrink:0}
+  .foot{display:flex;flex-direction:column;gap:1.5rem;justify-content:space-between}
+  @media(min-width:768px){.foot{flex-direction:row;align-items:flex-end}}
+  .foot-logo{height:26px;width:auto}
+  .foot-links{display:flex;flex-direction:column;gap:.75rem}
+  @media(min-width:768px){.foot-links{align-items:flex-end}}
+  .foot-links nav{display:flex;flex-wrap:wrap;gap:1.5rem}
+  .foot-links a{font-size:.875rem;color:var(--muted);transition:.2s}
+  .foot-links a:hover{color:var(--ink)}
+  .foot-links .cr{font-size:.875rem;color:var(--muted)}
+
+  /* contact form modal */
+  .cform-overlay{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:1.5rem;background:rgba(1,1,1,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+  .cform-overlay.open{display:flex}
+  .cform{background:var(--surface);border-radius:16px;max-width:30rem;width:100%;padding:2rem;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+  .cform-close{position:absolute;top:.9rem;right:1rem;border:none;background:none;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--muted)}
+  .cform h3{font-size:1.5rem;font-weight:600;letter-spacing:-0.02em}
+  .cform-sub{margin-top:.5rem;color:var(--muted);font-size:.95rem;line-height:1.55}
+  .cform-form{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+  .cform-form label{display:flex;flex-direction:column;gap:.4rem;font-size:.78rem;font-weight:600;letter-spacing:.02em;color:var(--ink)}
+  .cform-form input,.cform-form textarea{font:inherit;font-size:.95rem;font-weight:400;padding:.7rem .8rem;border:1px solid rgba(1,1,1,.18);border-radius:10px;background:#fff;color:var(--ink);width:100%}
+  .cform-form input:focus,.cform-form textarea:focus{outline:none;border-color:var(--ink)}
+  .cform-form textarea{resize:vertical;min-height:5rem}
+  .cform-submit{margin-top:.25rem;border:none;background:var(--ink);color:var(--paper);font:inherit;font-weight:500;font-size:.95rem;padding:.8rem 1.4rem;border-radius:999px;cursor:pointer;transition:opacity .2s}
+  .cform-submit:hover{opacity:.85}
+  .cform-submit:disabled{opacity:.55;cursor:default}
+  .cform-status{font-size:.85rem;min-height:1.1rem;line-height:1.5;color:var(--muted);margin:0}
+  .cform-status.ok{color:#1a7f37}
+  .cform-status.err{color:#b3261e}
+  .cform-status a{text-decoration:underline}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="index.html" class="topbar-brand" aria-label="Omnilex home"><img src="omnilex-logo.png" alt="Omnilex" /></a>
+      <nav class="topbar-nav">
+        <a href="index.html">Home</a>
+        <a href="verticals.html" class="active">Verticals</a>
+        <a href="customers.html">Customers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="head">
+      <div class="wrap">
+        <p class="kicker reveal">Verticals</p>
+        <h1 class="reveal">Who we serve, <span class="emph">and how</span>.</h1>
+        <p class="lead reveal">Every industry carries its own legal reality. Omnilex adapts to each one — taking the high-volume, high-stakes work off your desk and returning finished, review-ready output, supervised by expert lawyers.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="verticals">
+        <div class="vcard reveal">
+          <h3>Insurance &amp; Pension Funds</h3>
+          <p class="vlabel">Who</p>
+          <p>Insurers and occupational pension funds processing high volumes of claims and member cases.</p>
+          <p class="vlabel">How we help</p>
+          <p>Investigate invalidity and benefit claims end-to-end — split thousands of pages, build a timeline of events, flag contradictions, and recommend how to proceed, signed off by expert lawyers.</p>
+        </div>
+
+        <div class="vcard reveal">
+          <h3>Banking &amp; Financial Services</h3>
+          <p class="vlabel">Who</p>
+          <p>Banks, asset managers and fintechs operating under dense, fast-moving regulation.</p>
+          <p class="vlabel">How we help</p>
+          <p>Regulatory research and monitoring, contract review against your playbook, and cross-border compliance assessments — fully sourced and citation-ready.</p>
+        </div>
+
+        <div class="vcard reveal">
+          <h3>Law Firms</h3>
+          <p class="vlabel">Who</p>
+          <p>Firms that want to deliver more for clients without growing headcount.</p>
+          <p class="vlabel">How we help</p>
+          <p>First-draft research and memos, due diligence at volume, and document review — produced on the Omnilex engine and signed off by your own lawyers.</p>
+        </div>
+
+        <div class="vcard reveal">
+          <h3>In-house Legal Teams</h3>
+          <p class="vlabel">Who</p>
+          <p>Lean corporate legal teams buried in recurring, high-volume matters.</p>
+          <p class="vlabel">How we help</p>
+          <p>NDAs, commercial agreements, data-processing addenda and routine reviews handled end-to-end — freeing your team for the work only they can do.</p>
+        </div>
+
+        <div class="vcard reveal">
+          <h3>Public Sector</h3>
+          <p class="vlabel">Who</p>
+          <p>Government bodies and public institutions with strict accountability and confidentiality requirements.</p>
+          <p class="vlabel">How we help</p>
+          <p>Legal research, drafting and analysis on certified, DSG-compliant infrastructure — with a complete audit trail from source to result.</p>
+        </div>
+
+        <div class="vcard reveal">
+          <h3>Real Estate &amp; Construction</h3>
+          <p class="vlabel">Who</p>
+          <p>Developers, funds and firms managing contract-heavy transactions at scale.</p>
+          <p class="vlabel">How we help</p>
+          <p>Draft and review leases, development and construction agreements, and run document-heavy due diligence — faster and at a fraction of the cost.</p>
+        </div>
+      </div>
+
+      <div class="vcta reveal">
+        <h2>Not sure where you <span class="emph">fit in</span>?</h2>
+        <a href="mailto:marco.henri@omnilex.ai" class="btn btn-dark" data-contact>Talk to us</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="cityline" aria-hidden="true"><img src="sf-skyline.svg" alt="" /></div>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <img class="foot-logo" src="omnilex-logo.png" alt="Omnilex AG" />
+      </div>
+      <div class="foot-links">
+        <nav>
+          <a href="https://omnilex.ai/privacy-policy">Privacy Policy</a>
+          <a href="https://omnilex.ai/terms-and-conditions">Terms &amp; Conditions</a>
+          <a href="mailto:marco.henri@omnilex.ai" data-contact>Contact</a>
+        </nav>
+        <p class="cr">Copyright © 2026 Omnilex AG. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- contact form modal -->
+  <div class="cform-overlay" id="contactModal">
+    <div class="cform" role="dialog" aria-modal="true" aria-labelledby="cformTitle">
+      <button type="button" class="cform-close" aria-label="Close">&times;</button>
+      <h3 id="cformTitle">Talk to us</h3>
+      <p class="cform-sub">Tell us a bit about what you need and we'll get back to you.</p>
+      <form class="cform-form" novalidate>
+        <label>Name<input name="name" type="text" autocomplete="name" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="cform-submit">Send message</button>
+        <p class="cform-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // reveal on scroll
+    (function(){
+      var els=[].slice.call(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+      var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+    // contact modal
+    (function(){
+      var overlay=document.getElementById('contactModal'); if(!overlay)return;
+      var form=overlay.querySelector('.cform-form');
+      var status=overlay.querySelector('.cform-status');
+      var EMAIL='marco.henri@omnilex.ai';
+      function openM(e){ if(e)e.preventDefault(); overlay.classList.add('open'); document.body.style.overflow='hidden'; var f=form.elements['name']; if(f)setTimeout(function(){try{f.focus();}catch(_){}},60); }
+      function closeM(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+      [].slice.call(document.querySelectorAll('[data-contact]')).forEach(function(el){ el.addEventListener('click',openM); });
+      overlay.addEventListener('click',function(e){ if(e.target===overlay)closeM(); });
+      overlay.querySelector('.cform-close').addEventListener('click',closeM);
+      document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&overlay.classList.contains('open'))closeM(); });
+      form.addEventListener('submit',function(e){
+        e.preventDefault();
+        var name=form.elements['name'].value.trim(), email=form.elements['email'].value.trim(), message=form.elements['message'].value.trim();
+        if(!name||!email||!message){ status.textContent='Please fill in all fields.'; status.className='cform-status err'; return; }
+        var btn=form.querySelector('.cform-submit'); btn.disabled=true;
+        status.textContent='Sending…'; status.className='cform-status';
+        fetch('https://formsubmit.co/ajax/'+EMAIL,{
+          method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify({name:name,email:email,message:message,_subject:'New enquiry from the Omnilex website',_replyto:email,_template:'table'})
+        }).then(function(r){return r.json();}).then(function(j){
+          btn.disabled=false;
+          if(j&&(j.success==='true'||j.success===true)){
+            form.reset(); status.textContent='Thanks — your message is on its way.'; status.className='cform-status ok';
+          } else {
+            status.innerHTML='Thanks! If you don\'t hear back shortly, email us at <a href="mailto:'+EMAIL+'">'+EMAIL+'</a>.'; status.className='cform-status ok';
+          }
+        }).catch(function(){
+          btn.disabled=false;
+          status.innerHTML='Could not send right now — please email us at <a href="mailto:'+EMAIL+'">'+EMAIL+'</a>.'; status.className='cform-status err';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
