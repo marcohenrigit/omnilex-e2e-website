@@ -286,6 +286,23 @@
   .cform-status.ok{color:#1a7f37}
   .cform-status.err{color:#b3261e}
   .cform-status a{text-decoration:underline}
+  .vgroups{margin:2.75rem 0 0}
+  .verticals{display:grid;gap:1.25rem;grid-template-columns:1fr}
+  .verticals+.vsep{margin:2.25rem 0}
+  .vsep{border:0;border-top:1px solid var(--line)}
+  @media(min-width:560px){.verticals{grid-template-columns:1fr 1fr}}
+  @media(min-width:860px){.verticals{grid-template-columns:1fr 1fr 1fr}}
+  .vcard{position:relative;overflow:hidden;min-height:10.5rem;border:1px solid rgba(1,1,1,.1);border-radius:16px;background:rgba(255,255,255,.35);transition:border-color .25s,box-shadow .3s,background .3s}
+  .vcard:hover{border-color:rgba(1,1,1,.32);background:rgba(255,255,255,.55);box-shadow:0 16px 44px rgba(0,0,0,.05)}
+  .vcard-title{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.5rem;transition:opacity .3s ease}
+  .vcard-title h3{font-size:clamp(1.3rem,2.1vw,1.7rem);font-weight:600;line-height:1.12;letter-spacing:-0.02em}
+  .vcard-desc{padding:1.6rem;text-align:center;opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease}
+  .vcard:hover .vcard-title{opacity:0}
+  .vcard:hover .vcard-desc{opacity:1;transform:none}
+  .vcard-desc .vlabel{margin-top:1.1rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:600}
+  .vcard-desc .vlabel:first-child{margin-top:0}
+  .vcard-desc p{margin-top:.4rem;font-size:.87rem;line-height:1.55;color:var(--muted)}
+  @media(hover:none){.vcard-title{position:static;padding-bottom:0}.vcard-desc{opacity:1;transform:none;padding-top:1.1rem}}
 </style>
 </head>
 <body>
@@ -294,7 +311,7 @@
       <a href="index.html" class="topbar-brand" aria-label="Omnilex home"><img src="omnilex-logo.png" alt="Omnilex" /></a>
       <nav class="topbar-nav">
         <a href="index.html" class="active">Home</a>
-        <a href="verticals.html">Verticals</a>
+        <a href="#verticals">Verticals</a>
         <a href="customers.html">Customers</a>
       </nav>
     </div>
@@ -504,6 +521,78 @@
             <span class="pillar-num">03</span>
             <h3>Infrastructure</h3>
             <p>The AI workspace and Omnilex Mind run securely on infrastructure that protects data and the professional secrecy of legal professionals and enterprises.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VERTICALS -->
+    <section id="verticals" style="scroll-margin-top:5rem">
+      <div class="wrap pad">
+        <div style="max-width:44rem">
+          <p class="kicker">Verticals</p>
+          <h2 class="reveal">We are the <span class="emph">right partner</span>.</h2>
+          <p class="lead reveal" style="margin-top:1.25rem">Every industry carries its own legal reality. Omnilex adapts to each one, taking the high-volume, high-stakes work off your desk and returning finished output, supervised by expert lawyers.</p>
+        </div>
+        <div class="vgroups">
+          <div class="verticals">
+            <div class="vcard reveal">
+              <div class="vcard-title"><h3>Banking &amp; Finance</h3></div>
+              <div class="vcard-desc">
+              <p class="vlabel">Who</p>
+              <p>Banks and FinTechs operating with fast-moving regulation and high-volume contracting work.</p>
+              <p class="vlabel">How we help</p>
+              <p>Vendor agreements, outsourcing and SaaS contracts, customer terms, standard financing and facility documentation, and data-processing addenda handled end-to-end, freeing your team for the regulatory and structuring calls only they can make.</p>
+              </div>
+            </div>
+            <div class="vcard reveal">
+              <div class="vcard-title"><h3>Insurance &amp; Pension</h3></div>
+              <div class="vcard-desc">
+              <p class="vlabel">Who</p>
+              <p>Claims- and regulation-heavy legal teams in insurances &amp; pension funds.</p>
+              <p class="vlabel">How we help</p>
+              <p>Insuree-claims handling, distribution and broker agreements, service and outsourcing contracts, policy and member documentation, NDAs, and data-processing terms handled end-to-end, freeing your team for the underwriting, actuarial, and regulatory work only they can own.</p>
+              </div>
+            </div>
+            <div class="vcard reveal">
+              <div class="vcard-title"><h3>Venture Capital</h3></div>
+              <div class="vcard-desc">
+              <p class="vlabel">Who</p>
+              <p>Funds that back the world's greatest founders and companies.</p>
+              <p class="vlabel">How we help</p>
+              <p>Term sheets, SAFEs and convertibles, share purchase agreements, shareholders' agreements, side letters, and the closing documents that carry a round to signing, plus NDAs, fund and vendor contracts, and data-processing agreements. Handled end-to-end, freeing your team to source deals, negotiate, and back founders, which is where partners create value.</p>
+              </div>
+            </div>
+          </div>
+          <div class="vsep" aria-hidden="true"></div>
+          <div class="verticals">
+            <div class="vcard reveal">
+              <div class="vcard-title"><h3>Big Tech</h3></div>
+              <div class="vcard-desc">
+              <p class="vlabel">Who</p>
+              <p>Government bodies and public institutions with strict accountability and confidentiality requirements.</p>
+              <p class="vlabel">How we help</p>
+              <p>Legal research, drafting and analysis on certified, DSG-compliant infrastructure, with a complete audit trail from source to result.</p>
+              </div>
+            </div>
+            <div class="vcard reveal">
+              <div class="vcard-title"><h3>Deep Tech</h3></div>
+              <div class="vcard-desc">
+              <p class="vlabel">Who</p>
+              <p>Deep-tech teams scaling hardware and AI faster than their legal capacity.</p>
+              <p class="vlabel">How we help</p>
+              <p>NDAs, IP and licensing agreements, R&amp;D and integration contracts, government and SBIR-style awards, and data-processing terms handled end-to-end, freeing your team to protect the technology and close the deals that only they can.</p>
+              </div>
+            </div>
+            <div class="vcard reveal">
+              <div class="vcard-title"><h3>Frontier AI</h3></div>
+              <div class="vcard-desc">
+              <p class="vlabel">Who</p>
+              <p>AI research labs and companies that work on the future of AI.</p>
+              <p class="vlabel">How we help</p>
+              <p>Commercial contracting, product reviews, privacy, regulatory implementation, training-data/IP work and compute procurement.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
