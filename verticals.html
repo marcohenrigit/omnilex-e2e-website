@@ -49,17 +49,18 @@
   .verticals{display:grid;gap:1.25rem;grid-template-columns:1fr}
   .verticals+.vsep{margin:2.25rem 0}
   .vsep{border:0;border-top:1px solid var(--line)}
-  @media(min-width:640px){.verticals{grid-template-columns:1fr 1fr}}
-  .vcard{position:relative;overflow:hidden;min-height:13rem;border:1px solid rgba(1,1,1,.1);border-radius:18px;background:rgba(255,255,255,.35);transition:border-color .25s,box-shadow .3s,background .3s}
+  @media(min-width:560px){.verticals{grid-template-columns:1fr 1fr}}
+  @media(min-width:860px){.verticals{grid-template-columns:1fr 1fr 1fr}}
+  .vcard{position:relative;overflow:hidden;min-height:10.5rem;border:1px solid rgba(1,1,1,.1);border-radius:16px;background:rgba(255,255,255,.35);transition:border-color .25s,box-shadow .3s,background .3s}
   .vcard:hover{border-color:rgba(1,1,1,.32);background:rgba(255,255,255,.55);box-shadow:0 16px 44px rgba(0,0,0,.05)}
-  .vcard-title{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:2.25rem;transition:opacity .3s ease}
-  .vcard-title h3{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:600;line-height:1.08;letter-spacing:-0.025em}
-  .vcard-desc{padding:2.25rem;text-align:center;opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease}
+  .vcard-title{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.5rem;transition:opacity .3s ease}
+  .vcard-title h3{font-size:clamp(1.3rem,2.1vw,1.7rem);font-weight:600;line-height:1.12;letter-spacing:-0.02em}
+  .vcard-desc{padding:1.6rem;text-align:center;opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease}
   .vcard:hover .vcard-title{opacity:0}
   .vcard:hover .vcard-desc{opacity:1;transform:none}
   .vcard-desc .vlabel{margin-top:1.1rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:600}
   .vcard-desc .vlabel:first-child{margin-top:0}
-  .vcard-desc p{margin-top:.4rem;font-size:.92rem;line-height:1.6;color:var(--muted)}
+  .vcard-desc p{margin-top:.4rem;font-size:.87rem;line-height:1.55;color:var(--muted)}
   @media(hover:none){.vcard-title{position:static;padding-bottom:0}.vcard-desc{opacity:1;transform:none;padding-top:1.1rem}}
 
   .vcta{border-top:1px solid var(--line);padding:3rem 0 5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.25rem}
