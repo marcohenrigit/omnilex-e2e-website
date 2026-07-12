@@ -4,8 +4,8 @@
 <meta name="robots" content="noindex,nofollow" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Omnilex × Massive — Pilot Proposal</title>
-<meta name="description" content="A 30-day fixed-scope legal pilot for Massive: SDK consent, partner DPAs, customer AUP and vetting, scraping risk — handled end-to-end by Omnilex." />
+<title>Omnilex × Compound Eye: Legal built for machine perception</title>
+<meta name="description" content="A focused legal pilot for Compound Eye: government and defense contracts, VIDAS IP, export control, OEM agreements and training-data rights, handled end-to-end by Omnilex, AI-native and lawyer-supervised." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23010101'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Georgia'%20font-size='18'%20fill='%23FBFBF9'%20text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +14,7 @@
   :root{
     --paper:#FBFBF9; --surface:#FFFFFF; --ink:#010101; --coal:#212121; --muted:#6E6E6E;
     --line:#E7E5DF; --gold:#F5A623;
+    --m1:#3657F9; --m2:#F05A24; --mnavy:#1F1D1B;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
     --serif:"Signifier","Instrument Serif",Georgia,serif;
     --max:64rem;
@@ -26,7 +27,7 @@
   @media(min-width:1024px){.wrap{padding:0 2rem}}
   .emph{font-weight:700}
   .kicker{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:1rem}
-  .kicker .dotmark{color:var(--gold)}
+  .kicker .dotmark{color:var(--m2)}
   section{position:relative}
   .sec{padding:4.5rem 0}
   @media(min-width:1024px){.sec{padding:6rem 0}}
@@ -64,7 +65,7 @@
   .hero-terms b{color:var(--ink);font-weight:600}
   .hairline-gold{width:52px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:1.8rem}
 
-  /* legal surface — the star */
+  /* legal surface, the star */
   .surface-sec{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .surface-head{max-width:48rem}
   .surface-head .lead{margin-top:1.1rem}
@@ -155,6 +156,12 @@
   .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
   .foot img{height:22px;width:auto;display:block}
   .foot .cr{font-size:.84rem;color:var(--muted)}
+  .hero{overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 100% -8%, rgba(54,87,249,.12), rgba(240,90,36,.06) 45%, transparent 72%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-massive{height:44px;width:auto;display:block;margin-bottom:1.9rem}
+  @media(max-width:760px){.hero-massive{height:34px;margin-bottom:1.5rem}}
+  .mgrad{background:linear-gradient(90deg,var(--m1),var(--m2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:600}
 </style>
 </head>
 <body>
@@ -162,8 +169,8 @@
   <!-- TOP: logo only, no nav -->
   <div class="top">
     <div class="wrap top-inner">
-      <img src="/omnilex-logo.png" alt="Omnilex" />
-      <span class="top-for">Prepared for <b>Massive</b></span>
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex" />
+      <span class="top-for">Prepared for <b>Compound Eye</b></span>
     </div>
   </div>
 
@@ -171,46 +178,46 @@
     <!-- 1 · HERO -->
     <section class="hero">
       <div class="wrap">
-        <div class="hairline-gold reveal"></div>
-        <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; Providing world class legal to Massive</p>
-        <h1 class="reveal">Header Hero</h1>
-        <p class="lead reveal">Description Hero</p>
+        <img class="hero-massive reveal" src="https://cdn.prod.website-files.com/66184c1ec2bf481d95b05cfa/66a14a8dd58a47b7aff9e6a4_Logo.svg" alt="Compound Eye" />
+        <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; Providing world class legal to Compound Eye</p>
+        <h1 class="reveal">Perception this precise deserves <span class="mgrad">legal to match</span>.</h1>
+        <p class="lead reveal">Compound Eye gives autonomous machines human-like perception. VIDAS turns automotive-grade cameras into real-time depth, scene understanding and position, a redundant alternative to LiDAR and radar at a fraction of the cost. Building that across defense, heavy equipment and automotive creates a dense, recurring legal load: government contracts, export control, IP and OEM agreements. Omnilex handles it end-to-end, AI-native and supervised by expert lawyers, so it never slows the build.</p>
       </div>
     </section>
 
-    <!-- 2 · LEGAL SURFACE — THE STAR -->
+    <!-- 2 · LEGAL SURFACE, THE STAR -->
     <section class="surface-sec">
       <div class="wrap sec">
         <div class="surface-head">
           <p class="kicker reveal">We know your business</p>
-          <h2 class="reveal">Header Business</h2>
-          <p class="lead reveal">Description Business</p>
+          <h2 class="reveal">You are teaching machines to see. This is the legal load that rides along.</h2>
+          <p class="lead reveal">A deep-tech vision company selling VIDAS into defense, heavy equipment and automotive, backed by Khosla Ventures and five DoD Direct-to-Phase-2 SBIR awards, carries a very specific legal footprint. From your public profile, here is where we would start.</p>
         </div>
 
         <div class="surf-list reveal">
           <div class="surf">
-            <div class="surf-t"><span class="num">01</span><h3>Topic 1</h3></div>
-          <p>Description 1</p>
+            <div class="surf-t"><span class="num">01</span><h3>Government and defense contracts</h3></div>
+          <p>Your SBIR Phase II and Army CATALYST awards, and work through an integrator like RTX, come wrapped in FAR and DFARS clauses. The heart of it is data rights: keeping VIDAS as your commercial IP while the government takes only what it must. Get the rights and flow-downs wrong once and it follows every future contract.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">02</span><h3>Topic 2</h3></div>
-          <p>Description 2</p>
+            <div class="surf-t"><span class="num">02</span><h3>Your VIDAS IP</h3></div>
+          <p>VIDAS is the crown jewel. A clean patent strategy, watertight invention assignment, and trade-secret protection keep your algorithms yours, and give you freedom to operate against LiDAR incumbents and other vision patents as you scale.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">03</span><h3>Topic 3</h3></div>
-          <p>Description 3</p>
+            <div class="surf-t"><span class="num">03</span><h3>Export control (ITAR and EAR)</h3></div>
+          <p>Perception software adapted for warfighters is almost certainly export-controlled. You need the right classification, a technology control plan, license positions, and disciplined handling of foreign-national access and deemed exports, before an audit or a hire forces the question.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">04</span><h3>Topic 4</h3></div>
-          <p>Description 4</p>
+            <div class="surf-t"><span class="num">04</span><h3>OEM and commercial agreements</h3></div>
+          <p>Automotive and heavy-equipment deals turn on supply, integration and licensing terms, and on who carries the risk when a safety-critical perception system is in the loop. Warranty, liability caps and indemnities have to be drawn so a field failure never lands on Compound Eye.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">05</span><h3>Topic 5</h3></div>
-          <p>Description 5</p>
+            <div class="surf-t"><span class="num">05</span><h3>Training-data and model rights</h3></div>
+          <p>VIDAS is only as defensible as the data behind it. Labeling-vendor terms, data licensing, ownership of training sets and model outputs, and automotive-data privacy all need locking down so nobody else can claim a piece of what you built.</p>
           </div>
           <div class="surf">
-            <div class="surf-t"><span class="num">06</span><h3>Topic 6</h3></div>
-          <p>Description 6</p>
+            <div class="surf-t"><span class="num">06</span><h3>Team and partner protection</h3></div>
+          <p>As you hire engineers and partner with OEMs and integrators, invention assignment, NDAs and trade-secret controls are what stop your edge from walking out the door or leaking across a partnership.</p>
           </div>
         </div>
       </div>
@@ -220,30 +227,30 @@
     <section class="sline">
       <div class="wrap sec">
         <p class="kicker reveal">Never worry about legal again</p>
-        <h2 class="reveal" style="max-width:32ch">Header Value Proposition</h2>
+        <h2 class="reveal" style="max-width:34ch">You gave machines human-like perception. We give you legal you never have to look at.</h2>
         <div class="flow reveal">
           <div class="fstep">
-            <span class="ft">Step 1</span>
-            <span class="fd">Description 1</span>
-            <span class="fh">CTA 1</span>
+            <span class="ft">Forward it</span>
+            <span class="fd">Drop us any matter you have on our platform, Email, Slack or where it is most convenient.</span>
+            <span class="fh">Always-on</span>
           </div>
           <div class="farrow" aria-hidden="true">→</div>
           <div class="fstep">
-            <span class="ft">Step 2</span>
-            <span class="fd">Description 2</span>
-            <span class="fh">CTA 2</span>
+            <span class="ft">Let the mind work</span>
+            <span class="fd">The Omnilex Mind gets to work. Legal Research. Benchmarking with internal best practices. Redlining. Drafting the deliverable. Back-checking with initial findings. Preparing for review by the expert lawyer.</span>
+            <span class="fh">Immediate effort</span>
           </div>
           <div class="farrow" aria-hidden="true">→</div>
           <div class="fstep">
-            <span class="ft">Step 3</span>
-            <span class="fd">Description 3</span>
-            <span class="fh">CTA 3</span>
+            <span class="ft">Lawyer signs off</span>
+            <span class="fd">An Omnilex expert lawyer supervises, corrects and approves. The work is signed off only once it reaches world-class legal quality.</span>
+            <span class="fh">Zero Effort</span>
           </div>
           <div class="farrow" aria-hidden="true">→</div>
           <div class="fstep">
-            <span class="ft">Step 4</span>
-            <span class="fd">Description 4</span>
-            <span class="fh">CTA 4</span>
+            <span class="ft">That&rsquo;s it. Done</span>
+            <span class="fd">You get the finished, reviewed document, analysis, legal advice, heads-up. Not a feedback. Not an instruction what to do. It&rsquo;s done. End-to-end.</span>
+            <span class="fh">Results only</span>
           </div>
         </div>
       </div>
@@ -253,75 +260,27 @@
     <section class="sline">
       <div class="wrap sec">
         <p class="kicker reveal">Done with the old times</p>
-        <h2 class="reveal" style="max-width:30ch">Recurring contract work is exactly what firms overcharge for.</h2>
+        <h2 class="reveal" style="max-width:34ch">Your outside counsel should be winning your IP and SBIR fights, not reviewing NDAs.</h2>
+        <p class="lead reveal" style="margin-top:1.1rem;max-width:44rem">Right now the high-stakes work (patents, government-contract data rights, export control) and the everyday grind (NDAs, OEM redlines, vendor terms) hit the same expensive desk, billed by the hour. That is a specialist you should save for the fights that decide the company, spending time on work that should never have reached them.</p>
         <div class="cmp">
           <div class="cmp-col reveal">
-            <h3>Traditional legal teams</h3>
+            <h3>Compound Eye today</h3>
             <ul>
-              <li>Rely on outside counsel billing hourly</li>
-              <li>Drown in high-volume matters daily</li>
-              <li>Have long turnaround and stacked to-dos for weeks</li>
-              <li>Should be able to focus on high-stakes, critical matters</li>
+              <li>A lean team routing everything to outside counsel by the hour</li>
+              <li>Patent, SBIR and export questions competing with routine NDAs</li>
+              <li>Contracts and redlines piling up while engineers wait</li>
+              <li>Your best legal spend going to paperwork, not real risk</li>
             </ul>
           </div>
           <div class="cmp-col us reveal">
-            <h3>Omnilex</h3>
+            <h3>With Omnilex</h3>
             <ul>
-              <li>Built for high-volume matter throughput</li>
-              <li>Works around the clock and brings turnaround down to hours</li>
-              <li>Handles your matters at a fraction of common costs</li>
-              <li>Is operated by world-class lawyers</li>
+              <li>Absorbs your recurring, high-volume contract work end-to-end</li>
+              <li>Turnaround in hours, around the clock, at a fraction of firm rates</li>
+              <li>Frees your counsel for patents, SBIR and bet-the-company calls</li>
+              <li>Operated by world-class lawyers, supervising every document</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3 · THE PILOT -->
-    <section id="pilot">
-      <div class="wrap sec">
-        <p class="kicker reveal">Get started</p>
-        <h2 class="reveal" style="max-width:34ch">Small scope. Low risk.</h2>
-        <div class="offer reveal" style="margin-top:2.4rem">
-          <div class="offer-top">
-            <h3>X days to convince yourself</h3>
-            <div class="offer-badges">
-              <span class="badge">Fixed scope</span>
-              <span class="badge">Fixed fee</span>
-              <span class="badge">No lock-in</span>
-            </div>
-          </div>
-
-          <div class="offer-grid">
-            <div>
-              <p class="deliv-label">Two deliverables you'll actually hold</p>
-              <div class="deliv">
-                <h4>1 · SDK consent + partner terms, redrafted</h4>
-                <p>The exact opt-in language users see, plus the partner-app agreement behind it — rebuilt so consent is provable and risk flows to the right party.</p>
-              </div>
-              <div class="deliv">
-                <h4>2 · Customer AUP + vetting policy, built</h4>
-                <p>An enforceable acceptable-use policy and a practical customer-vetting workflow you can run from day one — the layer that keeps misuse off your books.</p>
-              </div>
-            </div>
-
-            <div class="offer-meta">
-              <div class="meta-row">
-                <p class="mk">What it costs</p>
-                <p class="mv"><span class="fee"><span class="ph">CHF [fixed fee]</span></span> &nbsp;— one price for the 30 days. No hourly billing, no surprise invoices.</p>
-              </div>
-              <div class="meta-row">
-                <p class="mk">What success looks like</p>
-                <p class="mv">Two documents in force, a written read of your remaining exposure, and a clear yes/no on whether we run your recurring legal volume next.</p>
-              </div>
-              <div class="meta-row">
-                <p class="mk">What we'll actually touch</p>
-                <p class="mv">Your SDK consent screen, one partner template, and your customer-facing AUP — nothing that blocks the business while we work.</p>
-              </div>
-            </div>
-          </div>
-
-          <p class="escalate"><b>The honest escalation path.</b> Recurring, high-volume contract work — partner onboarding, customer DPAs, AUP enforcement — is exactly what we take end-to-end after the pilot. The bet-the-company calls — a novel regulatory challenge, live litigation, a regulator at the door — we flag clearly and route to senior human counsel. We don't pretend AI replaces that judgment; we make sure it's rarely what you're paying for.</p>
         </div>
       </div>
     </section>
@@ -339,12 +298,12 @@
     </section>
   </main>
 
-  <div class="cityline" aria-hidden="true"><img src="/sf-skyline.svg" alt="" /></div>
+  <div class="cityline" aria-hidden="true"><img src="https://ask.omnilex.ai/sf-skyline.svg" alt="" /></div>
 
   <footer>
     <div class="wrap foot">
-      <img src="/omnilex-logo.png" alt="Omnilex AG" />
-      <p class="cr">Prepared for Massive · Confidential · © 2026 Omnilex AG</p>
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex AG" />
+      <p class="cr">Prepared for Compound Eye · Confidential · © 2026 Omnilex AG</p>
     </div>
   </footer>
 
