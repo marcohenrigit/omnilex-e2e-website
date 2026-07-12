@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omnilex × Tiny: Legal built for high-volume venture investing</title>
+<meta name="description" content="A focused legal pilot for Tiny (TSIC): investment instruments at volume, side letters and MFN, LP agreements, FCA financial promotions, KYC/AML and SFDR, handled end-to-end by Omnilex so your one in-house lawyer stays focused on judgment." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%2303181D'/%3E%3Ctext%20x='16'%20y='21'%20font-family='monospace'%20font-size='13'%20font-weight='700'%20fill='%23FAFAFA'%20text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#FAFAFA; --surface:#FFFFFF; --ink:#03181D; --coal:#212121; --muted:#6E6E6E;
+    --line:#E6E4EC; --accent:#A065FF; --accent-soft:#F1EAFE;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    --max:64rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-0.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem;width:100%}
+  @media(min-width:1024px){.wrap{padding:0 2rem}}
+  .emph{font-weight:700}
+  .kicker{font-family:var(--mono);font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:1rem}
+  .kicker .dotmark{color:var(--accent)}
+  section{position:relative}
+  .sec{padding:4.5rem 0}
+  @media(min-width:1024px){.sec{padding:6rem 0}}
+  .sline{border-top:1px solid var(--line)}
+  h1{font-size:clamp(2.3rem,5.4vw,3.9rem);line-height:1.05;font-weight:500;letter-spacing:-0.035em}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.12;font-weight:500;letter-spacing:-0.03em}
+  h2 .emph{font-weight:700}
+  .lead{font-size:1.08rem;color:var(--muted);line-height:1.65}
+  .hl{background:var(--accent);color:#fff;padding:.02em .16em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* top bar: omnilex + live clocks + prepared-for */
+  .top{position:absolute;top:0;left:0;right:0;z-index:10}
+  .top-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+  .top-inner img{height:20px;width:auto;display:block}
+  .top-right{display:flex;align-items:center;gap:1.4rem}
+  .clock{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;color:var(--ink);text-transform:uppercase;white-space:nowrap}
+  .clock b{color:var(--muted);font-weight:500}
+  .top-for{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+  .top-for b{color:var(--ink);font-weight:600}
+  @media(max-width:760px){.clock{display:none}}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;font-family:var(--mono);font-size:.82rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;padding:.95rem 1.7rem;transition:.2s;border:none;cursor:pointer}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-dark:hover{background:var(--accent)}
+  .btn-lg{font-size:.86rem;padding:1.05rem 2rem}
+
+  /* hero */
+  .hero{padding:9rem 0 4.5rem;position:relative;overflow:hidden}
+  @media(min-width:1024px){.hero{padding:11rem 0 5.5rem}}
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1{max-width:17ch}
+  .hero .lead{margin-top:1.6rem;max-width:44rem;font-size:1.15rem}
+  .hero-globe{position:absolute;top:-4%;right:-6%;width:52%;max-width:560px;opacity:.9;z-index:0;pointer-events:none}
+  @media(max-width:760px){.hero-globe{width:80%;opacity:.5;top:2%;right:-18%}}
+
+  /* TSIC lockup (actual logo) */
+  .hero-mark{margin-bottom:2rem}
+  .hero-mark img{height:52px;width:auto;display:block}
+  @media(max-width:760px){.hero-mark img{height:40px}}
+
+  /* legal surface, the star */
+  .surface-sec{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .surface-head{max-width:48rem}
+  .surface-head .lead{margin-top:1.1rem}
+  .surf-list{margin-top:3rem;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  @media(min-width:760px){.surf-list{grid-template-columns:1fr 1fr}}
+  .surf{background:var(--surface);padding:1.9rem 1.8rem;display:flex;flex-direction:column;transition:background .2s}
+  .surf:hover{background:#FCFBFF}
+  .surf-t{display:flex;align-items:baseline;gap:.7rem}
+  .surf-t .num{font-family:var(--mono);font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.06em;flex:0 0 auto;width:1.9rem}
+  .surf-t h3{font-size:1.12rem;font-weight:600;letter-spacing:-0.02em;line-height:1.2}
+  .surf p{margin-top:.75rem;padding-left:2.6rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .surf p .hl2{color:var(--ink);font-weight:600;background:none;padding:0}
+  .surf-note{margin-top:1.75rem;font-size:.92rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* the pilot offer card */
+  .offer{border:1.5px solid var(--ink);border-radius:22px;padding:2.4rem 2rem;background:var(--paper)}
+  @media(min-width:1024px){.offer{padding:3rem 3rem}}
+  .offer-top{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:1.6rem}
+  .offer-top h3{font-size:1.5rem;font-weight:600;letter-spacing:-0.02em}
+  .offer-badges{display:flex;flex-wrap:wrap;gap:.5rem}
+  .badge{font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(3,24,29,.2);border-radius:999px;padding:.35rem .8rem}
+  .offer-grid{margin-top:1.9rem;display:grid;gap:2rem}
+  @media(min-width:820px){.offer-grid{grid-template-columns:1fr 1fr}}
+  .deliv-label{font-family:var(--mono);font-size:.66rem;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:1rem}
+  .deliv{border-left:2px solid var(--accent);padding:.15rem 0 .15rem 1.1rem;margin-bottom:1.4rem}
+  .deliv h4{font-size:1.04rem;font-weight:600;letter-spacing:-0.01em}
+  .deliv p{margin-top:.4rem;font-size:.92rem;line-height:1.58;color:var(--muted)}
+  .offer-meta{display:flex;flex-direction:column;gap:1.2rem}
+  .meta-row .mk{font-family:var(--mono);font-size:.66rem;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+  .meta-row .mv{margin-top:.35rem;font-size:.98rem;line-height:1.5}
+  .meta-row .mv b{font-weight:600}
+  .fee{font-size:1.6rem;font-weight:600;letter-spacing:-0.02em}
+  .ph{background:var(--accent-soft);border-bottom:1.5px solid var(--accent);padding:0 .25rem;border-radius:3px 3px 0 0;font-style:normal}
+  .escalate{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.5rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .escalate b{color:var(--ink);font-weight:600}
+
+  /* how it works flow */
+  .flow{margin-top:3rem;display:grid;gap:1rem;align-items:stretch}
+  @media(min-width:820px){.flow{grid-template-columns:1fr 1.4rem 1fr 1.4rem 1fr 1.4rem 1fr}}
+  .fstep{border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.4rem;background:var(--surface);display:flex;flex-direction:column}
+  .fstep .ft{font-size:1.02rem;font-weight:600;letter-spacing:-0.01em}
+  .fstep .fd{margin-top:.5rem;font-size:.88rem;line-height:1.55;color:var(--muted)}
+  .fstep .fh{margin-top:1rem;font-family:var(--mono);font-size:.66rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}
+  .farrow{display:flex;align-items:center;justify-content:center;color:rgba(3,24,29,.28);font-size:1.3rem}
+  @media(max-width:819px){.farrow{transform:rotate(90deg);height:1.3rem}}
+  .flow-cap{margin-top:1.8rem;font-size:.94rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* compare / why not a firm */
+  .cmp{margin-top:3rem;display:grid;gap:1rem}
+  @media(min-width:760px){.cmp{grid-template-columns:1fr 1fr}}
+  .cmp-col{border:1px solid var(--line);border-radius:16px;padding:1.9rem 1.8rem}
+  .cmp-col.us{border-color:rgba(3,24,29,.45)}
+  .cmp-col h3{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em;display:flex;align-items:center;gap:.55rem}
+  .cmp-col.us h3::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--accent)}
+  .cmp-col ul{list-style:none;margin-top:1.1rem;display:flex;flex-direction:column;gap:.8rem}
+  .cmp-col li{font-size:.94rem;line-height:1.55;color:var(--muted);padding-left:1.3rem;position:relative}
+  .cmp-col li::before{content:"·";position:absolute;left:0;color:var(--muted)}
+  .cmp-col.us li::before{content:"→";color:var(--accent)}
+  .cmp-col.us li{color:var(--ink)}
+
+  /* final cta */
+  .final{text-align:center;max-width:40rem;margin:0 auto}
+  .final h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+  .final .lead{margin-top:1.2rem}
+  .final-cta{margin-top:2.2rem;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+  .final-note{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+
+  /* stay-tiny ticker */
+  .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:var(--paper)}
+  .ticker-track{display:inline-flex;white-space:nowrap;will-change:transform;animation:marq 30s linear infinite;font-family:var(--mono);text-transform:uppercase;letter-spacing:.2em;font-size:.78rem;font-weight:500;padding:1.05rem 0;color:var(--ink)}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  .ticker-track span{padding:0 1.4rem}
+  .ticker-track .b{color:var(--accent)}
+  @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
+  footer{border-top:1px solid var(--line);padding:2.5rem 0}
+  .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+  .foot img{height:20px;width:auto;display:block}
+  .foot .cr{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 92% -6%, rgba(160,101,255,.10), transparent 68%);pointer-events:none;z-index:0}
+</style>
+</head>
+<body>
+
+  <!-- TOP: omnilex logo, live clocks, prepared-for -->
+  <div class="top">
+    <div class="wrap top-inner">
+      <img src="/omnilex-logo.png" alt="Omnilex" />
+      <div class="top-right">
+        <span class="clock" id="clkLon"><b>London</b> 00:00</span>
+        <span class="clock" id="clkBer"><b>Berlin</b> 00:00</span>
+        <span class="top-for">Prepared for <b>Tiny</b></span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1 · HERO -->
+    <section class="hero">
+      <img class="hero-globe" src="/tiny-globe.svg" alt="" aria-hidden="true" />
+      <div class="wrap">
+        <div class="hero-mark reveal">
+          <img src="/tsic-logo.png" alt="TSIC, Tiny Supercomputer Investment Company" />
+        </div>
+        <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; Providing world class legal to Tiny</p>
+        <h1 class="reveal">High-volume investing deserves <span class="hl">high-volume legal</span>.</h1>
+        <p class="lead reveal">Tiny backs great companies when they&rsquo;re tiny: 200 to 250K cheques written from day one into 450+ startups since 2017, pre-seed and seed, across London and Berlin. That pace runs on a constant stream of investment instruments, side letters, LP terms and FCA-regulated compliance that would bury a single in-house lawyer. Omnilex is built to move at your speed: AI-native, supervised by expert lawyers, handling the recurring legal load end-to-end so it never slows a deal, and so your lawyer never becomes the bottleneck.</p>
+      </div>
+    </section>
+
+    <!-- 2 · LEGAL SURFACE, THE STAR -->
+    <section class="surface-sec">
+      <div class="wrap sec">
+        <div class="surface-head">
+          <p class="kicker reveal">We know your business</p>
+          <h2 class="reveal">You back founders at day one. This is the legal load running under every cheque.</h2>
+          <p class="lead reveal">A pre-seed and seed fund writing fast, founder-first cheques into 450+ companies since 2017, FCA-regulated and run from a tiny team across two countries, carries a very specific legal footprint. From your public model and your own fund structure, here is where we would start, and every one of these lands first on your in-house lawyer.</p>
+        </div>
+
+        <div class="surf-list reveal">
+          <div class="surf">
+            <div class="surf-t"><span class="num">01</span><h3>The investment instrument, at volume</h3></div>
+          <p>Your edge is speed: 450+ cheques since 2017, written from day one. Every one still needs a clean <span class="hl2">SAFE, ASA or convertible</span>, a term sheet and an executed instrument. That is a constant, repeating stream of paper, exactly the work that piles up on one desk when the fund is moving fast.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">02</span><h3>Side letters &amp; MFN obligations</h3></div>
+          <p>Fast, founder-friendly rounds mean side letters: information rights, pro-rata, most-favoured-nation. Each one you grant ripples across the fund, and <span class="hl2">MFN clauses have to be tracked and honoured</span> across every LP and every deal, or they quietly compound into liability.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">03</span><h3>Fund formation &amp; LP agreements</h3></div>
+          <p>Raising and running the funds behind the cheques means LPAs, subscription documents and LP negotiations. The terms your LPs push at close have to stay consistent with how you actually deploy, and with what the next fund promises.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">04</span><h3>FCA regulation &amp; financial promotions</h3></div>
+          <p>Tiny Supercomputer Management (UK) is <span class="hl2">authorised and regulated by the FCA</span>. That posture governs your financial promotions, your marketing to founders and LPs, and your AIFM and appointed-representative obligations. It is a live compliance surface, not a one-off filing.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">05</span><h3>UK + Germany, kept consistent</h3></div>
+          <p>Two management entities, a UK Ltd and a German GmbH, mean two regulatory and tax regimes under one brand. Documents, disclosures and structures have to line up across both, so a deal in Berlin never contradicts a promise made in London.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">06</span><h3>KYC/AML, GDPR &amp; SFDR disclosures</h3></div>
+          <p>Onboarding founders and LPs at your pace means KYC/AML at volume across jurisdictions. Add the personal data flowing through a 900+ founder community under GDPR, and your published SFDR sustainability disclosures, and you have recurring compliance that has to stay current and defensible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · HOW IT WORKS -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Never worry about legal again</p>
+        <h2 class="reveal" style="max-width:34ch">You keep a tiny team by design. We put a full legal back office behind your one lawyer, with nothing for you to build.</h2>
+        <div class="flow reveal">
+          <div class="fstep">
+            <span class="ft">Forward it</span>
+            <span class="fd">Drop us any matter you have on our platform, Email, Slack or where it is most convenient.</span>
+            <span class="fh">Always-on</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Let the mind work</span>
+            <span class="fd">The Omnilex Mind gets to work. Legal Research. Benchmarking with internal best practices. Redlining. Drafting the deliverable. Back-checking with initial findings. Preparing for review by the expert lawyer.</span>
+            <span class="fh">Immediate effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Lawyer signs off</span>
+            <span class="fd">An Omnilex expert lawyer supervises, corrects and approves. The work is signed off only once it reaches world-class legal quality.</span>
+            <span class="fh">Zero Effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">That&rsquo;s it. Done</span>
+            <span class="fd">You get the finished, reviewed document, analysis, legal advice, heads-up. Not a feedback. Not an instruction what to do. It&rsquo;s done. End-to-end.</span>
+            <span class="fh">Results only</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · KEEP YOUR ONE LAWYER -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Keep your one lawyer</p>
+        <h2 class="reveal" style="max-width:32ch">You run legal with one in-house lawyer. We make sure it stays that way.</h2>
+        <p class="lead reveal" style="margin-top:1.1rem;max-width:44rem">TSIC runs lean by design, and legal is no exception: a single in-house lawyer covering the whole fund. What breaks that model is never the hard calls, it is the volume. Instruments, side letters and onboarding pile up until you are forced to hire a team or send more to outside counsel. Omnilex takes that recurring load so your lawyer stays on judgment, negotiation and the decisions that actually need a human, and one lawyer stays enough.</p>
+        <div class="cmp">
+          <div class="cmp-col reveal">
+            <h3>One lawyer, alone</h3>
+            <ul>
+              <li>Every deal&rsquo;s paperwork lands on a single desk</li>
+              <li>More volume means a second hire or more outside counsel</li>
+              <li>Judgment work competes with routine drafting all day</li>
+              <li>As deal flow climbs, one person becomes the bottleneck</li>
+            </ul>
+          </div>
+          <div class="cmp-col us reveal">
+            <h3>One lawyer, plus Omnilex</h3>
+            <ul>
+              <li>We absorb the recurring instruments, side letters and onboarding</li>
+              <li>Your lawyer supervises the output and owns every relationship</li>
+              <li>No legal team to build, no outside-counsel meter running</li>
+              <li>Deal volume scales without adding a single headcount</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8 · FINAL CTA -->
+    <section class="sline">
+      <div class="wrap sec">
+        <div class="final reveal">
+          <h2>Pilot Omnilex</h2>
+          <div class="final-cta">
+            <a href="https://outlook.office.com/bookwithme/user/8439c070dc1b4a3b8985da775ade9433@omnilex.ai/meetingtype/Ck2iTwJv_Uq-E2bU_gbRbQ2?bookingcode=1c4f49a9-0fb0-457c-9fd4-879006d00d97&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mcard" class="btn btn-dark btn-lg" target="_blank" rel="noopener">Book Meeting →</a>
+            <span class="final-note">Stay Tiny · Legal handled end-to-end</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- STAY TINY ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Tiny VC</span><span class="b">•</span><span>London</span><span class="b">•</span><span>Berlin</span><span class="b">•</span><span>Est 2017</span><span class="b">•</span><span>Stay Tiny</span><span class="b">•</span>
+      <span>Tiny VC</span><span class="b">•</span><span>London</span><span class="b">•</span><span>Berlin</span><span class="b">•</span><span>Est 2017</span><span class="b">•</span><span>Stay Tiny</span><span class="b">•</span>
+      <span>Tiny VC</span><span class="b">•</span><span>London</span><span class="b">•</span><span>Berlin</span><span class="b">•</span><span>Est 2017</span><span class="b">•</span><span>Stay Tiny</span><span class="b">•</span>
+      <span>Tiny VC</span><span class="b">•</span><span>London</span><span class="b">•</span><span>Berlin</span><span class="b">•</span><span>Est 2017</span><span class="b">•</span><span>Stay Tiny</span><span class="b">•</span>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap foot">
+      <img src="/omnilex-logo.png" alt="Omnilex AG" />
+      <p class="cr">Prepared for Tiny · Confidential · © 2026 Omnilex AG</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);} });
+      },{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+    // live London / Berlin clocks (Tiny signature)
+    (function(){
+      function fmt(tz){try{return new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date());}catch(e){return '--:--';}}
+      var lon=document.getElementById('clkLon'), ber=document.getElementById('clkBer');
+      function tick(){ if(lon)lon.innerHTML='<b>London</b> '+fmt('Europe/London'); if(ber)ber.innerHTML='<b>Berlin</b> '+fmt('Europe/Berlin'); }
+      tick(); setInterval(tick,1000);
+    })();
+  </script>
+</body>
+</html>
