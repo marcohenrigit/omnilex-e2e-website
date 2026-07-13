@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omnilex × BCG X: Legal built at build speed</title>
+<meta name="description" content="A focused legal pilot for BCG X: IP ownership on every build, the EU AI Act, data and model rights, open-source clearance, venture spin-outs, and client SOWs, handled end-to-end by Omnilex so legal never gates a launch." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23212427'/%3E%3Ctext%20x='16'%20y='23'%20font-family='Georgia,serif'%20font-size='18'%20font-weight='700'%20fill='%2396F878'%20text-anchor='middle'%3EX%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#212427; --bg-soft:#26292C;
+    --paper:#F1EEEA; --surface:#FFFFFF;
+    --green:#0C2B15; --accent:#96F878; --mint:#00FFCC; --blue:#4928FF;
+    /* theme-scoped (dark defaults) */
+    --fg:#FFFFFF; --muted:rgba(255,255,255,.64); --line:rgba(255,255,255,.16);
+    --card:#26292C; --canvas:#212427;
+    --slab:"Zilla Slab",Georgia,"Times New Roman",serif;
+    --sans:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --max:64rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-0.006em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem;width:100%}
+  @media(min-width:1024px){.wrap{padding:0 2rem}}
+  section{position:relative;background:var(--canvas)}
+  section.light{--fg:#212427; --muted:#585D61; --line:#E2DFD9; --card:#FFFFFF; --canvas:var(--paper)}
+  .sec{padding:4.5rem 0}
+  @media(min-width:1024px){.sec{padding:6.5rem 0}}
+  .kicker{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.22em;color:var(--muted);margin-bottom:1.1rem}
+  .kicker .dotmark{color:var(--accent)}
+  h1,h2,h3.slab{font-family:var(--slab)}
+  h1{font-family:var(--slab);font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.02;font-weight:700;letter-spacing:-0.01em}
+  h2{font-family:var(--slab);font-size:clamp(1.9rem,3.7vw,2.9rem);line-height:1.08;font-weight:600;letter-spacing:-0.005em}
+  .lead{font-size:1.08rem;color:var(--muted);line-height:1.65}
+  .hl{background:var(--accent);color:var(--green);padding:.02em .18em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+  .reveal.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* top bar */
+  .top{position:absolute;top:0;left:0;right:0;z-index:20}
+  .top-inner{display:flex;align-items:center;justify-content:space-between;height:74px;gap:1rem}
+  .omni{height:20px;width:auto;display:block;filter:brightness(0) invert(1)}
+  .top-for{font-size:.74rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .top-for b{color:var(--fg);font-weight:600}
+
+  /* BCG X lockup */
+  .bx{font-family:var(--slab);font-weight:700;letter-spacing:-0.01em;line-height:1;display:inline-flex;align-items:center}
+  .bx .x{color:var(--accent);margin-left:.16em}
+  .hero-mark{margin-bottom:2rem}
+  .hero-mark .bx{font-size:2.7rem}
+  @media(max-width:760px){.hero-mark .bx{font-size:2.1rem}}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.55rem;border-radius:999px;font-family:var(--sans);font-size:.9rem;font-weight:600;letter-spacing:.01em;padding:1rem 1.8rem;transition:.2s;border:none;cursor:pointer}
+  .btn-accent{background:var(--accent);color:var(--green)}
+  .btn-accent:hover{background:#B6FF9E;transform:translateY(-1px)}
+  .btn-lg{font-size:.98rem;padding:1.1rem 2.1rem}
+
+  /* hero */
+  .hero{min-height:92vh;display:flex;align-items:center;padding:8rem 0 5rem;overflow:hidden}
+  @media(min-width:1024px){.hero{padding:9rem 0 6rem}}
+  #net{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.9;pointer-events:none}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(90deg, var(--bg) 12%, rgba(33,36,39,.72) 42%, rgba(33,36,39,.30) 72%, transparent 100%)}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(60% 60% at 82% 22%, rgba(150,248,120,.10), transparent 60%)}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{max-width:15ch}
+  .hero .lead{margin-top:1.8rem;max-width:44rem;font-size:1.16rem}
+
+  /* legal surface */
+  .surface-head{max-width:50rem}
+  .surface-head .lead{margin-top:1.2rem}
+  .surf-list{margin-top:3rem;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  @media(min-width:760px){.surf-list{grid-template-columns:1fr 1fr}}
+  .surf{background:var(--card);padding:2rem 1.9rem;display:flex;flex-direction:column;transition:transform .2s}
+  .surf:hover{transform:translateY(-2px)}
+  .surf-t{display:flex;align-items:baseline;gap:.8rem}
+  .surf-t .num{font-family:var(--slab);font-size:.9rem;font-weight:700;color:var(--green);letter-spacing:.02em;flex:0 0 auto;width:1.9rem}
+  section.light .surf-t .num{color:#1C7A3E}
+  .surf-t h3{font-size:1.14rem;font-weight:600;letter-spacing:-0.01em;line-height:1.2;font-family:var(--sans)}
+  .surf p{margin-top:.8rem;padding-left:2.7rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .surf p .hl2{color:var(--fg);font-weight:600}
+
+  /* flow */
+  .flow{margin-top:3rem;display:grid;gap:1rem;align-items:stretch}
+  @media(min-width:820px){.flow{grid-template-columns:1fr 1.3rem 1fr 1.3rem 1fr 1.3rem 1fr}}
+  .fstep{border:1px solid var(--line);border-radius:14px;padding:1.6rem 1.5rem;background:var(--card);display:flex;flex-direction:column}
+  .fstep .ft{font-size:1.04rem;font-weight:600;letter-spacing:-0.01em}
+  .fstep .fd{margin-top:.55rem;font-size:.88rem;line-height:1.55;color:var(--muted)}
+  .fstep .fh{margin-top:1.1rem;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}
+  section.light .fstep .fh{color:#1C7A3E}
+  .farrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.3rem;opacity:.7}
+  @media(max-width:819px){.farrow{transform:rotate(90deg);height:1.3rem}}
+
+  /* offer card */
+  .offer{border:1.5px solid var(--fg);border-radius:22px;padding:2.4rem 2rem;background:var(--card)}
+  @media(min-width:1024px){.offer{padding:3rem 3rem}}
+  .offer-top{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:1.6rem}
+  .offer-top h3{font-family:var(--slab);font-size:1.6rem;font-weight:600;letter-spacing:-0.01em}
+  .offer-badges{display:flex;flex-wrap:wrap;gap:.5rem}
+  .badge{font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:.4rem .85rem}
+  .offer-grid{margin-top:2rem;display:grid;gap:2rem}
+  @media(min-width:820px){.offer-grid{grid-template-columns:1fr 1fr}}
+  .deliv-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:1rem}
+  .deliv{border-left:2px solid var(--accent);padding:.15rem 0 .15rem 1.1rem;margin-bottom:1.4rem}
+  .deliv h4{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em}
+  .deliv p{margin-top:.42rem;font-size:.92rem;line-height:1.58;color:var(--muted)}
+  .offer-meta{display:flex;flex-direction:column;gap:1.3rem}
+  .meta-row .mk{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+  .meta-row .mv{margin-top:.35rem;font-size:.97rem;line-height:1.5}
+  .fee{font-family:var(--slab);font-size:1.7rem;font-weight:700;letter-spacing:-0.01em}
+  .ph{background:rgba(150,248,120,.22);border-bottom:1.5px solid var(--accent);padding:0 .28rem;border-radius:3px 3px 0 0;font-style:normal}
+  section.light .ph{background:rgba(150,248,120,.42)}
+  .escalate{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.6rem;font-size:.93rem;line-height:1.62;color:var(--muted)}
+  .escalate b{color:var(--fg);font-weight:600}
+
+  /* compare */
+  .cmp{margin-top:3rem;display:grid;gap:1rem}
+  @media(min-width:760px){.cmp{grid-template-columns:1fr 1fr}}
+  .cmp-col{border:1px solid var(--line);border-radius:16px;padding:2rem 1.9rem;background:var(--card)}
+  .cmp-col.us{border-color:var(--accent)}
+  .cmp-col h3{font-size:1.06rem;font-weight:600;letter-spacing:-0.01em;display:flex;align-items:center;gap:.6rem}
+  .cmp-col.us h3::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--accent)}
+  .cmp-col ul{list-style:none;margin-top:1.2rem;display:flex;flex-direction:column;gap:.85rem}
+  .cmp-col li{font-size:.94rem;line-height:1.55;color:var(--muted);padding-left:1.4rem;position:relative}
+  .cmp-col li::before{content:"·";position:absolute;left:0;color:var(--muted)}
+  .cmp-col.us li::before{content:"→";color:var(--accent)}
+  .cmp-col.us li{color:var(--fg)}
+
+  /* scope / honesty box */
+  .scope{border:1px solid var(--accent);border-radius:20px;padding:2.4rem 2rem;background:linear-gradient(180deg, rgba(150,248,120,.06), transparent)}
+  @media(min-width:1024px){.scope{padding:2.8rem 2.6rem}}
+  .scope h3{font-family:var(--slab);font-size:1.5rem;font-weight:600;letter-spacing:-0.01em;max-width:30ch}
+  .scope-grid{margin-top:1.8rem;display:grid;gap:1.4rem}
+  @media(min-width:760px){.scope-grid{grid-template-columns:1fr 1fr}}
+  .scope-item{border-top:1px solid var(--line);padding-top:1.1rem}
+  .scope-item h4{font-size:.95rem;font-weight:600}
+  .scope-item p{margin-top:.45rem;font-size:.9rem;line-height:1.6;color:var(--muted)}
+  .scope-item .tag{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}
+
+  /* final */
+  .final{text-align:center;max-width:42rem;margin:0 auto}
+  .final h2{font-size:clamp(2.1rem,4.4vw,3.1rem)}
+  .final-cta{margin-top:2.3rem;display:flex;flex-direction:column;align-items:center;gap:1rem}
+  .final-note{font-size:.74rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+
+  footer{border-top:1px solid var(--line);padding:2.6rem 0}
+  .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+  .foot .cr{font-size:.8rem;color:var(--muted);letter-spacing:.02em}
+</style>
+</head>
+<body>
+
+  <!-- TOP -->
+  <div class="top">
+    <div class="wrap top-inner">
+      <img class="omni" src="/omnilex-logo.png" alt="Omnilex" />
+      <span class="top-for">Prepared for <b>BCG&nbsp;X</b></span>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1 HERO -->
+    <section class="hero">
+      <canvas id="net" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="hero-mark reveal"><span class="bx">BCG<span class="x">X</span></span></div>
+        <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; Providing world class legal to BCG X</p>
+        <h1 class="reveal">Frontier builds deserve <span class="hl">frontier legal</span>.</h1>
+        <p class="lead reveal">BCG X is the tech build and design unit of BCG: thousands of engineers, data scientists and designers shipping AI products, software and new ventures for the world&rsquo;s largest companies. Every build raises the same questions at scale: who owns the IP, what the AI Act demands, whether the data rights hold, which open-source licences ship with the code. Omnilex is built to move at your speed: AI-native, supervised by expert lawyers, handling that recurring contract and compliance layer end-to-end so legal never gates a launch.</p>
+      </div>
+    </section>
+
+    <!-- 2 LEGAL SURFACE -->
+    <section class="light">
+      <div class="wrap sec">
+        <div class="surface-head">
+          <p class="kicker reveal">We know your business</p>
+          <h2 class="reveal">You ship products, models and ventures. This is the legal layer under every build.</h2>
+          <p class="lead reveal">A build-and-design unit shipping AI systems, software and new companies for global enterprises carries a very specific legal footprint. From your public model and how BCG X operates, here is where we would start, and all of it recurs on every engagement.</p>
+        </div>
+
+        <div class="surf-list reveal">
+          <div class="surf">
+            <div class="surf-t"><span class="num">01</span><h3>IP ownership in every build</h3></div>
+            <p>Who owns the code, the models and the designs you ship. Client SOWs and IP schedules have to allocate <span class="hl2">foreground and background IP</span> cleanly, engagement after engagement, or ownership surfaces as a dispute exactly when a build succeeds.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">02</span><h3>The EU AI Act, built in</h3></div>
+            <p>You deploy AI systems into regulated enterprises. Risk classification, transparency, human-oversight and technical-documentation duties attach to what you build, and <span class="hl2">they land on you as the provider</span>, not only on the client.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">03</span><h3>Data and model-training rights</h3></div>
+            <p>DPAs, data-use rights and training-data provenance for the data that powers your models, across client, third-party and open datasets, kept consistent so a model never ships on data you could not lawfully use.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">04</span><h3>Open-source licence compliance</h3></div>
+            <p>Your builds pull in open-source components. <span class="hl2">Copyleft, attribution and patent-grant obligations</span> have to be cleared before code ships to a client or into a venture, or the licence follows the product downstream.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">05</span><h3>Venture creation and spin-outs</h3></div>
+            <p>When a build becomes a company: incorporation, IP assignment into NewCo, founder and equity terms, and investor and JV documents, structured so the venture stands clean on day one.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">06</span><h3>Client MSAs, SOWs and flow-downs</h3></div>
+            <p>A constant stream of master agreements, statements of work and client-policy flow-downs gates every project kickoff, each one negotiated against a different client paper and a different risk posture.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 HOW IT WORKS -->
+    <section>
+      <div class="wrap sec">
+        <p class="kicker reveal">Never worry about legal again</p>
+        <h2 class="reveal" style="max-width:32ch">You keep a lean build team and move fast. We put a full legal function behind it, with nothing for you to build.</h2>
+        <div class="flow reveal">
+          <div class="fstep">
+            <span class="ft">Forward it</span>
+            <span class="fd">Drop us any matter you have on our platform, Email, Slack or where it is most convenient.</span>
+            <span class="fh">Always-on</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Let the mind work</span>
+            <span class="fd">The Omnilex Mind gets to work. Legal Research. Benchmarking with internal best practices. Redlining. Drafting the deliverable. Back-checking with initial findings. Preparing for review by the expert lawyer.</span>
+            <span class="fh">Immediate effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Lawyer signs off</span>
+            <span class="fd">An Omnilex expert lawyer supervises, corrects and approves. The work is signed off only once it reaches world-class legal quality.</span>
+            <span class="fh">Zero Effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">That&rsquo;s it. Done</span>
+            <span class="fd">You get the finished, reviewed document, analysis, legal advice, heads-up. Not a feedback. Not an instruction what to do. It&rsquo;s done. End-to-end.</span>
+            <span class="fh">Results only</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 THE PILOT -->
+    <section class="light">
+      <div class="wrap sec">
+        <p class="kicker reveal">Get started</p>
+        <h2 class="reveal" style="max-width:30ch">Small scope. Low risk.</h2>
+        <div class="offer reveal" style="margin-top:2.4rem">
+          <div class="offer-top">
+            <h3>A fixed-scope build-legal pilot</h3>
+            <div class="offer-badges">
+              <span class="badge">Fixed scope</span>
+              <span class="badge">Fixed fee</span>
+              <span class="badge">No lock-in</span>
+            </div>
+          </div>
+          <div class="offer-grid">
+            <div>
+              <p class="deliv-label">Two deliverables you will actually hold</p>
+              <div class="deliv">
+                <h4>1 · Master build agreement + IP schedule, rebuilt</h4>
+                <p>Your standard client build contract and the IP allocation behind it, rebuilt so ownership of code, models and designs is unambiguous and defensible on every engagement.</p>
+              </div>
+              <div class="deliv">
+                <h4>2 · AI Act readiness + open-source clearance workflow</h4>
+                <p>A practical risk-classification and documentation pack for the AI systems you ship, plus an open-source clearance workflow your teams can run before code leaves the building.</p>
+              </div>
+            </div>
+            <div class="offer-meta">
+              <div class="meta-row">
+                <p class="mk">What it costs</p>
+                <p class="mv"><span class="fee"><span class="ph">CHF [fixed fee]</span></span> &nbsp;one price for the pilot. No hourly billing, no surprise invoices.</p>
+              </div>
+              <div class="meta-row">
+                <p class="mk">What success looks like</p>
+                <p class="mv">Two instruments in force, a written read of your recurring exposure, and a clear yes or no on whether we run your build-legal volume next.</p>
+              </div>
+              <div class="meta-row">
+                <p class="mk">What we will actually touch</p>
+                <p class="mv">One client build template, your IP schedule and one AI system&rsquo;s compliance pack, nothing that blocks a live engagement while we work.</p>
+              </div>
+            </div>
+          </div>
+          <p class="escalate"><b>The honest escalation path.</b> Recurring, high-volume build and venture work, SOWs, DPAs, IP schedules and open-source clearance, is exactly what we take end-to-end after the pilot. The novel, bet-the-firm calls, a first-of-its-kind AI liability question, a contested venture spin-out, a regulator at the door, we flag clearly and route to senior human counsel. We do not pretend AI replaces that judgment; we make sure it is rarely what you are paying for.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 SHIP WITHOUT WAITING -->
+    <section>
+      <div class="wrap sec">
+        <p class="kicker reveal">Ship without waiting on legal</p>
+        <h2 class="reveal" style="max-width:30ch">Your builders should be shipping product, not chasing IP schedules.</h2>
+        <p class="lead reveal" style="margin-top:1.2rem;max-width:44rem">Inside a global firm, every SOW, DPA and open-source review queues behind the same legal and risk team. The work that makes up most of that queue is recurring and patternable, and it should never sit between a finished build and its launch.</p>
+        <div class="cmp">
+          <div class="cmp-col reveal">
+            <h3>Builds today</h3>
+            <ul>
+              <li>Every SOW, DPA and open-source review queues behind one team</li>
+              <li>Kickoffs and launches wait on contract turnaround</li>
+              <li>Novel AI-risk calls compete with routine paperwork</li>
+              <li>Recurring build and venture docs stack up across engagements</li>
+            </ul>
+          </div>
+          <div class="cmp-col us reveal">
+            <h3>With Omnilex</h3>
+            <ul>
+              <li>We absorb the recurring build, data and venture contracts end-to-end</li>
+              <li>Turnaround in hours, around the clock, at a fraction of firm rates</li>
+              <li>Frees your legal and risk teams for the novel, bet-the-firm calls</li>
+              <li>Every document supervised by world-class lawyers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 SCOPE / HONESTY -->
+    <section>
+      <div class="wrap sec" style="padding-top:0">
+        <div class="scope reveal">
+          <p class="kicker" style="color:var(--accent)">Where the line sits</p>
+          <h3>We run the recurring build-legal layer. Your counsel keeps the calls that make the firm.</h3>
+          <div class="scope-grid">
+            <div class="scope-item">
+              <span class="tag">Omnilex, end-to-end</span>
+              <h4>The patternable volume</h4>
+              <p>SOWs, master build agreements, IP schedules, DPAs, open-source clearance and venture-formation documents, drafted, redlined and delivered, supervised by expert lawyers.</p>
+            </div>
+            <div class="scope-item">
+              <span class="tag">Human counsel</span>
+              <h4>The novel and the contested</h4>
+              <p>A first-of-its-kind AI liability position, a disputed spin-out, live litigation, a regulator at the door. We flag it early and route it to senior counsel rather than pretend it away.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FINAL CTA -->
+    <section>
+      <div class="wrap sec">
+        <div class="final reveal">
+          <h2>Pilot Omnilex</h2>
+          <div class="final-cta">
+            <a href="https://outlook.office.com/bookwithme/user/8439c070dc1b4a3b8985da775ade9433@omnilex.ai/meetingtype/Ck2iTwJv_Uq-E2bU_gbRbQ2?bookingcode=1c4f49a9-0fb0-457c-9fd4-879006d00d97&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mcard" class="btn btn-accent btn-lg" target="_blank" rel="noopener">Book Meeting →</a>
+            <span class="final-note">Building tomorrow · Legal handled end-to-end</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <img class="omni" src="/omnilex-logo.png" alt="Omnilex AG" />
+      <p class="cr">Prepared for BCG X · Confidential · © 2026 Omnilex AG</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);} });
+      },{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+    // frontier particle-network hero motif
+    (function(){
+      var c=document.getElementById('net'); if(!c) return;
+      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var ctx=c.getContext('2d'), W=0,H=0,pts=[],raf=0,DPR=Math.min(window.devicePixelRatio||1,2);
+      function size(){var r=c.getBoundingClientRect();W=c.width=Math.max(1,Math.floor(r.width*DPR));H=c.height=Math.max(1,Math.floor(r.height*DPR));}
+      function init(){size();var n=Math.max(28,Math.min(66,Math.round((W*H)/(30000*DPR))));pts=[];for(var i=0;i<n;i++){pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.16*DPR,vy:(Math.random()-.5)*.16*DPR});}}
+      function frame(){ctx.clearRect(0,0,W,H);var i,j,max=140*DPR;
+        for(i=0;i<pts.length;i++){var p=pts[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;}
+        for(i=0;i<pts.length;i++){for(j=i+1;j<pts.length;j++){var a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<max){ctx.strokeStyle='rgba(150,248,120,'+(0.16*(1-d/max)).toFixed(3)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}}
+        for(i=0;i<pts.length;i++){var q=pts[i];ctx.fillStyle='rgba(150,248,120,.6)';ctx.beginPath();ctx.arc(q.x,q.y,1.5*DPR,0,6.2832);ctx.fill();}
+        raf=requestAnimationFrame(frame);}
+      init();
+      if(reduce){frame();} else {frame();}
+      var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){cancelAnimationFrame(raf);init();frame();},200);});
+    })();
+  </script>
+</body>
+</html>
