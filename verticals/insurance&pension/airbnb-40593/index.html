@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omnilex × Airbnb: Legal that scales with every stay</title>
+<meta name="description" content="A focused legal pilot for Airbnb: AirCover claims, host-guest disputes, trust and safety, and short-term-rental regulation handled end-to-end by Omnilex and supervised by expert lawyers, so your team focuses on the hard calls." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23010101'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Georgia'%20font-size='18'%20fill='%23FBFBF9'%20text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#FBFBF9; --surface:#FFFFFF; --ink:#010101; --coal:#212121; --muted:#6E6E6E;
+    --line:#E7E5DF; --gold:#F5A623;
+    --m1:#FF385C; --m2:#c1134e; --mnavy:#40232b;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --serif:"Signifier","Instrument Serif",Georgia,serif;
+    --max:64rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-0.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem;width:100%}
+  @media(min-width:1024px){.wrap{padding:0 2rem}}
+  .emph{font-weight:700}
+  .kicker{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:1rem}
+  .kicker .dotmark{color:var(--m2)}
+  section{position:relative}
+  .sec{padding:4.5rem 0}
+  @media(min-width:1024px){.sec{padding:6rem 0}}
+  .sline{border-top:1px solid var(--line)}
+  h1{font-size:clamp(2.3rem,5.4vw,3.9rem);line-height:1.03;font-weight:400;letter-spacing:-0.035em}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;font-weight:400;letter-spacing:-0.03em}
+  h2 .emph{font-weight:700}
+  .lead{font-size:1.08rem;color:var(--muted);line-height:1.65}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* minimal top logo, no nav */
+  .top{position:absolute;top:0;left:0;right:0;z-index:10}
+  .top-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .top-inner img{height:22px;width:auto;display:block}
+  .top-for{font-size:.78rem;color:var(--muted);letter-spacing:.02em}
+  .top-for b{color:var(--ink);font-weight:600}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;font-size:.95rem;font-weight:500;padding:.95rem 1.7rem;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-dark:hover{opacity:.86}
+  .btn-ghost{border:1px solid rgba(1,1,1,.25);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-lg{font-size:1.02rem;padding:1.05rem 2rem}
+
+  /* hero */
+  .hero{padding:9rem 0 4.5rem;position:relative}
+  @media(min-width:1024px){.hero{padding:11rem 0 5.5rem}}
+  .hero h1{max-width:16ch}
+  .hero .lead{margin-top:1.6rem;max-width:44rem;font-size:1.15rem}
+  .hero-cta{margin-top:2.4rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+  .hero-terms{margin-top:1rem;font-size:.86rem;color:var(--muted);letter-spacing:.01em}
+  .hero-terms b{color:var(--ink);font-weight:600}
+  .hairline-gold{width:52px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:1.8rem}
+
+  /* legal surface, the star */
+  .surface-sec{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .surface-head{max-width:48rem}
+  .surface-head .lead{margin-top:1.1rem}
+  .surf-list{margin-top:3rem;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  @media(min-width:760px){.surf-list{grid-template-columns:1fr 1fr}}
+  .surf{background:var(--surface);padding:1.9rem 1.8rem;display:flex;flex-direction:column;transition:background .2s}
+  .surf:hover{background:#FCFBF8}
+  .surf-t{display:flex;align-items:baseline;gap:.7rem}
+  .surf-t .num{font-size:.78rem;font-weight:600;color:var(--gold);letter-spacing:.06em;flex:0 0 auto;width:1.6rem}
+  .surf-t h3{font-size:1.12rem;font-weight:600;letter-spacing:-0.02em;line-height:1.2}
+  .surf p{margin-top:.75rem;padding-left:2.3rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .surf p .hl{color:var(--ink);font-weight:600}
+  .surf-note{margin-top:1.75rem;font-size:.92rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* the pilot offer card */
+  .offer{border:1.5px solid var(--ink);border-radius:22px;padding:2.4rem 2rem;background:var(--paper)}
+  @media(min-width:1024px){.offer{padding:3rem 3rem}}
+  .offer-top{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:1.6rem}
+  .offer-top h3{font-size:1.5rem;font-weight:600;letter-spacing:-0.02em}
+  .offer-badges{display:flex;flex-wrap:wrap;gap:.5rem}
+  .badge{font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(1,1,1,.2);border-radius:999px;padding:.35rem .8rem}
+  .offer-grid{margin-top:1.9rem;display:grid;gap:2rem}
+  @media(min-width:820px){.offer-grid{grid-template-columns:1fr 1fr}}
+  .deliv-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:1rem}
+  .deliv{border-left:2px solid var(--gold);padding:.15rem 0 .15rem 1.1rem;margin-bottom:1.4rem}
+  .deliv h4{font-size:1.04rem;font-weight:600;letter-spacing:-0.01em}
+  .deliv p{margin-top:.4rem;font-size:.92rem;line-height:1.58;color:var(--muted)}
+  .offer-meta{display:flex;flex-direction:column;gap:1.2rem}
+  .meta-row .mk{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+  .meta-row .mv{margin-top:.35rem;font-size:.98rem;line-height:1.5}
+  .meta-row .mv b{font-weight:600}
+  .fee{font-size:1.6rem;font-weight:600;letter-spacing:-0.02em}
+  .ph{background:#FFF3DD;border-bottom:1.5px solid var(--gold);padding:0 .25rem;border-radius:3px 3px 0 0;font-style:normal}
+  .escalate{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.5rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .escalate b{color:var(--ink);font-weight:600}
+
+  /* how it works flow */
+  .flow{margin-top:3rem;display:grid;gap:1rem;align-items:stretch}
+  @media(min-width:820px){.flow{grid-template-columns:1fr 1.4rem 1fr 1.4rem 1fr 1.4rem 1fr}}
+  .fstep{border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.4rem;background:var(--surface);display:flex;flex-direction:column}
+  .fstep .ft{font-size:1.02rem;font-weight:600;letter-spacing:-0.01em}
+  .fstep .fd{margin-top:.5rem;font-size:.88rem;line-height:1.55;color:var(--muted)}
+  .fstep .fh{margin-top:1rem;font-size:.74rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--gold)}
+  .farrow{display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.28);font-size:1.3rem}
+  @media(max-width:819px){.farrow{transform:rotate(90deg);height:1.3rem}}
+  .flow-cap{margin-top:1.8rem;font-size:.94rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* compare / why not a firm */
+  .cmp{margin-top:3rem;display:grid;gap:1rem}
+  @media(min-width:760px){.cmp{grid-template-columns:1fr 1fr}}
+  .cmp-col{border:1px solid var(--line);border-radius:16px;padding:1.9rem 1.8rem}
+  .cmp-col.us{border-color:rgba(1,1,1,.45)}
+  .cmp-col h3{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em;display:flex;align-items:center;gap:.55rem}
+  .cmp-col.us h3::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--gold)}
+  .cmp-col ul{list-style:none;margin-top:1.1rem;display:flex;flex-direction:column;gap:.8rem}
+  .cmp-col li{font-size:.94rem;line-height:1.55;color:var(--muted);padding-left:1.3rem;position:relative}
+  .cmp-col li::before{content:"–";position:absolute;left:0;color:var(--muted)}
+  .cmp-col.us li::before{content:"→";color:var(--gold)}
+  .cmp-col.us li{color:var(--ink)}
+
+  /* proof */
+  .proof-grid{margin-top:2.6rem;display:grid;gap:1.4rem}
+  @media(min-width:760px){.proof-grid{grid-template-columns:repeat(3,1fr)}}
+  .proof{border-top:1px solid var(--ink);padding-top:1.1rem}
+  .proof .pstat{font-size:1.18rem;font-weight:600;letter-spacing:-0.02em;line-height:1.25}
+  .proof .plbl{margin-top:.7rem;font-size:.92rem;line-height:1.55;color:var(--muted)}
+
+  /* scope / honesty box */
+  .honesty{background:var(--ink);color:var(--paper);border-radius:20px;padding:2.4rem 2rem}
+  @media(min-width:1024px){.honesty{padding:2.8rem 2.6rem}}
+  .honesty .kicker{color:rgba(251,251,249,.55)}
+  .honesty h3{font-size:1.35rem;font-weight:500;letter-spacing:-0.02em}
+  .honesty-grid{margin-top:1.6rem;display:grid;gap:1.3rem}
+  @media(min-width:760px){.honesty-grid{grid-template-columns:1fr 1fr}}
+  .honesty-item h4{font-size:.95rem;font-weight:600}
+  .honesty-item p{margin-top:.4rem;font-size:.9rem;line-height:1.6;color:rgba(251,251,249,.68)}
+
+  /* final cta */
+  .final{text-align:center;max-width:40rem;margin:0 auto}
+  .final h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+  .final .lead{margin-top:1.2rem}
+  .final-cta{margin-top:2.2rem;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+  .final-note{font-size:.86rem;color:var(--muted)}
+
+  .cityline{width:100%;line-height:0}
+  .cityline img{width:100%;height:auto;display:block}
+  footer{border-top:1px solid var(--line);padding:2.5rem 0}
+  .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+  .foot img{height:22px;width:auto;display:block}
+  .foot .cr{font-size:.84rem;color:var(--muted)}
+  .hero{overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 100% -8%, rgba(255,56,92,.13), rgba(255,56,92,.05) 45%, transparent 72%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-massive{height:44px;width:auto;display:block;margin-bottom:1.9rem}
+  @media(max-width:760px){.hero-massive{height:34px;margin-bottom:1.5rem}}
+  .mgrad{background:linear-gradient(90deg,var(--m1),var(--m2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:600}
+  .hero-wordmark{font-weight:700;font-size:clamp(4rem,10vw,6.5rem);letter-spacing:-0.03em;color:#FF385C;line-height:1;margin-bottom:1.6rem}
+</style>
+</head>
+<body>
+
+  <!-- TOP: logo only, no nav -->
+  <div class="top">
+    <div class="wrap top-inner">
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex" />
+      <span class="top-for">Prepared for <b>Airbnb</b></span>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1 · HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <img class="hero-massive reveal" src="data:image/webp;base64,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" alt="Airbnb" style="height:120px;max-width:100%" />
+        <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; Providing world class legal to Airbnb</p>
+        <h1 class="reveal">You protect every stay with AirCover. <span class="mgrad">We take the legal load behind it.</span></h1>
+        <p class="lead reveal">Airbnb runs one of the largest trust-and-protection operations in the world: over 8 million listings across 220+ countries, AirCover on every booking, and millions of trips a year. Behind that sits a claims, disputes and regulatory load at a scale most insurers never see. Omnilex takes the high-volume legal layer off your team, supervised by expert lawyers, so they focus on the hard calls, not the queue.</p>
+      </div>
+    </section>
+
+    <!-- 2 · LEGAL SURFACE, THE STAR -->
+    <section class="surface-sec">
+      <div class="wrap sec">
+        <div class="surface-head">
+          <p class="kicker reveal">We know your business</p>
+          <h2 class="reveal">Every stay you protect creates legal work. This is where we take it.</h2>
+          <p class="lead reveal">A global platform running AirCover, trust and safety, and short-term-rental compliance across 220+ countries generates claims, disputes and regulatory work at a scale most teams can only triage. Here is where an AI-native service, supervised by expert lawyers, carries the load.</p>
+        </div>
+
+        <div class="surf-list reveal">
+          <div class="surf">
+            <div class="surf-t"><span class="num">01</span><h3>AirCover claims at platform scale</h3></div>
+          <p>Host damage protection and the host liability that ride on every booking add up to a claims operation most insurers would envy in volume: intake, evidence, coverage decisions, payouts and appeals. We take the high-volume claims layer so your team sets policy instead of chasing files.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">02</span><h3>Host and guest disputes</h3></div>
+          <p>Damage claims, refunds, chargebacks and he-said-she-said disputes between hosts and guests are relentless and emotionally charged. Consistent, defensible decisions and documentation are what keep them from turning into litigation. We handle the volume.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">03</span><h3>Trust and safety and liability</h3></div>
+          <p>Safety incidents, injury and property-damage claims, and the liability that follows a stay create real exposure. The investigation, coverage analysis and documentation behind each one is legal-grade work. We carry it so your specialists focus on the hard cases.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">04</span><h3>Short-term-rental regulation, everywhere</h3></div>
+          <p>Registration rules, occupancy taxes and host obligations differ across thousands of cities in 220+ countries and change constantly. We keep the map current so hosts stay compliant and the platform stays ahead of regulators.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">05</span><h3>Host, co-host and partner agreements</h3></div>
+          <p>Host terms, co-host arrangements, Airbnb-friendly apartment and hotel-partner agreements, and the insurer and assistance-provider contracts behind AirCover and travel insurance carry a steady legal load. We handle the recurring drafting and review.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">06</span><h3>Terms, policy and consumer protection</h3></div>
+          <p>Your terms of service, cancellation and refund policies, and consumer-protection and privacy obligations across every market are constantly tested. We keep them consistent, current and defensible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · HOW IT WORKS -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Never worry about legal again</p>
+        <h2 class="reveal" style="max-width:34ch">You set the policy. We handle the volume behind it.</h2>
+        <div class="flow reveal">
+          <div class="fstep">
+            <span class="ft">Forward it</span>
+            <span class="fd">Drop us any matter you have on our platform, Email, Slack or where it is most convenient.</span>
+            <span class="fh">Always-on</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Let the mind work</span>
+            <span class="fd">The Omnilex Mind gets to work. Legal Research. Benchmarking with internal best practices. Redlining. Drafting the deliverable. Back-checking with initial findings. Preparing for review by the expert lawyer.</span>
+            <span class="fh">Immediate effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Lawyer signs off</span>
+            <span class="fd">An Omnilex expert lawyer supervises, corrects and approves. The work is signed off only once it reaches world-class legal quality.</span>
+            <span class="fh">Zero Effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">That&rsquo;s it. Done</span>
+            <span class="fd">You get the finished, reviewed document, analysis, legal advice, heads-up. Not a feedback. Not an instruction what to do. It&rsquo;s done. End-to-end.</span>
+            <span class="fh">Results only</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · WHY NOT A FIRM / WHY NOW -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Done with the old times</p>
+        <h2 class="reveal" style="max-width:36ch">Your team should be setting policy, not clearing the claims queue.</h2>
+        <p class="lead reveal" style="margin-top:1.1rem;max-width:44rem">Across AirCover claims, host and guest disputes, and shifting regulation, the same high-volume, deadline-driven work lands on trust-and-safety, claims and legal teams, pulling them off the calls only they can make. That is exactly the load an AI-native service, supervised by lawyers, is built to carry.</p>
+        <div class="cmp">
+          <div class="cmp-col reveal">
+            <h3>Airbnb today</h3>
+            <ul>
+              <li>Host-damage and liability claims arriving faster than any team can clear</li>
+              <li>Host and guest disputes escalating without consistent handling</li>
+              <li>Short-term-rental regulation shifting city by city, worldwide</li>
+              <li>Trust and safety talent spent on routine files</li>
+            </ul>
+          </div>
+          <div class="cmp-col us reveal">
+            <h3>With Omnilex</h3>
+            <ul>
+              <li>The high-volume AirCover and dispute layer handled end-to-end</li>
+              <li>Consistent, defensible decisions on every claim</li>
+              <li>Short-term-rental and consumer regulation tracked and kept current</li>
+              <li>Expert lawyers signing off on every output</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8 · FINAL CTA -->
+    <section class="sline">
+      <div class="wrap sec">
+        <div class="final reveal">
+          <h2>Pilot Omnilex</h2>
+          <div class="final-cta">
+            <a href="https://outlook.office.com/bookwithme/user/8439c070dc1b4a3b8985da775ade9433@omnilex.ai/meetingtype/Ck2iTwJv_Uq-E2bU_gbRbQ2?bookingcode=1c4f49a9-0fb0-457c-9fd4-879006d00d97&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mcard" class="btn btn-dark btn-lg" target="_blank" rel="noopener">Book Meeting →</a>          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cityline" aria-hidden="true"><img src="https://ask.omnilex.ai/sf-skyline.svg" alt="" /></div>
+
+  <footer>
+    <div class="wrap foot">
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex AG" />
+      <p class="cr">Prepared for Airbnb · Confidential · © 2026 Omnilex AG</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);} });
+      },{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+  </script>
+</body>
+</html>
