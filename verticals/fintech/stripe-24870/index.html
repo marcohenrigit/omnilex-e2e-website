@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omnilex × Stripe: Legal that scales with global money movement</title>
+<meta name="description" content="A focused legal pilot for Stripe: money-transmission licensing, KYC/AML and sanctions, network and partner agreements, and disputes handled end-to-end by Omnilex and supervised by expert lawyers, so your team stays ahead of the roadmap." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23010101'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Georgia'%20font-size='18'%20fill='%23FBFBF9'%20text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#FBFBF9; --surface:#FFFFFF; --ink:#010101; --coal:#212121; --muted:#6E6E6E;
+    --line:#E7E5DF; --gold:#F5A623;
+    --m1:#635BFF; --m2:#0a2540; --mnavy:#0a2540;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --serif:"Signifier","Instrument Serif",Georgia,serif;
+    --max:64rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-0.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem;width:100%}
+  @media(min-width:1024px){.wrap{padding:0 2rem}}
+  .emph{font-weight:700}
+  .kicker{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:1rem}
+  .kicker .dotmark{color:var(--m2)}
+  section{position:relative}
+  .sec{padding:4.5rem 0}
+  @media(min-width:1024px){.sec{padding:6rem 0}}
+  .sline{border-top:1px solid var(--line)}
+  h1{font-size:clamp(2.3rem,5.4vw,3.9rem);line-height:1.03;font-weight:400;letter-spacing:-0.035em}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;font-weight:400;letter-spacing:-0.03em}
+  h2 .emph{font-weight:700}
+  .lead{font-size:1.08rem;color:var(--muted);line-height:1.65}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* minimal top logo, no nav */
+  .top{position:absolute;top:0;left:0;right:0;z-index:10}
+  .top-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .top-inner img{height:22px;width:auto;display:block}
+  .top-for{font-size:.78rem;color:var(--muted);letter-spacing:.02em}
+  .top-for b{color:var(--ink);font-weight:600}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;font-size:.95rem;font-weight:500;padding:.95rem 1.7rem;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-dark:hover{opacity:.86}
+  .btn-ghost{border:1px solid rgba(1,1,1,.25);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-lg{font-size:1.02rem;padding:1.05rem 2rem}
+
+  /* hero */
+  .hero{padding:9rem 0 4.5rem;position:relative}
+  @media(min-width:1024px){.hero{padding:11rem 0 5.5rem}}
+  .hero h1{max-width:16ch}
+  .hero .lead{margin-top:1.6rem;max-width:44rem;font-size:1.15rem}
+  .hero-cta{margin-top:2.4rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+  .hero-terms{margin-top:1rem;font-size:.86rem;color:var(--muted);letter-spacing:.01em}
+  .hero-terms b{color:var(--ink);font-weight:600}
+  .hairline-gold{width:52px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:1.8rem}
+
+  /* legal surface, the star */
+  .surface-sec{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .surface-head{max-width:48rem}
+  .surface-head .lead{margin-top:1.1rem}
+  .surf-list{margin-top:3rem;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  @media(min-width:760px){.surf-list{grid-template-columns:1fr 1fr}}
+  .surf{background:var(--surface);padding:1.9rem 1.8rem;display:flex;flex-direction:column;transition:background .2s}
+  .surf:hover{background:#FCFBF8}
+  .surf-t{display:flex;align-items:baseline;gap:.7rem}
+  .surf-t .num{font-size:.78rem;font-weight:600;color:var(--gold);letter-spacing:.06em;flex:0 0 auto;width:1.6rem}
+  .surf-t h3{font-size:1.12rem;font-weight:600;letter-spacing:-0.02em;line-height:1.2}
+  .surf p{margin-top:.75rem;padding-left:2.3rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .surf p .hl{color:var(--ink);font-weight:600}
+  .surf-note{margin-top:1.75rem;font-size:.92rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* the pilot offer card */
+  .offer{border:1.5px solid var(--ink);border-radius:22px;padding:2.4rem 2rem;background:var(--paper)}
+  @media(min-width:1024px){.offer{padding:3rem 3rem}}
+  .offer-top{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:1.6rem}
+  .offer-top h3{font-size:1.5rem;font-weight:600;letter-spacing:-0.02em}
+  .offer-badges{display:flex;flex-wrap:wrap;gap:.5rem}
+  .badge{font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(1,1,1,.2);border-radius:999px;padding:.35rem .8rem}
+  .offer-grid{margin-top:1.9rem;display:grid;gap:2rem}
+  @media(min-width:820px){.offer-grid{grid-template-columns:1fr 1fr}}
+  .deliv-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:1rem}
+  .deliv{border-left:2px solid var(--gold);padding:.15rem 0 .15rem 1.1rem;margin-bottom:1.4rem}
+  .deliv h4{font-size:1.04rem;font-weight:600;letter-spacing:-0.01em}
+  .deliv p{margin-top:.4rem;font-size:.92rem;line-height:1.58;color:var(--muted)}
+  .offer-meta{display:flex;flex-direction:column;gap:1.2rem}
+  .meta-row .mk{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+  .meta-row .mv{margin-top:.35rem;font-size:.98rem;line-height:1.5}
+  .meta-row .mv b{font-weight:600}
+  .fee{font-size:1.6rem;font-weight:600;letter-spacing:-0.02em}
+  .ph{background:#FFF3DD;border-bottom:1.5px solid var(--gold);padding:0 .25rem;border-radius:3px 3px 0 0;font-style:normal}
+  .escalate{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.5rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .escalate b{color:var(--ink);font-weight:600}
+
+  /* how it works flow */
+  .flow{margin-top:3rem;display:grid;gap:1rem;align-items:stretch}
+  @media(min-width:820px){.flow{grid-template-columns:1fr 1.4rem 1fr 1.4rem 1fr 1.4rem 1fr}}
+  .fstep{border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.4rem;background:var(--surface);display:flex;flex-direction:column}
+  .fstep .ft{font-size:1.02rem;font-weight:600;letter-spacing:-0.01em}
+  .fstep .fd{margin-top:.5rem;font-size:.88rem;line-height:1.55;color:var(--muted)}
+  .fstep .fh{margin-top:1rem;font-size:.74rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--gold)}
+  .farrow{display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.28);font-size:1.3rem}
+  @media(max-width:819px){.farrow{transform:rotate(90deg);height:1.3rem}}
+  .flow-cap{margin-top:1.8rem;font-size:.94rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* compare / why not a firm */
+  .cmp{margin-top:3rem;display:grid;gap:1rem}
+  @media(min-width:760px){.cmp{grid-template-columns:1fr 1fr}}
+  .cmp-col{border:1px solid var(--line);border-radius:16px;padding:1.9rem 1.8rem}
+  .cmp-col.us{border-color:rgba(1,1,1,.45)}
+  .cmp-col h3{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em;display:flex;align-items:center;gap:.55rem}
+  .cmp-col.us h3::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--gold)}
+  .cmp-col ul{list-style:none;margin-top:1.1rem;display:flex;flex-direction:column;gap:.8rem}
+  .cmp-col li{font-size:.94rem;line-height:1.55;color:var(--muted);padding-left:1.3rem;position:relative}
+  .cmp-col li::before{content:"–";position:absolute;left:0;color:var(--muted)}
+  .cmp-col.us li::before{content:"→";color:var(--gold)}
+  .cmp-col.us li{color:var(--ink)}
+
+  /* proof */
+  .proof-grid{margin-top:2.6rem;display:grid;gap:1.4rem}
+  @media(min-width:760px){.proof-grid{grid-template-columns:repeat(3,1fr)}}
+  .proof{border-top:1px solid var(--ink);padding-top:1.1rem}
+  .proof .pstat{font-size:1.18rem;font-weight:600;letter-spacing:-0.02em;line-height:1.25}
+  .proof .plbl{margin-top:.7rem;font-size:.92rem;line-height:1.55;color:var(--muted)}
+
+  /* scope / honesty box */
+  .honesty{background:var(--ink);color:var(--paper);border-radius:20px;padding:2.4rem 2rem}
+  @media(min-width:1024px){.honesty{padding:2.8rem 2.6rem}}
+  .honesty .kicker{color:rgba(251,251,249,.55)}
+  .honesty h3{font-size:1.35rem;font-weight:500;letter-spacing:-0.02em}
+  .honesty-grid{margin-top:1.6rem;display:grid;gap:1.3rem}
+  @media(min-width:760px){.honesty-grid{grid-template-columns:1fr 1fr}}
+  .honesty-item h4{font-size:.95rem;font-weight:600}
+  .honesty-item p{margin-top:.4rem;font-size:.9rem;line-height:1.6;color:rgba(251,251,249,.68)}
+
+  /* final cta */
+  .final{text-align:center;max-width:40rem;margin:0 auto}
+  .final h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+  .final .lead{margin-top:1.2rem}
+  .final-cta{margin-top:2.2rem;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+  .final-note{font-size:.86rem;color:var(--muted)}
+
+  .cityline{width:100%;line-height:0}
+  .cityline img{width:100%;height:auto;display:block}
+  footer{border-top:1px solid var(--line);padding:2.5rem 0}
+  .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+  .foot img{height:22px;width:auto;display:block}
+  .foot .cr{font-size:.84rem;color:var(--muted)}
+  .hero{overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 100% -8%, rgba(99,91,255,.14), rgba(10,37,64,.05) 45%, transparent 72%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-massive{height:44px;width:auto;display:block;margin-bottom:1.9rem}
+  @media(max-width:760px){.hero-massive{height:34px;margin-bottom:1.5rem}}
+  .mgrad{background:linear-gradient(90deg,var(--m1),var(--m2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:600}
+</style>
+</head>
+<body>
+
+  <!-- TOP: logo only, no nav -->
+  <div class="top">
+    <div class="wrap top-inner">
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex" />
+      <span class="top-for">Prepared for <b>Sandra Vargas</b></span>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1 · HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <img class="hero-massive reveal" src="data:image/webp;base64,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" alt="Stripe" style="height:58px;border-radius:12px" />
+        <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; Providing world class legal to Stripe</p>
+        <h1 class="reveal">You move $1.9 trillion for the internet. <span class="mgrad">We take the legal load off every layer.</span></h1>
+        <p class="lead reveal">Stripe is the financial infrastructure of the internet: $1.9 trillion processed in 2025, 135+ payment methods, and half the Fortune 100 building on your rails, from payments to Issuing, Treasury and agentic commerce. That runs on a wall of legal machinery: licensing, financial-regulatory compliance, network and partner agreements, and disputes at planetary scale. Omnilex takes the high-volume layer off your team, supervised by expert lawyers, so your people stay ahead of the roadmap, not the queue.</p>
+      </div>
+    </section>
+
+    <!-- 2 · LEGAL SURFACE, THE STAR -->
+    <section class="surface-sec">
+      <div class="wrap sec">
+        <div class="surface-head">
+          <p class="kicker reveal">We know your business</p>
+          <h2 class="reveal">Global money movement runs on legal machinery. This is where we take it.</h2>
+          <p class="lead reveal">A regulated payments and financial-infrastructure company operating across 160 countries, onboarding millions of businesses and shipping new financial products constantly, generates legal, regulatory and compliance work at a scale most teams can only triage. Here is where an AI-native service, supervised by expert lawyers, carries the load.</p>
+        </div>
+
+        <div class="surf-list reveal">
+          <div class="surf">
+            <div class="surf-t"><span class="num">01</span><h3>Money transmission and financial licensing</h3></div>
+          <p>Operating as regulated financial infrastructure means money-transmitter licenses across US states, e-money and PI authorizations in the EU and UK, bank-partner agreements, and staying current with financial regulation in dozens of countries. We carry the licensing and filing load so expansion never waits on legal.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">02</span><h3>KYC, AML and sanctions</h3></div>
+          <p>Onboarding millions of businesses means KYB and KYC, an AML program, OFAC and sanctions screening, SAR filings, and prohibited-business enforcement at platform scale. We handle the recurring documentation so your risk team stays ahead of it.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">03</span><h3>Card network and partner agreements</h3></div>
+          <p>Visa, Mastercard and scheme rules, acquiring and processor agreements, bank sponsorship, PCI DSS, and the contracts behind Issuing, Treasury and Connect form a dense web of obligations. We handle the review so your partnerships stay in good standing.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">04</span><h3>Merchant and platform agreements</h3></div>
+          <p>The Stripe Services Agreement, connected-account and platform terms, product terms across dozens of products, and enterprise contracts with the Fortune 100 are high-volume, high-stakes contracting. We take the recurring drafting and review off your team.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">05</span><h3>Disputes, chargebacks and risk</h3></div>
+          <p>Chargebacks, disputes, fraud and the loss and liability allocation behind them run at massive volume with regulatory deadlines. We handle the operational-legal layer behind disputed transactions so it never becomes a backlog.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">06</span><h3>Privacy, data and new-product risk</h3></div>
+          <p>Global data protection, cross-border transfers, financial-data access, and the novel legal questions around stablecoins, crypto and agentic commerce keep coming. We keep the documentation current so legal stays ahead of the roadmap.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · HOW IT WORKS -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Never worry about legal again</p>
+        <h2 class="reveal" style="max-width:34ch">You build the rails. We handle the legal behind them.</h2>
+        <div class="flow reveal">
+          <div class="fstep">
+            <span class="ft">Forward it</span>
+            <span class="fd">Drop us any matter you have on our platform, Email, Slack or where it is most convenient.</span>
+            <span class="fh">Always-on</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Let the mind work</span>
+            <span class="fd">The Omnilex Mind gets to work. Legal Research. Benchmarking with internal best practices. Redlining. Drafting the deliverable. Back-checking with initial findings. Preparing for review by the expert lawyer.</span>
+            <span class="fh">Immediate effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Lawyer signs off</span>
+            <span class="fd">An Omnilex expert lawyer supervises, corrects and approves. The work is signed off only once it reaches world-class legal quality.</span>
+            <span class="fh">Zero Effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">That&rsquo;s it. Done</span>
+            <span class="fd">You get the finished, reviewed document, analysis, legal advice, heads-up. Not a feedback. Not an instruction what to do. It&rsquo;s done. End-to-end.</span>
+            <span class="fh">Results only</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · WHY NOT A FIRM / WHY NOW -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Done with the old times</p>
+        <h2 class="reveal" style="max-width:36ch">Your legal team should be shaping the roadmap, not clearing the queue.</h2>
+        <p class="lead reveal" style="margin-top:1.1rem;max-width:44rem">Across licensing, compliance, agreements and disputes, the same high-volume, specialized work lands on legal, risk and outside counsel, pulling them off the questions that shape the roadmap. That is exactly the load an AI-native service, supervised by lawyers, is built to carry.</p>
+        <div class="cmp">
+          <div class="cmp-col reveal">
+            <h3>Stripe today</h3>
+            <ul>
+              <li>Licensing and regulatory filings across dozens of jurisdictions</li>
+              <li>KYC, AML and sanctions reviews at onboarding scale</li>
+              <li>Merchant, platform and partner agreements piling up</li>
+              <li>Disputes and network obligations handled under deadline</li>
+            </ul>
+          </div>
+          <div class="cmp-col us reveal">
+            <h3>With Omnilex</h3>
+            <ul>
+              <li>Licensing and regulatory documentation handled end-to-end</li>
+              <li>KYC, AML and sanctions files kept audit-ready</li>
+              <li>Merchant, platform and partner agreements handled at scale</li>
+              <li>Expert lawyers signing off on every output</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8 · FINAL CTA -->
+    <section class="sline">
+      <div class="wrap sec">
+        <div class="final reveal">
+          <h2>Pilot Omnilex</h2>
+          <div class="final-cta">
+            <a href="https://outlook.office.com/bookwithme/user/8439c070dc1b4a3b8985da775ade9433@omnilex.ai/meetingtype/Ck2iTwJv_Uq-E2bU_gbRbQ2?bookingcode=1c4f49a9-0fb0-457c-9fd4-879006d00d97&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mcard" class="btn btn-dark btn-lg" target="_blank" rel="noopener">Book Meeting →</a>          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cityline" aria-hidden="true"><img src="https://ask.omnilex.ai/sf-skyline.svg" alt="" /></div>
+
+  <footer>
+    <div class="wrap foot">
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex AG" />
+      <p class="cr">Prepared for Sandra Vargas · Confidential · © 2026 Omnilex AG</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);} });
+      },{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+  </script>
+</body>
+</html>
