@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omnilex × Penumbra: The compliance grind, off your desk</title>
+<meta name="description" content="A focused pilot for Penumbra compliance: HCP and consulting agreements, promotional and MLR review, Sunshine Act and Open Payments, and third-party diligence handled end-to-end by Omnilex and supervised by expert lawyers, so you focus on real risk." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23010101'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Georgia'%20font-size='18'%20fill='%23FBFBF9'%20text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#FBFBF9; --surface:#FFFFFF; --ink:#010101; --coal:#212121; --muted:#6E6E6E;
+    --line:#E7E5DF; --gold:#F5A623;
+    --m1:#d01030; --m2:#8a0a22; --mnavy:#3a0a14;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --serif:"Signifier","Instrument Serif",Georgia,serif;
+    --max:64rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-0.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem;width:100%}
+  @media(min-width:1024px){.wrap{padding:0 2rem}}
+  .emph{font-weight:700}
+  .kicker{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:1rem}
+  .kicker .dotmark{color:var(--m2)}
+  section{position:relative}
+  .sec{padding:4.5rem 0}
+  @media(min-width:1024px){.sec{padding:6rem 0}}
+  .sline{border-top:1px solid var(--line)}
+  h1{font-size:clamp(2.3rem,5.4vw,3.9rem);line-height:1.03;font-weight:400;letter-spacing:-0.035em}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;font-weight:400;letter-spacing:-0.03em}
+  h2 .emph{font-weight:700}
+  .lead{font-size:1.08rem;color:var(--muted);line-height:1.65}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* minimal top logo, no nav */
+  .top{position:absolute;top:0;left:0;right:0;z-index:10}
+  .top-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .top-inner img{height:22px;width:auto;display:block}
+  .top-for{font-size:.78rem;color:var(--muted);letter-spacing:.02em}
+  .top-for b{color:var(--ink);font-weight:600}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;font-size:.95rem;font-weight:500;padding:.95rem 1.7rem;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-dark:hover{opacity:.86}
+  .btn-ghost{border:1px solid rgba(1,1,1,.25);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-lg{font-size:1.02rem;padding:1.05rem 2rem}
+
+  /* hero */
+  .hero{padding:9rem 0 4.5rem;position:relative}
+  @media(min-width:1024px){.hero{padding:11rem 0 5.5rem}}
+  .hero h1{max-width:16ch}
+  .hero .lead{margin-top:1.6rem;max-width:44rem;font-size:1.15rem}
+  .hero-cta{margin-top:2.4rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+  .hero-terms{margin-top:1rem;font-size:.86rem;color:var(--muted);letter-spacing:.01em}
+  .hero-terms b{color:var(--ink);font-weight:600}
+  .hairline-gold{width:52px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:1.8rem}
+
+  /* legal surface, the star */
+  .surface-sec{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .surface-head{max-width:48rem}
+  .surface-head .lead{margin-top:1.1rem}
+  .surf-list{margin-top:3rem;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  @media(min-width:760px){.surf-list{grid-template-columns:1fr 1fr}}
+  .surf{background:var(--surface);padding:1.9rem 1.8rem;display:flex;flex-direction:column;transition:background .2s}
+  .surf:hover{background:#FCFBF8}
+  .surf-t{display:flex;align-items:baseline;gap:.7rem}
+  .surf-t .num{font-size:.78rem;font-weight:600;color:var(--gold);letter-spacing:.06em;flex:0 0 auto;width:1.6rem}
+  .surf-t h3{font-size:1.12rem;font-weight:600;letter-spacing:-0.02em;line-height:1.2}
+  .surf p{margin-top:.75rem;padding-left:2.3rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .surf p .hl{color:var(--ink);font-weight:600}
+  .surf-note{margin-top:1.75rem;font-size:.92rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* the pilot offer card */
+  .offer{border:1.5px solid var(--ink);border-radius:22px;padding:2.4rem 2rem;background:var(--paper)}
+  @media(min-width:1024px){.offer{padding:3rem 3rem}}
+  .offer-top{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:1.6rem}
+  .offer-top h3{font-size:1.5rem;font-weight:600;letter-spacing:-0.02em}
+  .offer-badges{display:flex;flex-wrap:wrap;gap:.5rem}
+  .badge{font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(1,1,1,.2);border-radius:999px;padding:.35rem .8rem}
+  .offer-grid{margin-top:1.9rem;display:grid;gap:2rem}
+  @media(min-width:820px){.offer-grid{grid-template-columns:1fr 1fr}}
+  .deliv-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:1rem}
+  .deliv{border-left:2px solid var(--gold);padding:.15rem 0 .15rem 1.1rem;margin-bottom:1.4rem}
+  .deliv h4{font-size:1.04rem;font-weight:600;letter-spacing:-0.01em}
+  .deliv p{margin-top:.4rem;font-size:.92rem;line-height:1.58;color:var(--muted)}
+  .offer-meta{display:flex;flex-direction:column;gap:1.2rem}
+  .meta-row .mk{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+  .meta-row .mv{margin-top:.35rem;font-size:.98rem;line-height:1.5}
+  .meta-row .mv b{font-weight:600}
+  .fee{font-size:1.6rem;font-weight:600;letter-spacing:-0.02em}
+  .ph{background:#FFF3DD;border-bottom:1.5px solid var(--gold);padding:0 .25rem;border-radius:3px 3px 0 0;font-style:normal}
+  .escalate{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.5rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .escalate b{color:var(--ink);font-weight:600}
+
+  /* how it works flow */
+  .flow{margin-top:3rem;display:grid;gap:1rem;align-items:stretch}
+  @media(min-width:820px){.flow{grid-template-columns:1fr 1.4rem 1fr 1.4rem 1fr 1.4rem 1fr}}
+  .fstep{border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.4rem;background:var(--surface);display:flex;flex-direction:column}
+  .fstep .ft{font-size:1.02rem;font-weight:600;letter-spacing:-0.01em}
+  .fstep .fd{margin-top:.5rem;font-size:.88rem;line-height:1.55;color:var(--muted)}
+  .fstep .fh{margin-top:1rem;font-size:.74rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--gold)}
+  .farrow{display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.28);font-size:1.3rem}
+  @media(max-width:819px){.farrow{transform:rotate(90deg);height:1.3rem}}
+  .flow-cap{margin-top:1.8rem;font-size:.94rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* compare / why not a firm */
+  .cmp{margin-top:3rem;display:grid;gap:1rem}
+  @media(min-width:760px){.cmp{grid-template-columns:1fr 1fr}}
+  .cmp-col{border:1px solid var(--line);border-radius:16px;padding:1.9rem 1.8rem}
+  .cmp-col.us{border-color:rgba(1,1,1,.45)}
+  .cmp-col h3{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em;display:flex;align-items:center;gap:.55rem}
+  .cmp-col.us h3::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--gold)}
+  .cmp-col ul{list-style:none;margin-top:1.1rem;display:flex;flex-direction:column;gap:.8rem}
+  .cmp-col li{font-size:.94rem;line-height:1.55;color:var(--muted);padding-left:1.3rem;position:relative}
+  .cmp-col li::before{content:"–";position:absolute;left:0;color:var(--muted)}
+  .cmp-col.us li::before{content:"→";color:var(--gold)}
+  .cmp-col.us li{color:var(--ink)}
+
+  /* proof */
+  .proof-grid{margin-top:2.6rem;display:grid;gap:1.4rem}
+  @media(min-width:760px){.proof-grid{grid-template-columns:repeat(3,1fr)}}
+  .proof{border-top:1px solid var(--ink);padding-top:1.1rem}
+  .proof .pstat{font-size:1.18rem;font-weight:600;letter-spacing:-0.02em;line-height:1.25}
+  .proof .plbl{margin-top:.7rem;font-size:.92rem;line-height:1.55;color:var(--muted)}
+
+  /* scope / honesty box */
+  .honesty{background:var(--ink);color:var(--paper);border-radius:20px;padding:2.4rem 2rem}
+  @media(min-width:1024px){.honesty{padding:2.8rem 2.6rem}}
+  .honesty .kicker{color:rgba(251,251,249,.55)}
+  .honesty h3{font-size:1.35rem;font-weight:500;letter-spacing:-0.02em}
+  .honesty-grid{margin-top:1.6rem;display:grid;gap:1.3rem}
+  @media(min-width:760px){.honesty-grid{grid-template-columns:1fr 1fr}}
+  .honesty-item h4{font-size:.95rem;font-weight:600}
+  .honesty-item p{margin-top:.4rem;font-size:.9rem;line-height:1.6;color:rgba(251,251,249,.68)}
+
+  /* final cta */
+  .final{text-align:center;max-width:40rem;margin:0 auto}
+  .final h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+  .final .lead{margin-top:1.2rem}
+  .final-cta{margin-top:2.2rem;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+  .final-note{font-size:.86rem;color:var(--muted)}
+
+  .cityline{width:100%;line-height:0}
+  .cityline img{width:100%;height:auto;display:block}
+  footer{border-top:1px solid var(--line);padding:2.5rem 0}
+  .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+  .foot img{height:22px;width:auto;display:block}
+  .foot .cr{font-size:.84rem;color:var(--muted)}
+  .hero{overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 100% -8%, rgba(208,16,48,.13), rgba(208,16,48,.05) 45%, transparent 72%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-massive{height:44px;width:auto;display:block;margin-bottom:1.9rem}
+  @media(max-width:760px){.hero-massive{height:34px;margin-bottom:1.5rem}}
+  .mgrad{background:linear-gradient(90deg,var(--m1),var(--m2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:600}
+</style>
+</head>
+<body>
+
+  <!-- TOP: logo only, no nav -->
+  <div class="top">
+    <div class="wrap top-inner">
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex" />
+      <span class="top-for">Prepared for <b>Penumbra</b></span>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1 · HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <img class="hero-massive reveal" src="data:image/webp;base64,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" alt="Penumbra" style="height:52px" />
+        <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; For Penumbra&rsquo;s compliance team</p>
+        <h1 class="reveal">You keep Penumbra compliant. <span class="mgrad">We take the review queue off your desk.</span></h1>
+        <p class="lead reveal">You are the compliance analyst behind a global medtech company: HCP and consulting agreements, promotional reviews, Sunshine Act reporting, third-party diligence, and a queue that never stops. You already know the rules better than anyone. What eats your week is the volume around them. Omnilex takes that first-pass, high-repetition layer off your plate, supervised by expert lawyers, so your time goes to the judgment calls and real risk only you can own.</p>
+      </div>
+    </section>
+
+    <!-- 2 · LEGAL SURFACE, THE STAR -->
+    <section class="surface-sec">
+      <div class="wrap sec">
+        <div class="surface-head">
+          <p class="kicker reveal">We know your business</p>
+          <h2 class="reveal">You know the rules cold. Here is the grind we take off your desk.</h2>
+          <p class="lead reveal">From consulting agreements and promotional review to Open Payments and third-party diligence, you run a review load most teams would need several people for. Here is where we quietly carry it, the reviews, the reconciliations, the documentation, so your attention stays on real compliance risk.</p>
+        </div>
+
+        <div class="surf-list reveal">
+          <div class="surf">
+            <div class="surf-t"><span class="num">01</span><h3>HCP and consulting agreement review</h3></div>
+          <p>Consulting, speaker, advisory-board and confidentiality agreements with physicians and hospitals cross your desk constantly. Fair-market-value checks, needs assessments, and the documentation that keeps each one defensible is high-volume, repetitive work. We take it so you review by exception, not by volume.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">02</span><h3>Promotional and MLR review</h3></div>
+          <p>Every piece of promotional material, claim and IFU reference needs a medical, legal and regulatory read against label and off-label rules. That queue never empties. We handle the first-pass review so your team clears it faster.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">03</span><h3>Sunshine Act and Open Payments</h3></div>
+          <p>Tracking every meal, payment, honorarium and transfer of value to physicians, reconciling it, and filing Open Payments is relentless, detail-heavy work where a miss becomes a reportable error. We take the collection and reconciliation off your plate.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">04</span><h3>Third-party diligence and FCPA</h3></div>
+          <p>Distributors, agents and vendors across global markets need diligence, screening and anti-corruption documentation before and during every engagement. We run the recurring checks and keep the files audit-ready.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">05</span><h3>Policy, training and monitoring</h3></div>
+          <p>Policy updates, training records, monitoring and audit support, and the constant stream of compliance questions from sales and marketing eat your week. We handle the documentation and first responses so you focus on real risk.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">06</span><h3>CDAs, NDAs and everyday contracts</h3></div>
+          <p>The steady flow of confidentiality, vendor and study agreements behind the business is exactly the routine review that fills a compliance analyst's day. We take the volume so nothing sits in your queue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · HOW IT WORKS -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Never worry about legal again</p>
+        <h2 class="reveal" style="max-width:34ch">You own the risk calls. We handle the review volume behind them.</h2>
+        <div class="flow reveal">
+          <div class="fstep">
+            <span class="ft">Forward it</span>
+            <span class="fd">Drop us any matter you have on our platform, Email, Slack or where it is most convenient.</span>
+            <span class="fh">Always-on</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Let the mind work</span>
+            <span class="fd">The Omnilex Mind gets to work. Legal Research. Benchmarking with internal best practices. Redlining. Drafting the deliverable. Back-checking with initial findings. Preparing for review by the expert lawyer.</span>
+            <span class="fh">Immediate effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Lawyer signs off</span>
+            <span class="fd">An Omnilex expert lawyer supervises, corrects and approves. The work is signed off only once it reaches world-class legal quality.</span>
+            <span class="fh">Zero Effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">That&rsquo;s it. Done</span>
+            <span class="fd">You get the finished, reviewed document, analysis, legal advice, heads-up. Not a feedback. Not an instruction what to do. It&rsquo;s done. End-to-end.</span>
+            <span class="fh">Results only</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · WHY NOT A FIRM / WHY NOW -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Done with the old times</p>
+        <h2 class="reveal" style="max-width:36ch">You&rsquo;re doing a great job. You just shouldn&rsquo;t be doing all of it.</h2>
+        <p class="lead reveal" style="margin-top:1.1rem;max-width:44rem">You hold the compliance line for a global device company, and hold it well. But too much of your week goes to first-pass reviews, transparency reconciliations and routine agreements, the work that keeps you from the monitoring and judgment that actually reduce risk. That is exactly the load we take.</p>
+        <div class="cmp">
+          <div class="cmp-col reveal">
+            <h3>Your desk today</h3>
+            <ul>
+              <li>HCP and vendor agreements queuing for first-pass review</li>
+              <li>Promotional and MLR reviews competing with everything else</li>
+              <li>Sunshine Act data reconciled by hand under deadline</li>
+              <li>Compliance questions pulling you off higher-value work</li>
+            </ul>
+          </div>
+          <div class="cmp-col us reveal">
+            <h3>With Omnilex</h3>
+            <ul>
+              <li>First-pass agreement and promotional reviews handled for you</li>
+              <li>Open Payments data collected and reconciled at scale</li>
+              <li>Third-party diligence kept audit-ready</li>
+              <li>Expert lawyers signing off, so you review by exception</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8 · FINAL CTA -->
+    <section class="sline">
+      <div class="wrap sec">
+        <div class="final reveal">
+          <h2>Pilot Omnilex</h2>
+          <div class="final-cta">
+            <a href="https://outlook.office.com/bookwithme/user/8439c070dc1b4a3b8985da775ade9433@omnilex.ai/meetingtype/Ck2iTwJv_Uq-E2bU_gbRbQ2?bookingcode=1c4f49a9-0fb0-457c-9fd4-879006d00d97&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mcard" class="btn btn-dark btn-lg" target="_blank" rel="noopener">Book Meeting →</a>          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cityline" aria-hidden="true"><img src="https://ask.omnilex.ai/sf-skyline.svg" alt="" /></div>
+
+  <footer>
+    <div class="wrap foot">
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex AG" />
+      <p class="cr">Prepared for Penumbra · Confidential · © 2026 Omnilex AG</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);} });
+      },{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+  </script>
+</body>
+</html>
