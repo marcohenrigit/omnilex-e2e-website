@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omnilex × Marsh: Legal that scales with the world&rsquo;s risk</title>
+<meta name="description" content="A focused legal pilot for Marsh: multinational program documentation, transactional risk, contract reviews and claims files handled end-to-end by Omnilex and supervised by expert lawyers, so your advisors focus on advising." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23010101'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Georgia'%20font-size='18'%20fill='%23FBFBF9'%20text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#FBFBF9; --surface:#FFFFFF; --ink:#010101; --coal:#212121; --muted:#6E6E6E;
+    --line:#E7E5DF; --gold:#F5A623;
+    --m1:#0a84c4; --m2:#00285c; --mnavy:#00285c;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --serif:"Signifier","Instrument Serif",Georgia,serif;
+    --max:64rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-0.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem;width:100%}
+  @media(min-width:1024px){.wrap{padding:0 2rem}}
+  .emph{font-weight:700}
+  .kicker{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:1rem}
+  .kicker .dotmark{color:var(--m2)}
+  section{position:relative}
+  .sec{padding:4.5rem 0}
+  @media(min-width:1024px){.sec{padding:6rem 0}}
+  .sline{border-top:1px solid var(--line)}
+  h1{font-size:clamp(2.3rem,5.4vw,3.9rem);line-height:1.03;font-weight:400;letter-spacing:-0.035em}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;font-weight:400;letter-spacing:-0.03em}
+  h2 .emph{font-weight:700}
+  .lead{font-size:1.08rem;color:var(--muted);line-height:1.65}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .reveal.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* minimal top logo, no nav */
+  .top{position:absolute;top:0;left:0;right:0;z-index:10}
+  .top-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .top-inner img{height:22px;width:auto;display:block}
+  .top-for{font-size:.78rem;color:var(--muted);letter-spacing:.02em}
+  .top-for b{color:var(--ink);font-weight:600}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;font-size:.95rem;font-weight:500;padding:.95rem 1.7rem;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+  .btn-dark{background:var(--ink);color:var(--paper)}
+  .btn-dark:hover{opacity:.86}
+  .btn-ghost{border:1px solid rgba(1,1,1,.25);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-lg{font-size:1.02rem;padding:1.05rem 2rem}
+
+  /* hero */
+  .hero{padding:9rem 0 4.5rem;position:relative}
+  @media(min-width:1024px){.hero{padding:11rem 0 5.5rem}}
+  .hero h1{max-width:16ch}
+  .hero .lead{margin-top:1.6rem;max-width:44rem;font-size:1.15rem}
+  .hero-cta{margin-top:2.4rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+  .hero-terms{margin-top:1rem;font-size:.86rem;color:var(--muted);letter-spacing:.01em}
+  .hero-terms b{color:var(--ink);font-weight:600}
+  .hairline-gold{width:52px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:1.8rem}
+
+  /* legal surface, the star */
+  .surface-sec{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .surface-head{max-width:48rem}
+  .surface-head .lead{margin-top:1.1rem}
+  .surf-list{margin-top:3rem;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  @media(min-width:760px){.surf-list{grid-template-columns:1fr 1fr}}
+  .surf{background:var(--surface);padding:1.9rem 1.8rem;display:flex;flex-direction:column;transition:background .2s}
+  .surf:hover{background:#FCFBF8}
+  .surf-t{display:flex;align-items:baseline;gap:.7rem}
+  .surf-t .num{font-size:.78rem;font-weight:600;color:var(--gold);letter-spacing:.06em;flex:0 0 auto;width:1.6rem}
+  .surf-t h3{font-size:1.12rem;font-weight:600;letter-spacing:-0.02em;line-height:1.2}
+  .surf p{margin-top:.75rem;padding-left:2.3rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .surf p .hl{color:var(--ink);font-weight:600}
+  .surf-note{margin-top:1.75rem;font-size:.92rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* the pilot offer card */
+  .offer{border:1.5px solid var(--ink);border-radius:22px;padding:2.4rem 2rem;background:var(--paper)}
+  @media(min-width:1024px){.offer{padding:3rem 3rem}}
+  .offer-top{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:1.6rem}
+  .offer-top h3{font-size:1.5rem;font-weight:600;letter-spacing:-0.02em}
+  .offer-badges{display:flex;flex-wrap:wrap;gap:.5rem}
+  .badge{font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);border:1px solid rgba(1,1,1,.2);border-radius:999px;padding:.35rem .8rem}
+  .offer-grid{margin-top:1.9rem;display:grid;gap:2rem}
+  @media(min-width:820px){.offer-grid{grid-template-columns:1fr 1fr}}
+  .deliv-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:1rem}
+  .deliv{border-left:2px solid var(--gold);padding:.15rem 0 .15rem 1.1rem;margin-bottom:1.4rem}
+  .deliv h4{font-size:1.04rem;font-weight:600;letter-spacing:-0.01em}
+  .deliv p{margin-top:.4rem;font-size:.92rem;line-height:1.58;color:var(--muted)}
+  .offer-meta{display:flex;flex-direction:column;gap:1.2rem}
+  .meta-row .mk{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.13em;color:var(--muted)}
+  .meta-row .mv{margin-top:.35rem;font-size:.98rem;line-height:1.5}
+  .meta-row .mv b{font-weight:600}
+  .fee{font-size:1.6rem;font-weight:600;letter-spacing:-0.02em}
+  .ph{background:#FFF3DD;border-bottom:1.5px solid var(--gold);padding:0 .25rem;border-radius:3px 3px 0 0;font-style:normal}
+  .escalate{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.5rem;font-size:.94rem;line-height:1.62;color:var(--muted)}
+  .escalate b{color:var(--ink);font-weight:600}
+
+  /* how it works flow */
+  .flow{margin-top:3rem;display:grid;gap:1rem;align-items:stretch}
+  @media(min-width:820px){.flow{grid-template-columns:1fr 1.4rem 1fr 1.4rem 1fr 1.4rem 1fr}}
+  .fstep{border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.4rem;background:var(--surface);display:flex;flex-direction:column}
+  .fstep .ft{font-size:1.02rem;font-weight:600;letter-spacing:-0.01em}
+  .fstep .fd{margin-top:.5rem;font-size:.88rem;line-height:1.55;color:var(--muted)}
+  .fstep .fh{margin-top:1rem;font-size:.74rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--gold)}
+  .farrow{display:flex;align-items:center;justify-content:center;color:rgba(1,1,1,.28);font-size:1.3rem}
+  @media(max-width:819px){.farrow{transform:rotate(90deg);height:1.3rem}}
+  .flow-cap{margin-top:1.8rem;font-size:.94rem;color:var(--muted);line-height:1.6;max-width:46rem}
+
+  /* compare / why not a firm */
+  .cmp{margin-top:3rem;display:grid;gap:1rem}
+  @media(min-width:760px){.cmp{grid-template-columns:1fr 1fr}}
+  .cmp-col{border:1px solid var(--line);border-radius:16px;padding:1.9rem 1.8rem}
+  .cmp-col.us{border-color:rgba(1,1,1,.45)}
+  .cmp-col h3{font-size:1.05rem;font-weight:600;letter-spacing:-0.01em;display:flex;align-items:center;gap:.55rem}
+  .cmp-col.us h3::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--gold)}
+  .cmp-col ul{list-style:none;margin-top:1.1rem;display:flex;flex-direction:column;gap:.8rem}
+  .cmp-col li{font-size:.94rem;line-height:1.55;color:var(--muted);padding-left:1.3rem;position:relative}
+  .cmp-col li::before{content:"–";position:absolute;left:0;color:var(--muted)}
+  .cmp-col.us li::before{content:"→";color:var(--gold)}
+  .cmp-col.us li{color:var(--ink)}
+
+  /* proof */
+  .proof-grid{margin-top:2.6rem;display:grid;gap:1.4rem}
+  @media(min-width:760px){.proof-grid{grid-template-columns:repeat(3,1fr)}}
+  .proof{border-top:1px solid var(--ink);padding-top:1.1rem}
+  .proof .pstat{font-size:1.18rem;font-weight:600;letter-spacing:-0.02em;line-height:1.25}
+  .proof .plbl{margin-top:.7rem;font-size:.92rem;line-height:1.55;color:var(--muted)}
+
+  /* scope / honesty box */
+  .honesty{background:var(--ink);color:var(--paper);border-radius:20px;padding:2.4rem 2rem}
+  @media(min-width:1024px){.honesty{padding:2.8rem 2.6rem}}
+  .honesty .kicker{color:rgba(251,251,249,.55)}
+  .honesty h3{font-size:1.35rem;font-weight:500;letter-spacing:-0.02em}
+  .honesty-grid{margin-top:1.6rem;display:grid;gap:1.3rem}
+  @media(min-width:760px){.honesty-grid{grid-template-columns:1fr 1fr}}
+  .honesty-item h4{font-size:.95rem;font-weight:600}
+  .honesty-item p{margin-top:.4rem;font-size:.9rem;line-height:1.6;color:rgba(251,251,249,.68)}
+
+  /* final cta */
+  .final{text-align:center;max-width:40rem;margin:0 auto}
+  .final h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+  .final .lead{margin-top:1.2rem}
+  .final-cta{margin-top:2.2rem;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+  .final-note{font-size:.86rem;color:var(--muted)}
+
+  .cityline{width:100%;line-height:0}
+  .cityline img{width:100%;height:auto;display:block}
+  footer{border-top:1px solid var(--line);padding:2.5rem 0}
+  .foot{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+  .foot img{height:22px;width:auto;display:block}
+  .foot .cr{font-size:.84rem;color:var(--muted)}
+  .hero{overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 100% -8%, rgba(10,132,196,.14), rgba(0,40,92,.06) 45%, transparent 72%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:1}
+  .hero-massive{height:44px;width:auto;display:block;margin-bottom:1.9rem}
+  @media(max-width:760px){.hero-massive{height:34px;margin-bottom:1.5rem}}
+  .mgrad{background:linear-gradient(90deg,var(--m1),var(--m2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:600}
+</style>
+</head>
+<body>
+
+  <!-- TOP: logo only, no nav -->
+  <div class="top">
+    <div class="wrap top-inner">
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex" />
+      <span class="top-for">Prepared for <b>Marsh</b></span>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1 · HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <img class="hero-massive reveal" src="data:image/jpeg;base64,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" alt="Marsh" style="height:74px;border-radius:14px" />
+        <p class="kicker reveal"><span class="dotmark">●</span>&nbsp; Providing world class legal to Marsh</p>
+        <h1 class="reveal">You advise the world on risk. <span class="mgrad">We take the legal load off every placement.</span></h1>
+        <p class="lead reveal">Marsh is the world's leading insurance broker and risk advisor, placing and servicing risk for multinational clients across roughly 130 countries, from transactional risk on live deals to global programs and complex claims. That scale runs on legal machinery: program documentation, contract reviews, client agreements and claims files at a volume no team can fully triage. Omnilex takes that layer off your advisors, supervised by expert lawyers, so their time goes to the perspective clients pay Marsh for.</p>
+      </div>
+    </section>
+
+    <!-- 2 · LEGAL SURFACE, THE STAR -->
+    <section class="surface-sec">
+      <div class="wrap sec">
+        <div class="surface-head">
+          <p class="kicker reveal">We know your business</p>
+          <h2 class="reveal">The world's risk runs through Marsh. So does a mountain of legal work. This is where we take it.</h2>
+          <p class="lead reveal">A global broker and risk advisor placing multinational programs, transactional risk and complex claims for the largest companies on earth generates legal and compliance work at a scale most teams can only triage. Here is where an AI-native service, supervised by expert lawyers, carries the load.</p>
+        </div>
+
+        <div class="surf-list reveal">
+          <div class="surf">
+            <div class="surf-t"><span class="num">01</span><h3>Multinational program contracting</h3></div>
+          <p>Placing and coordinating global programs across roughly 130 countries means master and local policies, DIC and DIL, admitted and non-admitted rules, and premium-tax and compliance in every jurisdiction. The legal coordination behind a Marsh multinational program is relentless. We carry it so your programs stay in step worldwide.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">02</span><h3>Transactional risk and PE / M&amp;A</h3></div>
+          <p>Reps and warranties, tax and contingent-liability placements move on deal timelines, with heavy diligence and documentation on every transaction. Your transactional-risk and private-equity practice runs on legal throughput. We handle the documentation so your dealmakers keep closing.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">03</span><h3>Contractual risk transfer on the largest accounts</h3></div>
+          <p>Reviewing your clients' construction, infrastructure and commercial contracts for insurance and indemnity terms, on high-value, high-complexity programs, is legal work at a scale only Marsh handles. We take it, fast, so your advisors answer with authority.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">04</span><h3>Claims advocacy</h3></div>
+          <p>Building and pursuing complex, high-stakes claims for clients, coverage analysis, documentation and the advocacy that turns a loss into a recovery, is legal-grade work at volume. We build the files so your advocates win the outcome.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">05</span><h3>Client service and broker-of-record agreements</h3></div>
+          <p>The engagement letters, appointments, scope-of-service and remuneration terms behind thousands of enterprise relationships, held to the transparency standard Marsh has led on. We handle the recurring drafting so client teams stay with clients.</p>
+          </div>
+          <div class="surf">
+            <div class="surf-t"><span class="num">06</span><h3>Carrier, facility, MGA and captive agreements</h3></div>
+          <p>The agreements behind your placements, MGA and programmes, captives and alternative risk transfer each carry a steady, specialized legal load. We handle the review so your structures stay sound.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · HOW IT WORKS -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Never worry about legal again</p>
+        <h2 class="reveal" style="max-width:34ch">You bring the perspective. We handle the machinery behind it.</h2>
+        <div class="flow reveal">
+          <div class="fstep">
+            <span class="ft">Forward it</span>
+            <span class="fd">Drop us any matter you have on our platform, Email, Slack or where it is most convenient.</span>
+            <span class="fh">Always-on</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Let the mind work</span>
+            <span class="fd">The Omnilex Mind gets to work. Legal Research. Benchmarking with internal best practices. Redlining. Drafting the deliverable. Back-checking with initial findings. Preparing for review by the expert lawyer.</span>
+            <span class="fh">Immediate effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">Lawyer signs off</span>
+            <span class="fd">An Omnilex expert lawyer supervises, corrects and approves. The work is signed off only once it reaches world-class legal quality.</span>
+            <span class="fh">Zero Effort</span>
+          </div>
+          <div class="farrow" aria-hidden="true">→</div>
+          <div class="fstep">
+            <span class="ft">That&rsquo;s it. Done</span>
+            <span class="fd">You get the finished, reviewed document, analysis, legal advice, heads-up. Not a feedback. Not an instruction what to do. It&rsquo;s done. End-to-end.</span>
+            <span class="fh">Results only</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · WHY NOT A FIRM / WHY NOW -->
+    <section class="sline">
+      <div class="wrap sec">
+        <p class="kicker reveal">Done with the old times</p>
+        <h2 class="reveal" style="max-width:36ch">Your advisors should be advising, not drowning in documentation.</h2>
+        <p class="lead reveal" style="margin-top:1.1rem;max-width:44rem">Across programs, deals, contracts and claims, the same high-volume, specialized work lands on advisors, brokers and outside counsel, pulling them off the judgment clients pay Marsh for. That is exactly the load an AI-native service, supervised by lawyers, is built to carry.</p>
+        <div class="cmp">
+          <div class="cmp-col reveal">
+            <h3>Marsh today</h3>
+            <ul>
+              <li>Advisors pulled off strategy onto program documentation</li>
+              <li>Deal and claims files competing with client work</li>
+              <li>Contract reviews queued behind the next placement</li>
+              <li>Specialized legal spend spread across outside counsel</li>
+            </ul>
+          </div>
+          <div class="cmp-col us reveal">
+            <h3>With Omnilex</h3>
+            <ul>
+              <li>Program, deal and claims documentation handled end-to-end</li>
+              <li>Contract and coverage reviews back fast, at scale</li>
+              <li>Client and carrier agreements kept current</li>
+              <li>Expert lawyers signing off on every output</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8 · FINAL CTA -->
+    <section class="sline">
+      <div class="wrap sec">
+        <div class="final reveal">
+          <h2>Pilot Omnilex</h2>
+          <div class="final-cta">
+            <a href="https://outlook.office.com/bookwithme/user/8439c070dc1b4a3b8985da775ade9433@omnilex.ai/meetingtype/Ck2iTwJv_Uq-E2bU_gbRbQ2?bookingcode=1c4f49a9-0fb0-457c-9fd4-879006d00d97&amp;anonymous&amp;ismsaljsauthenabled&amp;ep=mcard" class="btn btn-dark btn-lg" target="_blank" rel="noopener">Book Meeting →</a>          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cityline" aria-hidden="true"><img src="https://ask.omnilex.ai/sf-skyline.svg" alt="" /></div>
+
+  <footer>
+    <div class="wrap foot">
+      <img src="https://ask.omnilex.ai/omnilex-logo.png" alt="Omnilex AG" />
+      <p class="cr">Prepared for Marsh · Confidential · © 2026 Omnilex AG</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return;}
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);} });
+      },{threshold:0.1,rootMargin:'0px 0px -6% 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+  </script>
+</body>
+</html>
